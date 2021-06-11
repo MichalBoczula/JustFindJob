@@ -8,5 +8,6 @@ namespace JustFindJob.Domain.Entities
         public Technology Technology { get; set; }
         public string ElementName { get; set; }
         public int ElementLevel { get; set; }
+        public string Image { get; set; }
     }
 }

@@ -7,6 +7,8 @@ namespace JustFindJob.Domain.Entities
     {
         public int JobOfferId { get; set; }
         public JobOffer JobOffer { get; set; }
+        public string MainTechnologyName { get; set; }
+        public string MainTechnologyImage { get; set; }
         public ICollection<TechnologyElement> TechnologyElements { get; set; }
     }
 }
