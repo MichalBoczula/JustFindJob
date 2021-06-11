@@ -3,9 +3,44 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BBF7048D-AC3D-4C76-9AC8-01EFF4BE0DAE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{CF13F46A-A6EC-416E-982E-AAB26426D8C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{CE7B1C84-9901-4A6C-B5AC-744406584F96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{B61C0325-7281-4D12-B00F-DDDE7BCDED6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SRC", "SRC", "{EAD4D1CF-7F58-416B-B05A-5EC1B4332311}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustFindJob.Domain", "JustFindJob.Domain\JustFindJob.Domain.csproj", "{10A32216-D9B0-478E-BD21-36FDA57AC5E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustFindJob.Application", "JustFindJob.Application\JustFindJob.Application.csproj", "{4C1664A6-E4A0-435B-B6A1-6C9EFFFA824A}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10A32216-D9B0-478E-BD21-36FDA57AC5E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10A32216-D9B0-478E-BD21-36FDA57AC5E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10A32216-D9B0-478E-BD21-36FDA57AC5E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10A32216-D9B0-478E-BD21-36FDA57AC5E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C1664A6-E4A0-435B-B6A1-6C9EFFFA824A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C1664A6-E4A0-435B-B6A1-6C9EFFFA824A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C1664A6-E4A0-435B-B6A1-6C9EFFFA824A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C1664A6-E4A0-435B-B6A1-6C9EFFFA824A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BBF7048D-AC3D-4C76-9AC8-01EFF4BE0DAE} = {EAD4D1CF-7F58-416B-B05A-5EC1B4332311}
+		{CF13F46A-A6EC-416E-982E-AAB26426D8C4} = {EAD4D1CF-7F58-416B-B05A-5EC1B4332311}
+		{CE7B1C84-9901-4A6C-B5AC-744406584F96} = {EAD4D1CF-7F58-416B-B05A-5EC1B4332311}
+		{10A32216-D9B0-478E-BD21-36FDA57AC5E6} = {BBF7048D-AC3D-4C76-9AC8-01EFF4BE0DAE}
+		{4C1664A6-E4A0-435B-B6A1-6C9EFFFA824A} = {BBF7048D-AC3D-4C76-9AC8-01EFF4BE0DAE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {65571B86-A7FD-47DB-9AC0-022DDCBC505D}
