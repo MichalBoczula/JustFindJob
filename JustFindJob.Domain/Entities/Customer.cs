@@ -1,13 +1,16 @@
-﻿using JustFindJob.Domain.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace JustFindJob.Domain.Entities
 {
-    public class Customer : AuditableEntity
+    public class Customer
     {
-        public Guid CustomerUniqueCode { get; set; }
-        public PersonalData PersonalData { get; set; }
-        public ICollection<JobOffer> Applied { get; set; }
+        public string FirstName{ get; set; }
+        public string  LastName { get; set; }
+        public string  MainTechnologyName { get; set; }
+        public ExperienceLevel ExperienceLevel { get; set; }
     }
 }

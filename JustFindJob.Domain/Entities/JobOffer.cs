@@ -15,6 +15,7 @@ namespace JustFindJob.Domain.Entities
         public bool OfferStatus { get; set; }
         public string Localization { get; set; }
         public string ExperienceLevel { get; set; }
-        public ICollection<Customer> Customers { get; set; }
+        public string ShortDescription { get; set; }
+        public string LongDescription { get; set; }
     }
 }
