@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace JustFindJob.Application.Features.JobOffers.Queries.List
 {
-    public class GetJobOfferListQuery : IRequest<JobOfferListVm>
+    public class GetJobOfferListQuery : IRequest<List<JobOfferListVm>>
     {
 
     }

@@ -12,9 +12,8 @@ namespace JustFindJob.Domain.Entities
         public int CompanyId { get; set; }
         public Company Company { get; set; }
         public Technology Technology { get; set; }
-        public bool OfferStatus { get; set; }
         public string Localization { get; set; }
-        public string ExperienceLevel { get; set; }
+        public ExperienceLevels ExperienceLevel { get; set; }
         public string ShortDescription { get; set; }
         public string LongDescription { get; set; }
     }

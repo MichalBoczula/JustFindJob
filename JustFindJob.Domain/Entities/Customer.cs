@@ -11,6 +11,6 @@ namespace JustFindJob.Domain.Entities
         public string FirstName{ get; set; }
         public string  LastName { get; set; }
         public string  MainTechnologyName { get; set; }
-        public ExperienceLevel ExperienceLevel { get; set; }
+        public ExperienceLevels ExperienceLevel { get; set; }
     }
 }

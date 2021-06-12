@@ -11,22 +11,22 @@ using System.Threading.Tasks;
 
 namespace JustFindJob.Application.Features.JobOffers.Queries.List
 {
-    public class GetJobOfferListQueryHandler : IRequestHandler<GetJobOfferListQuery, JobOfferListVm>
+    public class GetJobOfferListQueryHandler : IRequestHandler<GetJobOfferListQuery, List<JobOfferListVm>>
     {
-        private readonly IJobOfferDbContext _context;
+        private readonly IJobOfferRepository _repository;
         private readonly IMapper _mapper;
 
-        public GetJobOfferListQueryHandler(IJobOfferDbContext context, IMapper mapper)
+        public GetJobOfferListQueryHandler(IJobOfferRepository repository, IMapper mapper)
         {
-            _context = context;
+            _repository = repository;
             _mapper = mapper;
         }
 
-        public async Task<JobOfferListVm> Handle(GetJobOfferListQuery request, CancellationToken cancellationToken)
+        public async Task<List<JobOfferListVm>> Handle(GetJobOfferListQuery request, CancellationToken cancellationToken)
         {
-            var result = from jo in _context.JobOffers
-                         select jo;
-            return _mapper.Map<JobOfferListVm>(await result.ToListAsync(cancellationToken));
+            var result = await _repository.GetList(cancellationToken);
+            return _mapper.Map<List<JobOfferListVm>>(result);
         }
+
     }
 }

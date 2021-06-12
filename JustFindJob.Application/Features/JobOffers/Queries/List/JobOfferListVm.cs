@@ -8,6 +8,10 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.List
 {
     public class JobOfferListVm
     {
-        public ICollection<JobOfferListDto> JobOfferListDtos { get; set; }
+        public string CompanyName { get; set; }
+        public string Localization { get; set; }
+        public string ExperienceLevel { get; set; }
+        public string MainTechnologyName { get; set; }
+        public string MainTechnologyImage { get; set; }
     }
 }

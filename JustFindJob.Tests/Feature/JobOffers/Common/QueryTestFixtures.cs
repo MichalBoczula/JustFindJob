@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using JustFindJob.Application.Contracts.Persistance;
+using JustFindJob.Application.Profiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,16 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace JustFindJob.Tests.Feature.JobOffer.Common
+namespace JustFindJob.Tests.Feature.JobOffers.Common
 {
-    public class QueryTestFixtures : IDisposable
+    public class QueryTestFixtures
     {
-        public IJobOfferDbContext Context { get; private set; }
         public IMapper Mapper { get; private set; }
 
-        public void Dispose()
+        public QueryTestFixtures()
         {
-            throw new NotImplementedException();
+            var configurationProvider = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<MappingProfiles>();
+            });
+
+            Mapper = configurationProvider.CreateMapper();
         }
     }
 

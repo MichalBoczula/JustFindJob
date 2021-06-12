@@ -1,6 +1,6 @@
 ﻿namespace JustFindJob.Domain.Entities
 {
-    public enum ExperienceLevel
+    public enum ExperienceLevels
     {
         Junior, 
         Mid,
