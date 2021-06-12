@@ -28,7 +28,6 @@ namespace JustFindJob.Tests.Feature.JobOffer.Queries
         {
             var handler = new GetJobOfferListQueryHandler(_context, _mapper);
             var result = await handler.Handle(new GetJobOfferListQuery(), CancellationToken.None);
-            ///act
         }
     }
 }
