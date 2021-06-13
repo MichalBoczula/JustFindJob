@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace JustFindJob.Application.Contracts.Persistance
 {
-    public interface IJobOfferDbContext
+    public interface IJustFindJobDbContext
     {
         DbSet<JobOffer> JobOffers { get; set; }
         DbSet<Company> Companies { get; set; }

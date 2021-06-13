@@ -24,7 +24,7 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.List
 
         public async Task<List<JobOfferListVm>> Handle(GetJobOfferListQuery request, CancellationToken cancellationToken)
         {
-            var result = await _repository.GetList(cancellationToken);
+            var result = await _repository.GetList();
             return _mapper.Map<List<JobOfferListVm>>(result);
         }
 

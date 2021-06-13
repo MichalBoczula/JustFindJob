@@ -13,5 +13,7 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.List
         public string ExperienceLevel { get; set; }
         public string MainTechnologyName { get; set; }
         public string MainTechnologyImage { get; set; }
+        public string ShortDescription { get; set; }
+
     }
 }

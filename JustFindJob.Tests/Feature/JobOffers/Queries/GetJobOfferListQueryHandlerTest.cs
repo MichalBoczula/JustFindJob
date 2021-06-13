@@ -47,7 +47,7 @@ namespace JustFindJob.Tests.Feature.JobOffers.Queries
                 }
             };
             var repoMock = new Mock<IJobOfferRepository>();
-            repoMock.Setup(x => x.GetList(It.IsAny<CancellationToken>())).ReturnsAsync(list);
+            repoMock.Setup(x => x.GetList()).ReturnsAsync(list);
 
             var handler = new GetJobOfferListQueryHandler(repoMock.Object, mapper);
             //Act
