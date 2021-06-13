@@ -11,11 +11,10 @@ namespace JustFindJob.Persistance
 {
     public static class PersistanceDI
     {
-
         public static IServiceCollection AddPersistance(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<JustFindJobDbContext>(options => 
-                options.UseSqlServer(configuration.GetConnectionString("JustFindJob")));
+                options.UseSqlServer(configuration.GetConnectionString("JustFindJobConnection")));
 
             return services;
         }

@@ -32,9 +32,7 @@ namespace JustFindJob.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "JustFindJob.API", Version = "v1" });
             });
-
             services.AddPersistance(Configuration);
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
