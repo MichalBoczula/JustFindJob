@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using JustFindJob.Application.Contracts.Persistance;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -15,6 +16,7 @@ namespace JustFindJob.Persistance
         {
             services.AddDbContext<JustFindJobDbContext>(options => 
                 options.UseSqlServer(configuration.GetConnectionString("JustFindJobConnection")));
+            services.AddScoped<IJustFindJobDbContext, JustFindJobDbContext>();
 
             return services;
         }

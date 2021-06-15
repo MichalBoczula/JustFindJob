@@ -1,4 +1,5 @@
-﻿using JustFindJob.Domain.Common;
+﻿using JustFindJob.Application.Contracts.Persistance;
+using JustFindJob.Domain.Common;
 using JustFindJob.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace JustFindJob.Persistance
 {
-    public class JustFindJobDbContext : DbContext
+    public class JustFindJobDbContext : DbContext , IJustFindJobDbContext
     {
         public JustFindJobDbContext(DbContextOptions<JustFindJobDbContext> options) : base(options)
         {

@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\JustFindJob.Application\JustFindJob.Application.csproj" />
     <ProjectReference Include="..\JustFindJob.Domain\JustFindJob.Domain.csproj" />
   </ItemGroup>
 

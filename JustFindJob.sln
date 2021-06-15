@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustFindJob.Application", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustFindJob.Persistance", "JustFindJob.Persistance\JustFindJob.Persistance.csproj", "{054A9B50-A7E8-4F04-A415-42E68EC0D83F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustFindJob.API", "JustFindJob.API\JustFindJob.API.csproj", "{B6DD3F91-0E63-43C5-B2DB-54FF16BC1EFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustFindJob.API", "JustFindJob.API\JustFindJob.API.csproj", "{B6DD3F91-0E63-43C5-B2DB-54FF16BC1EFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustFindJob.Application.Test", "JustFindJob.Application.Test\JustFindJob.Application.Test.csproj", "{3DAB5CB9-79AC-4C37-BAF3-A9D0ADFBEBD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{B6DD3F91-0E63-43C5-B2DB-54FF16BC1EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6DD3F91-0E63-43C5-B2DB-54FF16BC1EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6DD3F91-0E63-43C5-B2DB-54FF16BC1EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DAB5CB9-79AC-4C37-BAF3-A9D0ADFBEBD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DAB5CB9-79AC-4C37-BAF3-A9D0ADFBEBD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DAB5CB9-79AC-4C37-BAF3-A9D0ADFBEBD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DAB5CB9-79AC-4C37-BAF3-A9D0ADFBEBD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{4C1664A6-E4A0-435B-B6A1-6C9EFFFA824A} = {BBF7048D-AC3D-4C76-9AC8-01EFF4BE0DAE}
 		{054A9B50-A7E8-4F04-A415-42E68EC0D83F} = {CF13F46A-A6EC-416E-982E-AAB26426D8C4}
 		{B6DD3F91-0E63-43C5-B2DB-54FF16BC1EFE} = {CE7B1C84-9901-4A6C-B5AC-744406584F96}
+		{3DAB5CB9-79AC-4C37-BAF3-A9D0ADFBEBD0} = {B61C0325-7281-4D12-B00F-DDDE7BCDED6D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {65571B86-A7FD-47DB-9AC0-022DDCBC505D}
