@@ -24,15 +24,17 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.Details
 
         public async Task<JobOfferDetailsVm> Handle(GetJobOfferDetailsQuery request, CancellationToken cancellationToken)
         {
-            var result = from job in _context.JobOffers
+            var query = await (
+                         from job in _context.JobOffers
                          where job.Id == request.JobOfferId
                          join tech in _context.Technologies
-                            on job.Id equals tech.JobOfferId
+                            on job.Id equals tech.JobOfferId into jobAndCom
                          join company in _context.Companies
-                            on job.CompanyId equals company.Id
-                         select job;
-            return _mapper.Map<JobOfferDetailsVm>(
-                    await result.FirstOrDefaultAsync(cancellationToken));
+                            on job.CompanyId equals company.Id into jobAndComAndTech
+                         select jobAndComAndTech)
+                         .FirstOrDefaultAsync(cancellationToken);
+            var result = _mapper.Map<JobOfferDetailsVm>(query);
+            return result;
         }
     }
 }

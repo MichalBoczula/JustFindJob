@@ -22,7 +22,9 @@ namespace JustFindJob.Persistance
 
         public DbSet<JobOffer> JobOffers { get; set; }
         public DbSet<Company> Companies { get; set; }
+        public DbSet<CompanyDetails> CompanyDetails { get; set; }
         public DbSet<Technology> Technologies { get; set; }
+        public DbSet<TechnologyElement> TechnologyElements { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

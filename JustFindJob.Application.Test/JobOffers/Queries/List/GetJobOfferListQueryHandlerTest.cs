@@ -28,12 +28,21 @@ namespace JustFindJob.Application.Test.JobOffers.Queries.List
         [Fact]
         public async Task ShouldReturnList()
         {
+            //arrange
             var handler = new GetJobOfferListQueryHandler(_context, _mapper);
-
+            //act
             var result = await handler.Handle(new GetJobOfferListQuery(), CancellationToken.None);
-
+            //assert
             result.ShouldBeOfType<List<JobOfferListVm>>();
-            result.Count.ShouldBe(2);
+            result.Count.ShouldBe(12);
+            foreach (var ele in result)
+            {
+                ele.TechnologyDto.MainTechnologyName.ShouldNotBeNullOrEmpty();
+                ele.CompanyDto.Name.ShouldNotBeNullOrEmpty();
+                ele.JobOfferDto.Localization.ShouldNotBeNullOrEmpty();
+                ele.JobOfferDto.ExperienceLevel.ShouldNotBeNullOrEmpty();
+                ele.JobOfferDto.ShortDescription.ShouldNotBeNullOrEmpty();
+            }
         }
     }
 }

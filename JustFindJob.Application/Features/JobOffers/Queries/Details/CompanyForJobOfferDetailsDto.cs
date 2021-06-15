@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JustFindJob.Application.Features.JobOffers.Queries.Details
 {
-    public class CompanyForJobOfferDto
+    public class CompanyForJobOfferDetailsDto
     {
         public string Name { get; set; }
         public string Size { get; set; }
