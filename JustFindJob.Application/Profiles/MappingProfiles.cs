@@ -16,6 +16,8 @@ namespace JustFindJob.Application.Profiles
         {
             CreateMap<JobOffer, JobOfferListVm>().ReverseMap();
             CreateMap<JobOffer, JobOfferDetailsVm>().ReverseMap();
+            CreateMap<Technology, TechnologyForJobOfferDto>().ReverseMap();
+            CreateMap<Company, CompanyForJobOfferDto>().ReverseMap();
         }
     }
 }

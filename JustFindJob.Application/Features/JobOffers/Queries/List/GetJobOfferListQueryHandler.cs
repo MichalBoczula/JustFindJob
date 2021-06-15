@@ -13,19 +13,21 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.List
 {
     public class GetJobOfferListQueryHandler : IRequestHandler<GetJobOfferListQuery, List<JobOfferListVm>>
     {
-        private readonly IJobOfferRepository _repository;
+        private readonly IJustFindJobDbContext _context;
         private readonly IMapper _mapper;
 
-        public GetJobOfferListQueryHandler(IJobOfferRepository repository, IMapper mapper)
+        public GetJobOfferListQueryHandler(IJustFindJobDbContext context, IMapper mapper)
         {
-            _repository = repository;
+            _context = context;
             _mapper = mapper;
         }
 
         public async Task<List<JobOfferListVm>> Handle(GetJobOfferListQuery request, CancellationToken cancellationToken)
         {
-            var result = await _repository.GetList();
-            return _mapper.Map<List<JobOfferListVm>>(result);
+            var result = from jobs in _context.JobOffers
+                         select jobs;
+            return  _mapper.Map<List<JobOfferListVm>>(
+                    await result.ToListAsync(cancellationToken));
         }
 
     }
