@@ -4,8 +4,6 @@
     {
         Junior, 
         Mid,
-        Senior,
-        Expert,
-        Master
+        Senior
     }
 }
