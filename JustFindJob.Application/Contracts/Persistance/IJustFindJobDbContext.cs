@@ -14,7 +14,8 @@ namespace JustFindJob.Application.Contracts.Persistance
         DbSet<JobOffer> JobOffers { get; set; }
         DbSet<Company> Companies { get; set; }
         DbSet<CompanyDetails> CompanyDetails { get; set; }
-        DbSet<Technology> Technologies{ get; set; }
+        DbSet<TechStack> TechStacks { get; set; }
+        DbSet<TechnologyLevel> TechnologyLevels { get; set; }
         DbSet<TechnologyElement> TechnologyElements { get; set; }
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);

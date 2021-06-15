@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace JustFindJob.Domain.Entities
 {
-    public class TechnologyElement : AuditableEntity
+    public class TechnologyLevel : AuditableEntity
     {
-        public string Name { get; set; }
-        public string Image { get; set; }
+        public string Level { get; set; }
     }
 }

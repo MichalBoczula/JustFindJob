@@ -380,146 +380,364 @@ namespace JustFindJob.Persistance.Migrations
                         });
                 });
 
-            modelBuilder.Entity("JustFindJob.Domain.Entities.Technology", b =>
+            modelBuilder.Entity("JustFindJob.Domain.Entities.TechStack", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("Inactivated")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("InactivatedBy")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("JobOfferId")
                         .HasColumnType("int");
 
-                    b.Property<string>("MainTechnologyImage")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MainTechnologyName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("Modified")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ModifiedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("StatusId")
+                    b.Property<int>("TechnologyElementId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.Property<int>("TechnologyLevelId")
+                        .HasColumnType("int");
+
+                    b.HasKey("JobOfferId", "TechnologyElementId");
 
                     b.HasIndex("JobOfferId")
                         .IsUnique();
 
-                    b.ToTable("Technologies");
+                    b.HasIndex("TechnologyElementId");
+
+                    b.HasIndex("TechnologyLevelId");
+
+                    b.ToTable("TechStacks");
 
                     b.HasData(
                         new
                         {
-                            Id = 1,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 1,
-                            MainTechnologyName = ".Net",
-                            StatusId = 0
+                            TechnologyElementId = 1,
+                            TechnologyLevelId = 2
                         },
                         new
                         {
-                            Id = 2,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            JobOfferId = 1,
+                            TechnologyElementId = 2,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
+                            JobOfferId = 1,
+                            TechnologyElementId = 4,
+                            TechnologyLevelId = 1
+                        },
+                        new
+                        {
+                            JobOfferId = 1,
+                            TechnologyElementId = 8,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
+                            JobOfferId = 1,
+                            TechnologyElementId = 9,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
                             JobOfferId = 2,
-                            MainTechnologyName = ".Net",
-                            StatusId = 0
+                            TechnologyElementId = 1,
+                            TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 3,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            JobOfferId = 2,
+                            TechnologyElementId = 2,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 2,
+                            TechnologyElementId = 7,
+                            TechnologyLevelId = 1
+                        },
+                        new
+                        {
+                            JobOfferId = 2,
+                            TechnologyElementId = 8,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 2,
+                            TechnologyElementId = 9,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
                             JobOfferId = 3,
-                            MainTechnologyName = ".Net",
-                            StatusId = 0
+                            TechnologyElementId = 1,
+                            TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 4,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            JobOfferId = 3,
+                            TechnologyElementId = 2,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 3,
+                            TechnologyElementId = 4,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 3,
+                            TechnologyElementId = 8,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 3,
+                            TechnologyElementId = 9,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
                             JobOfferId = 4,
-                            MainTechnologyName = "Java",
-                            StatusId = 0
+                            TechnologyElementId = 3,
+                            TechnologyLevelId = 4
                         },
                         new
                         {
-                            Id = 5,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            JobOfferId = 4,
+                            TechnologyElementId = 11,
+                            TechnologyLevelId = 4
+                        },
+                        new
+                        {
+                            JobOfferId = 4,
+                            TechnologyElementId = 12,
+                            TechnologyLevelId = 4
+                        },
+                        new
+                        {
+                            JobOfferId = 4,
+                            TechnologyElementId = 10,
+                            TechnologyLevelId = 4
+                        },
+                        new
+                        {
                             JobOfferId = 5,
-                            MainTechnologyName = "Java",
-                            StatusId = 0
+                            TechnologyElementId = 3,
+                            TechnologyLevelId = 4
                         },
                         new
                         {
-                            Id = 6,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            JobOfferId = 5,
+                            TechnologyElementId = 11,
+                            TechnologyLevelId = 4
+                        },
+                        new
+                        {
+                            JobOfferId = 5,
+                            TechnologyElementId = 12,
+                            TechnologyLevelId = 4
+                        },
+                        new
+                        {
+                            JobOfferId = 5,
+                            TechnologyElementId = 10,
+                            TechnologyLevelId = 4
+                        },
+                        new
+                        {
                             JobOfferId = 6,
-                            MainTechnologyName = "Java",
-                            StatusId = 0
+                            TechnologyElementId = 3,
+                            TechnologyLevelId = 2
                         },
                         new
                         {
-                            Id = 7,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            JobOfferId = 6,
+                            TechnologyElementId = 4,
+                            TechnologyLevelId = 1
+                        },
+                        new
+                        {
+                            JobOfferId = 6,
+                            TechnologyElementId = 13,
+                            TechnologyLevelId = 1
+                        },
+                        new
+                        {
+                            JobOfferId = 6,
+                            TechnologyElementId = 11,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
+                            JobOfferId = 6,
+                            TechnologyElementId = 12,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
+                            JobOfferId = 6,
+                            TechnologyElementId = 10,
+                            TechnologyLevelId = 1
+                        },
+                        new
+                        {
                             JobOfferId = 7,
-                            MainTechnologyName = "Java",
-                            StatusId = 0
+                            TechnologyElementId = 20,
+                            TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 8,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            JobOfferId = 7,
+                            TechnologyElementId = 7,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
+                            JobOfferId = 7,
+                            TechnologyElementId = 13,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 7,
+                            TechnologyElementId = 4,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
                             JobOfferId = 8,
-                            MainTechnologyName = "JavaScript",
-                            StatusId = 0
+                            TechnologyElementId = 20,
+                            TechnologyLevelId = 2
                         },
                         new
                         {
-                            Id = 9,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            JobOfferId = 8,
+                            TechnologyElementId = 4,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
+                            JobOfferId = 8,
+                            TechnologyElementId = 13,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
+                            JobOfferId = 8,
+                            TechnologyElementId = 14,
+                            TechnologyLevelId = 1
+                        },
+                        new
+                        {
+                            JobOfferId = 8,
+                            TechnologyElementId = 15,
+                            TechnologyLevelId = 1
+                        },
+                        new
+                        {
                             JobOfferId = 9,
-                            MainTechnologyName = "JavaScript",
-                            StatusId = 0
+                            TechnologyElementId = 20,
+                            TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 10,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            JobOfferId = 9,
+                            TechnologyElementId = 4,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 9,
+                            TechnologyElementId = 13,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 9,
+                            TechnologyElementId = 14,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 9,
+                            TechnologyElementId = 15,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
                             JobOfferId = 10,
-                            MainTechnologyName = "JavaScript",
-                            StatusId = 0
+                            TechnologyElementId = 7,
+                            TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 11,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            JobOfferId = 10,
+                            TechnologyElementId = 4,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 10,
+                            TechnologyElementId = 13,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 10,
+                            TechnologyElementId = 14,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 10,
+                            TechnologyElementId = 15,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
                             JobOfferId = 11,
-                            MainTechnologyName = "PHP",
-                            StatusId = 0
+                            TechnologyElementId = 18,
+                            TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 12,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            JobOfferId = 11,
+                            TechnologyElementId = 19,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 11,
+                            TechnologyElementId = 10,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 11,
+                            TechnologyElementId = 5,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
                             JobOfferId = 12,
-                            MainTechnologyName = "Python",
-                            StatusId = 0
+                            TechnologyElementId = 6,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
+                            JobOfferId = 12,
+                            TechnologyElementId = 10,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
+                            JobOfferId = 12,
+                            TechnologyElementId = 16,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
+                            JobOfferId = 12,
+                            TechnologyElementId = 17,
+                            TechnologyLevelId = 2
                         });
                 });
 
@@ -534,12 +752,6 @@ namespace JustFindJob.Persistance.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ElementLevel")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ElementName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
@@ -557,342 +769,222 @@ namespace JustFindJob.Persistance.Migrations
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("StatusId")
-                        .HasColumnType("int");
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TechnologyId")
+                    b.Property<int>("StatusId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TechnologyId");
-
-                    b.ToTable("TechnologyElement");
+                    b.ToTable("TechnologyElements");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Junior",
-                            ElementName = "ASP.NET",
-                            StatusId = 0,
-                            TechnologyId = 1
+                            Name = "C#",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 2,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Junior",
-                            ElementName = "Angular",
-                            StatusId = 0,
-                            TechnologyId = 1
+                            Name = ".Net",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 3,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Junior",
-                            ElementName = "MSSQL",
-                            StatusId = 0,
-                            TechnologyId = 1
+                            Name = "Java",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 4,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Mid",
-                            ElementName = "ASP.NET",
-                            StatusId = 0,
-                            TechnologyId = 2
+                            Name = "JavaScript",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 5,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Junior",
-                            ElementName = "Angular",
-                            StatusId = 0,
-                            TechnologyId = 2
+                            Name = "Python",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 6,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Mid",
-                            ElementName = "MSSQL",
-                            StatusId = 0,
-                            TechnologyId = 2
+                            Name = "PHP",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 7,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Mid",
-                            ElementName = "ASP.NET",
-                            StatusId = 0,
-                            TechnologyId = 3
+                            Name = "Angular",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 8,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Mid",
-                            ElementName = "Angular",
-                            StatusId = 0,
-                            TechnologyId = 3
+                            Name = "MSSQL",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 9,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Mid",
-                            ElementName = "MSSQL",
-                            StatusId = 0,
-                            TechnologyId = 3
+                            Name = "ASP.NET",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 10,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Senior",
-                            ElementName = "MySQL",
-                            StatusId = 0,
-                            TechnologyId = 4
+                            Name = "MySQL",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 11,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Senior",
-                            ElementName = "Spring",
-                            StatusId = 0,
-                            TechnologyId = 4
+                            Name = "Spring",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 12,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Senior",
-                            ElementName = "Hibernate",
-                            StatusId = 0,
-                            TechnologyId = 4
+                            Name = "Hibernate",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 13,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Senior",
-                            ElementName = "MySQL",
-                            StatusId = 0,
-                            TechnologyId = 5
+                            Name = "HTML & CSS",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 14,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Senior",
-                            ElementName = "Spring",
-                            StatusId = 0,
-                            TechnologyId = 5
+                            Name = "Node",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 15,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Senior",
-                            ElementName = "Hibernate",
-                            StatusId = 0,
-                            TechnologyId = 5
+                            Name = "NoSQL",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 16,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Junior",
-                            ElementName = "MySQL",
-                            StatusId = 0,
-                            TechnologyId = 6
+                            Name = "Symfony",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 17,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Junior",
-                            ElementName = "Spring",
-                            StatusId = 0,
-                            TechnologyId = 6
+                            Name = "PHPUnit",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 18,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Junior",
-                            ElementName = "Hibernate",
-                            StatusId = 0,
-                            TechnologyId = 6
+                            Name = "Django",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 19,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Mid",
-                            ElementName = "MySQL",
-                            StatusId = 0,
-                            TechnologyId = 7
+                            Name = "Flask",
+                            StatusId = 0
                         },
                         new
                         {
                             Id = 20,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Mid",
-                            ElementName = "Spring",
-                            StatusId = 0,
-                            TechnologyId = 7
+                            Name = "React",
+                            StatusId = 0
+                        });
+                });
+
+            modelBuilder.Entity("JustFindJob.Domain.Entities.TechnologyLevel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Inactivated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("InactivatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Level")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Modified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TechnologyLevels");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Level = "Nice to have",
+                            StatusId = 0
                         },
                         new
                         {
-                            Id = 21,
+                            Id = 2,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Mid",
-                            ElementName = "Hibernate",
-                            StatusId = 0,
-                            TechnologyId = 7
+                            Level = "Begginer",
+                            StatusId = 0
                         },
                         new
                         {
-                            Id = 22,
+                            Id = 3,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Junior",
-                            ElementName = "NoSQL",
-                            StatusId = 0,
-                            TechnologyId = 8
+                            Level = "Experienced",
+                            StatusId = 0
                         },
                         new
                         {
-                            Id = 23,
+                            Id = 4,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Junior",
-                            ElementName = "Node",
-                            StatusId = 0,
-                            TechnologyId = 8
-                        },
-                        new
-                        {
-                            Id = 24,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Junior",
-                            ElementName = "HTML & CSS",
-                            StatusId = 0,
-                            TechnologyId = 8
-                        },
-                        new
-                        {
-                            Id = 25,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Mid",
-                            ElementName = "NoSQL",
-                            StatusId = 0,
-                            TechnologyId = 9
-                        },
-                        new
-                        {
-                            Id = 26,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Mid",
-                            ElementName = "Node",
-                            StatusId = 0,
-                            TechnologyId = 9
-                        },
-                        new
-                        {
-                            Id = 27,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Mid",
-                            ElementName = "HTML & CSS",
-                            StatusId = 0,
-                            TechnologyId = 9
-                        },
-                        new
-                        {
-                            Id = 28,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Mid",
-                            ElementName = "NoSQL",
-                            StatusId = 0,
-                            TechnologyId = 10
-                        },
-                        new
-                        {
-                            Id = 29,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Mid",
-                            ElementName = "Node",
-                            StatusId = 0,
-                            TechnologyId = 10
-                        },
-                        new
-                        {
-                            Id = 30,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Mid",
-                            ElementName = "HTML & CSS",
-                            StatusId = 0,
-                            TechnologyId = 10
-                        },
-                        new
-                        {
-                            Id = 31,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Mid",
-                            ElementName = "MySQL",
-                            StatusId = 0,
-                            TechnologyId = 11
-                        },
-                        new
-                        {
-                            Id = 32,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Mid",
-                            ElementName = "Symfony",
-                            StatusId = 0,
-                            TechnologyId = 11
-                        },
-                        new
-                        {
-                            Id = 33,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Mid",
-                            ElementName = "PHPUnit",
-                            StatusId = 0,
-                            TechnologyId = 11
-                        },
-                        new
-                        {
-                            Id = 34,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Junior",
-                            ElementName = "SQL",
-                            StatusId = 0,
-                            TechnologyId = 12
-                        },
-                        new
-                        {
-                            Id = 35,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Junior",
-                            ElementName = "Django",
-                            StatusId = 0,
-                            TechnologyId = 12
-                        },
-                        new
-                        {
-                            Id = 36,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ElementLevel = "Junior",
-                            ElementName = "Flask",
-                            StatusId = 0,
-                            TechnologyId = 12
+                            Level = "Expert",
+                            StatusId = 0
                         });
                 });
 
@@ -918,26 +1010,31 @@ namespace JustFindJob.Persistance.Migrations
                     b.Navigation("Company");
                 });
 
-            modelBuilder.Entity("JustFindJob.Domain.Entities.Technology", b =>
+            modelBuilder.Entity("JustFindJob.Domain.Entities.TechStack", b =>
                 {
                     b.HasOne("JustFindJob.Domain.Entities.JobOffer", "JobOffer")
-                        .WithOne("Technology")
-                        .HasForeignKey("JustFindJob.Domain.Entities.Technology", "JobOfferId")
+                        .WithOne("TechStack")
+                        .HasForeignKey("JustFindJob.Domain.Entities.TechStack", "JobOfferId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("JustFindJob.Domain.Entities.TechnologyElement", "TechnologyElement")
+                        .WithMany()
+                        .HasForeignKey("TechnologyElementId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("JustFindJob.Domain.Entities.TechnologyLevel", "TechnologyLevel")
+                        .WithMany()
+                        .HasForeignKey("TechnologyLevelId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("JobOffer");
-                });
 
-            modelBuilder.Entity("JustFindJob.Domain.Entities.TechnologyElement", b =>
-                {
-                    b.HasOne("JustFindJob.Domain.Entities.Technology", "Technology")
-                        .WithMany("TechnologyElements")
-                        .HasForeignKey("TechnologyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("TechnologyElement");
 
-                    b.Navigation("Technology");
+                    b.Navigation("TechnologyLevel");
                 });
 
             modelBuilder.Entity("JustFindJob.Domain.Entities.Company", b =>
@@ -949,12 +1046,7 @@ namespace JustFindJob.Persistance.Migrations
 
             modelBuilder.Entity("JustFindJob.Domain.Entities.JobOffer", b =>
                 {
-                    b.Navigation("Technology");
-                });
-
-            modelBuilder.Entity("JustFindJob.Domain.Entities.Technology", b =>
-                {
-                    b.Navigation("TechnologyElements");
+                    b.Navigation("TechStack");
                 });
 #pragma warning restore 612, 618
         }

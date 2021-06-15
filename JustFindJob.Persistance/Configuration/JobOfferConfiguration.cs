@@ -17,9 +17,9 @@ namespace JustFindJob.Persistance.Configuration
             builder.HasOne(jo => jo.Company)
                 .WithMany(c => c.JobOffers)
                 .HasForeignKey(jo => jo.CompanyId);
-            builder.HasOne(jo => jo.Technology)
-                .WithOne(t => t.JobOffer)
-                .HasForeignKey<Technology>(t => t.JobOfferId);
+            builder.HasOne(jo => jo.TechStack)
+                .WithOne(ts => ts.JobOffer)
+                .HasForeignKey<TechStack>(t => t.JobOfferId);
         }
     }
 }

@@ -25,20 +25,20 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.List
         public async Task<List<JobOfferListVm>> Handle(GetJobOfferListQuery request, CancellationToken cancellationToken)
         {
             var elements = await (from job in _context.JobOffers
-                           join com in _context.Companies
-                             on job.CompanyId equals com.Id
-                           join tech in _context.Technologies
-                             on job.Id equals tech.JobOfferId
-                            select new 
-                            {
-                                job,
-                                com,
-                                tech
-                            }).ToListAsync(cancellationToken);
+                                  join com in _context.Companies
+                                    on job.CompanyId equals com.Id
+                                  join tech in _context.TechStacks
+                                    on job.Id equals tech.JobOfferId
+                                  select new
+                                  {
+                                      job,
+                                      com,
+                                      tech
+                                  }).ToListAsync(cancellationToken);
 
             List<JobOfferListVm> result = new List<JobOfferListVm>();
 
-            foreach (var ele in  elements)
+            foreach (var ele in elements)
             {
                 var companyDto = _mapper.Map<CompanyDtoForJobOfferList>(ele.com);
                 var jobOfferDto = _mapper.Map<JobOfferDtoForJobOfferList>(ele.job);
@@ -55,6 +55,5 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.List
 
             return result;
         }
-
     }
 }

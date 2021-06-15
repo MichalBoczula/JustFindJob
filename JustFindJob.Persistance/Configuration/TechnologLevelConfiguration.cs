@@ -9,14 +9,11 @@ using System.Threading.Tasks;
 
 namespace JustFindJob.Persistance.Configuration
 {
-    public class TechnologyConfiguration : IEntityTypeConfiguration<Technology>
+    public class TechnologyConfiguration : IEntityTypeConfiguration<TechnologyLevel>
     {
-        public void Configure(EntityTypeBuilder<Technology> builder)
+        public void Configure(EntityTypeBuilder<TechnologyLevel> builder)
         {
             builder.HasKey(t => t.Id);
-            builder.HasMany(t => t.TechnologyElements)
-                .WithOne(te => te.Technology)
-                .HasForeignKey(te => te.TechnologyId);
         }
     }
 }

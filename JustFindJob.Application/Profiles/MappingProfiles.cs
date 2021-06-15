@@ -15,13 +15,13 @@ namespace JustFindJob.Application.Profiles
         public MappingProfiles()
         {
 #region JobOffer Queries 
-            CreateMap<Technology, TechnologyDtoForJobOfferList>().ReverseMap();
+            CreateMap<TechStack, TechnologyDtoForJobOfferList>().ReverseMap();
             CreateMap<Company, CompanyDtoForJobOfferList>().ReverseMap();
             CreateMap<JobOffer, JobOfferDtoForJobOfferList>().ReverseMap();
 #endregion
             CreateMap<JobOffer, JobOfferListVm>().ReverseMap();
             CreateMap<JobOffer, JobOfferDetailsVm>().ReverseMap();
-            CreateMap<Technology, TechnologyForJobOfferDto>().ReverseMap();
+            CreateMap<TechStack, TechnologyForJobOfferDto>().ReverseMap();
             CreateMap<Company, CompanyForJobOfferDetailsDto>().ReverseMap();
         }
     }

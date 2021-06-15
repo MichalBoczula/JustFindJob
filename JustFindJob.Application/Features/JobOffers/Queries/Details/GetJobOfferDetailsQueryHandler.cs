@@ -27,7 +27,7 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.Details
             var query = await (
                          from job in _context.JobOffers
                          where job.Id == request.JobOfferId
-                         join tech in _context.Technologies
+                         join tech in _context.TechStacks
                             on job.Id equals tech.JobOfferId into jobAndCom
                          join company in _context.Companies
                             on job.CompanyId equals company.Id into jobAndComAndTech

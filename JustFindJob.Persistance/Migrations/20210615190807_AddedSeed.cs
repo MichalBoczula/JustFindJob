@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace JustFindJob.Persistance.Migrations
 {
-    public partial class AddedDataSeed : Migration
+    public partial class AddedSeed : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,6 +16,44 @@ namespace JustFindJob.Persistance.Migrations
                     { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "Bank of Banks", "more than 250 employees", 0, "Bank" },
                     { 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "AutoMotivo", "50 - 100 employees", 0, "Industry" },
                     { 4, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "Develop IT", "10 - 25 employees", 0, "Software House" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "TechnologyElements",
+                columns: new[] { "Id", "Created", "CreatedBy", "Image", "Inactivated", "InactivatedBy", "Modified", "ModifiedBy", "Name", "StatusId" },
+                values: new object[,]
+                {
+                    { 20, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "React", 0 },
+                    { 19, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "Flask", 0 },
+                    { 18, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "Django", 0 },
+                    { 17, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "PHPUnit", 0 },
+                    { 16, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "Symfony", 0 },
+                    { 15, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "NoSQL", 0 },
+                    { 14, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "Node", 0 },
+                    { 13, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "HTML & CSS", 0 },
+                    { 12, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "Hibernate", 0 },
+                    { 11, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "Spring", 0 },
+                    { 10, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "MySQL", 0 },
+                    { 9, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "ASP.NET", 0 },
+                    { 8, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "MSSQL", 0 },
+                    { 7, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "Angular", 0 },
+                    { 6, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "PHP", 0 },
+                    { 5, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "Python", 0 },
+                    { 4, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "JavaScript", 0 },
+                    { 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "Java", 0 },
+                    { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, ".Net", 0 },
+                    { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, null, null, null, "C#", 0 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "TechnologyLevels",
+                columns: new[] { "Id", "Created", "CreatedBy", "Inactivated", "InactivatedBy", "Level", "Modified", "ModifiedBy", "StatusId" },
+                values: new object[,]
+                {
+                    { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, "Nice to have", null, null, 0 },
+                    { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, "Begginer", null, null, 0 },
+                    { 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, "Experienced", null, null, 0 },
+                    { 4, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, "Expert", null, null, 0 }
                 });
 
             migrationBuilder.InsertData(
@@ -49,65 +87,22 @@ namespace JustFindJob.Persistance.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Technologies",
-                columns: new[] { "Id", "Created", "CreatedBy", "Inactivated", "InactivatedBy", "JobOfferId", "MainTechnologyImage", "MainTechnologyName", "Modified", "ModifiedBy", "StatusId" },
+                table: "TechStacks",
+                columns: new[] { "JobOfferId", "TechnologyElementId", "TechnologyLevelId" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, 1, null, ".Net", null, null, 0 },
-                    { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, 2, null, ".Net", null, null, 0 },
-                    { 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, 3, null, ".Net", null, null, 0 },
-                    { 8, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, 8, null, "JavaScript", null, null, 0 },
-                    { 4, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, 4, null, "Java", null, null, 0 },
-                    { 5, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, 5, null, "Java", null, null, 0 },
-                    { 6, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, 6, null, "Java", null, null, 0 },
-                    { 7, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, 7, null, "Java", null, null, 0 },
-                    { 11, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, 11, null, "PHP", null, null, 0 },
-                    { 12, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, 12, null, "Python", null, null, 0 },
-                    { 9, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, 9, null, "JavaScript", null, null, 0 },
-                    { 10, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, null, 10, null, "JavaScript", null, null, 0 }
-                });
-
-            migrationBuilder.InsertData(
-                table: "TechnologyElement",
-                columns: new[] { "Id", "Created", "CreatedBy", "ElementLevel", "ElementName", "Image", "Inactivated", "InactivatedBy", "Modified", "ModifiedBy", "StatusId", "TechnologyId" },
-                values: new object[,]
-                {
-                    { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Junior", "ASP.NET", null, null, null, null, null, 0, 1 },
-                    { 18, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Junior", "Hibernate", null, null, null, null, null, 0, 6 },
-                    { 19, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Mid", "MySQL", null, null, null, null, null, 0, 7 },
-                    { 20, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Mid", "Spring", null, null, null, null, null, 0, 7 },
-                    { 21, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Mid", "Hibernate", null, null, null, null, null, 0, 7 },
-                    { 31, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Mid", "MySQL", null, null, null, null, null, 0, 11 },
-                    { 32, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Mid", "Symfony", null, null, null, null, null, 0, 11 },
-                    { 17, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Junior", "Spring", null, null, null, null, null, 0, 6 },
-                    { 33, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Mid", "PHPUnit", null, null, null, null, null, 0, 11 },
-                    { 35, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Junior", "Django", null, null, null, null, null, 0, 12 },
-                    { 36, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Junior", "Flask", null, null, null, null, null, 0, 12 },
-                    { 25, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Mid", "NoSQL", null, null, null, null, null, 0, 9 },
-                    { 26, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Mid", "Node", null, null, null, null, null, 0, 9 },
-                    { 27, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Mid", "HTML & CSS", null, null, null, null, null, 0, 9 },
-                    { 28, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Mid", "NoSQL", null, null, null, null, null, 0, 10 },
-                    { 34, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Junior", "SQL", null, null, null, null, null, 0, 12 },
-                    { 16, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Junior", "MySQL", null, null, null, null, null, 0, 6 },
-                    { 15, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Senior", "Hibernate", null, null, null, null, null, 0, 5 },
-                    { 14, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Senior", "Spring", null, null, null, null, null, 0, 5 },
-                    { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Junior", "Angular", null, null, null, null, null, 0, 1 },
-                    { 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Junior", "MSSQL", null, null, null, null, null, 0, 1 },
-                    { 4, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Mid", "ASP.NET", null, null, null, null, null, 0, 2 },
-                    { 5, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Junior", "Angular", null, null, null, null, null, 0, 2 },
-                    { 6, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Mid", "MSSQL", null, null, null, null, null, 0, 2 },
-                    { 7, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Mid", "ASP.NET", null, null, null, null, null, 0, 3 },
-                    { 8, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Mid", "Angular", null, null, null, null, null, 0, 3 },
-                    { 9, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Mid", "MSSQL", null, null, null, null, null, 0, 3 },
-                    { 22, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Junior", "NoSQL", null, null, null, null, null, 0, 8 },
-                    { 23, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Junior", "Node", null, null, null, null, null, 0, 8 },
-                    { 24, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Junior", "HTML & CSS", null, null, null, null, null, 0, 8 },
-                    { 10, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Senior", "MySQL", null, null, null, null, null, 0, 4 },
-                    { 11, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Senior", "Spring", null, null, null, null, null, 0, 4 },
-                    { 12, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Senior", "Hibernate", null, null, null, null, null, 0, 4 },
-                    { 13, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Senior", "MySQL", null, null, null, null, null, 0, 5 },
-                    { 29, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Mid", "Node", null, null, null, null, null, 0, 10 },
-                    { 30, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Mid", "HTML & CSS", null, null, null, null, null, 0, 10 }
+                    { 1, 9, 2 },
+                    { 2, 9, 3 },
+                    { 3, 9, 3 },
+                    { 8, 15, 1 },
+                    { 4, 10, 4 },
+                    { 5, 10, 4 },
+                    { 6, 10, 1 },
+                    { 7, 4, 3 },
+                    { 11, 5, 3 },
+                    { 12, 17, 2 },
+                    { 9, 15, 3 },
+                    { 10, 15, 3 }
                 });
         }
 
@@ -134,304 +129,464 @@ namespace JustFindJob.Persistance.Migrations
                 keyValue: 4);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 1, 1 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 1, 2 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 1, 4 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 1, 8 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 1, 9 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 2, 1 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 2, 2 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 2, 7 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 2, 8 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 2, 9 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 3, 1 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 3, 2 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 3, 4 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 3, 8 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 3, 9 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 4, 3 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 4, 10 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 4, 11 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 4, 12 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 5, 3 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 5, 10 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 5, 11 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 5, 12 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 6, 3 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 6, 4 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 6, 10 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 6, 11 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 6, 12 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 6, 13 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 7, 4 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 7, 7 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 7, 13 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 7, 20 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 8, 4 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 8, 13 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 8, 14 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 8, 15 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 8, 20 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 9, 4 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 9, 13 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 9, 14 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 9, 15 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 9, 20 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 10, 4 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 10, 7 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 10, 13 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 10, 14 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 10, 15 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 11, 5 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 11, 10 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 11, 18 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 11, 19 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 12, 6 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 12, 10 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 12, 16 });
+
+            migrationBuilder.DeleteData(
+                table: "TechStacks",
+                keyColumns: new[] { "JobOfferId", "TechnologyElementId" },
+                keyValues: new object[] { 12, 17 });
+
+            migrationBuilder.DeleteData(
+                table: "JobOffers",
                 keyColumn: "Id",
                 keyValue: 1);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "JobOffers",
                 keyColumn: "Id",
                 keyValue: 2);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "JobOffers",
                 keyColumn: "Id",
                 keyValue: 3);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "JobOffers",
                 keyColumn: "Id",
                 keyValue: 4);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "JobOffers",
                 keyColumn: "Id",
                 keyValue: 5);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "JobOffers",
                 keyColumn: "Id",
                 keyValue: 6);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "JobOffers",
                 keyColumn: "Id",
                 keyValue: 7);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "JobOffers",
                 keyColumn: "Id",
                 keyValue: 8);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "JobOffers",
                 keyColumn: "Id",
                 keyValue: 9);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "JobOffers",
                 keyColumn: "Id",
                 keyValue: 10);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "JobOffers",
                 keyColumn: "Id",
                 keyValue: 11);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "JobOffers",
                 keyColumn: "Id",
                 keyValue: 12);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "TechnologyElements",
+                keyColumn: "Id",
+                keyValue: 1);
+
+            migrationBuilder.DeleteData(
+                table: "TechnologyElements",
+                keyColumn: "Id",
+                keyValue: 2);
+
+            migrationBuilder.DeleteData(
+                table: "TechnologyElements",
+                keyColumn: "Id",
+                keyValue: 3);
+
+            migrationBuilder.DeleteData(
+                table: "TechnologyElements",
+                keyColumn: "Id",
+                keyValue: 4);
+
+            migrationBuilder.DeleteData(
+                table: "TechnologyElements",
+                keyColumn: "Id",
+                keyValue: 5);
+
+            migrationBuilder.DeleteData(
+                table: "TechnologyElements",
+                keyColumn: "Id",
+                keyValue: 6);
+
+            migrationBuilder.DeleteData(
+                table: "TechnologyElements",
+                keyColumn: "Id",
+                keyValue: 7);
+
+            migrationBuilder.DeleteData(
+                table: "TechnologyElements",
+                keyColumn: "Id",
+                keyValue: 8);
+
+            migrationBuilder.DeleteData(
+                table: "TechnologyElements",
+                keyColumn: "Id",
+                keyValue: 9);
+
+            migrationBuilder.DeleteData(
+                table: "TechnologyElements",
+                keyColumn: "Id",
+                keyValue: 10);
+
+            migrationBuilder.DeleteData(
+                table: "TechnologyElements",
+                keyColumn: "Id",
+                keyValue: 11);
+
+            migrationBuilder.DeleteData(
+                table: "TechnologyElements",
+                keyColumn: "Id",
+                keyValue: 12);
+
+            migrationBuilder.DeleteData(
+                table: "TechnologyElements",
                 keyColumn: "Id",
                 keyValue: 13);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "TechnologyElements",
                 keyColumn: "Id",
                 keyValue: 14);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "TechnologyElements",
                 keyColumn: "Id",
                 keyValue: 15);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "TechnologyElements",
                 keyColumn: "Id",
                 keyValue: 16);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "TechnologyElements",
                 keyColumn: "Id",
                 keyValue: 17);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "TechnologyElements",
                 keyColumn: "Id",
                 keyValue: 18);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "TechnologyElements",
                 keyColumn: "Id",
                 keyValue: 19);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
+                table: "TechnologyElements",
                 keyColumn: "Id",
                 keyValue: 20);
 
             migrationBuilder.DeleteData(
-                table: "TechnologyElement",
-                keyColumn: "Id",
-                keyValue: 21);
-
-            migrationBuilder.DeleteData(
-                table: "TechnologyElement",
-                keyColumn: "Id",
-                keyValue: 22);
-
-            migrationBuilder.DeleteData(
-                table: "TechnologyElement",
-                keyColumn: "Id",
-                keyValue: 23);
-
-            migrationBuilder.DeleteData(
-                table: "TechnologyElement",
-                keyColumn: "Id",
-                keyValue: 24);
-
-            migrationBuilder.DeleteData(
-                table: "TechnologyElement",
-                keyColumn: "Id",
-                keyValue: 25);
-
-            migrationBuilder.DeleteData(
-                table: "TechnologyElement",
-                keyColumn: "Id",
-                keyValue: 26);
-
-            migrationBuilder.DeleteData(
-                table: "TechnologyElement",
-                keyColumn: "Id",
-                keyValue: 27);
-
-            migrationBuilder.DeleteData(
-                table: "TechnologyElement",
-                keyColumn: "Id",
-                keyValue: 28);
-
-            migrationBuilder.DeleteData(
-                table: "TechnologyElement",
-                keyColumn: "Id",
-                keyValue: 29);
-
-            migrationBuilder.DeleteData(
-                table: "TechnologyElement",
-                keyColumn: "Id",
-                keyValue: 30);
-
-            migrationBuilder.DeleteData(
-                table: "TechnologyElement",
-                keyColumn: "Id",
-                keyValue: 31);
-
-            migrationBuilder.DeleteData(
-                table: "TechnologyElement",
-                keyColumn: "Id",
-                keyValue: 32);
-
-            migrationBuilder.DeleteData(
-                table: "TechnologyElement",
-                keyColumn: "Id",
-                keyValue: 33);
-
-            migrationBuilder.DeleteData(
-                table: "TechnologyElement",
-                keyColumn: "Id",
-                keyValue: 34);
-
-            migrationBuilder.DeleteData(
-                table: "TechnologyElement",
-                keyColumn: "Id",
-                keyValue: 35);
-
-            migrationBuilder.DeleteData(
-                table: "TechnologyElement",
-                keyColumn: "Id",
-                keyValue: 36);
-
-            migrationBuilder.DeleteData(
-                table: "Technologies",
+                table: "TechnologyLevels",
                 keyColumn: "Id",
                 keyValue: 1);
 
             migrationBuilder.DeleteData(
-                table: "Technologies",
+                table: "TechnologyLevels",
                 keyColumn: "Id",
                 keyValue: 2);
 
             migrationBuilder.DeleteData(
-                table: "Technologies",
+                table: "TechnologyLevels",
                 keyColumn: "Id",
                 keyValue: 3);
 
             migrationBuilder.DeleteData(
-                table: "Technologies",
+                table: "TechnologyLevels",
                 keyColumn: "Id",
                 keyValue: 4);
-
-            migrationBuilder.DeleteData(
-                table: "Technologies",
-                keyColumn: "Id",
-                keyValue: 5);
-
-            migrationBuilder.DeleteData(
-                table: "Technologies",
-                keyColumn: "Id",
-                keyValue: 6);
-
-            migrationBuilder.DeleteData(
-                table: "Technologies",
-                keyColumn: "Id",
-                keyValue: 7);
-
-            migrationBuilder.DeleteData(
-                table: "Technologies",
-                keyColumn: "Id",
-                keyValue: 8);
-
-            migrationBuilder.DeleteData(
-                table: "Technologies",
-                keyColumn: "Id",
-                keyValue: 9);
-
-            migrationBuilder.DeleteData(
-                table: "Technologies",
-                keyColumn: "Id",
-                keyValue: 10);
-
-            migrationBuilder.DeleteData(
-                table: "Technologies",
-                keyColumn: "Id",
-                keyValue: 11);
-
-            migrationBuilder.DeleteData(
-                table: "Technologies",
-                keyColumn: "Id",
-                keyValue: 12);
-
-            migrationBuilder.DeleteData(
-                table: "JobOffers",
-                keyColumn: "Id",
-                keyValue: 1);
-
-            migrationBuilder.DeleteData(
-                table: "JobOffers",
-                keyColumn: "Id",
-                keyValue: 2);
-
-            migrationBuilder.DeleteData(
-                table: "JobOffers",
-                keyColumn: "Id",
-                keyValue: 3);
-
-            migrationBuilder.DeleteData(
-                table: "JobOffers",
-                keyColumn: "Id",
-                keyValue: 4);
-
-            migrationBuilder.DeleteData(
-                table: "JobOffers",
-                keyColumn: "Id",
-                keyValue: 5);
-
-            migrationBuilder.DeleteData(
-                table: "JobOffers",
-                keyColumn: "Id",
-                keyValue: 6);
-
-            migrationBuilder.DeleteData(
-                table: "JobOffers",
-                keyColumn: "Id",
-                keyValue: 7);
-
-            migrationBuilder.DeleteData(
-                table: "JobOffers",
-                keyColumn: "Id",
-                keyValue: 8);
-
-            migrationBuilder.DeleteData(
-                table: "JobOffers",
-                keyColumn: "Id",
-                keyValue: 9);
-
-            migrationBuilder.DeleteData(
-                table: "JobOffers",
-                keyColumn: "Id",
-                keyValue: 10);
-
-            migrationBuilder.DeleteData(
-                table: "JobOffers",
-                keyColumn: "Id",
-                keyValue: 11);
-
-            migrationBuilder.DeleteData(
-                table: "JobOffers",
-                keyColumn: "Id",
-                keyValue: 12);
 
             migrationBuilder.DeleteData(
                 table: "Companies",
