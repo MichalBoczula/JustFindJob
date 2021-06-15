@@ -11,6 +11,9 @@ namespace JustFindJob.Domain.Entities
         public string? CompanyInformation1 { get; set; }
         public string? CompanyInformation2 { get; set; }
         public string? CompanyInformation3 { get; set; }
+        public string? CompanyImage1 { get; set; }
+        public string? CompanyImage2 { get; set; }
+        public string? CompanyImage3 { get; set; }
 #nullable disable
     }
 }
