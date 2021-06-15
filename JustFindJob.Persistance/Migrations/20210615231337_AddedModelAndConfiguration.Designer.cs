@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JustFindJob.Persistance.Migrations
 {
     [DbContext(typeof(JustFindJobDbContext))]
-    [Migration("20210615190516_AddedModelWithConfiguration")]
-    partial class AddedModelWithConfiguration
+    [Migration("20210615231337_AddedModelAndConfiguration")]
+    partial class AddedModelAndConfiguration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -163,6 +163,9 @@ namespace JustFindJob.Persistance.Migrations
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ProgrammingLanguageId")
+                        .HasColumnType("int");
+
                     b.Property<string>("ShortDescription")
                         .HasColumnType("nvarchar(max)");
 
@@ -173,7 +176,48 @@ namespace JustFindJob.Persistance.Migrations
 
                     b.HasIndex("CompanyId");
 
+                    b.HasIndex("ProgrammingLanguageId");
+
                     b.ToTable("JobOffers");
+                });
+
+            modelBuilder.Entity("JustFindJob.Domain.Entities.ProgrammingLanguage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Inactivated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("InactivatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Modified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProgrammingLanguages");
                 });
 
             modelBuilder.Entity("JustFindJob.Domain.Entities.TechStack", b =>
@@ -293,7 +337,15 @@ namespace JustFindJob.Persistance.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("JustFindJob.Domain.Entities.ProgrammingLanguage", "ProgrammingLanguage")
+                        .WithMany("JobOffers")
+                        .HasForeignKey("ProgrammingLanguageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Company");
+
+                    b.Navigation("ProgrammingLanguage");
                 });
 
             modelBuilder.Entity("JustFindJob.Domain.Entities.TechStack", b =>
@@ -333,6 +385,11 @@ namespace JustFindJob.Persistance.Migrations
             modelBuilder.Entity("JustFindJob.Domain.Entities.JobOffer", b =>
                 {
                     b.Navigation("TechStack");
+                });
+
+            modelBuilder.Entity("JustFindJob.Domain.Entities.ProgrammingLanguage", b =>
+                {
+                    b.Navigation("JobOffers");
                 });
 #pragma warning restore 612, 618
         }

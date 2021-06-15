@@ -11,5 +11,7 @@ namespace JustFindJob.Domain.Entities
     {
         public string Name { get; set; }
         public string Image { get; set; }
+        public ICollection<JobOffer> JobOffers { get; set; }
+        public ICollection<TechnologyElement> TechnologyElements { get; set; }
     }
 }

@@ -11,5 +11,9 @@ namespace JustFindJob.Domain.Entities
     {
         public string Name { get; set; }
         public string Image { get; set; }
+#nullable enable
+        public int? ProgrammingLanguageId { get; set; }
+        public ProgrammingLanguage? ProgrammingLanguage { get; set; }
+#nullable disable
     }
 }

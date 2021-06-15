@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace JustFindJob.Persistance.Migrations
 {
-    public partial class AddedModelWithConfiguration : Migration
+    public partial class AddedModelAndConfiguration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -28,6 +28,27 @@ namespace JustFindJob.Persistance.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Companies", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProgrammingLanguages",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Image = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Created = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Modified = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    StatusId = table.Column<int>(type: "int", nullable: false),
+                    InactivatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Inactivated = table.Column<DateTime>(type: "datetime2", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProgrammingLanguages", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -111,6 +132,7 @@ namespace JustFindJob.Persistance.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CompanyId = table.Column<int>(type: "int", nullable: false),
+                    ProgrammingLanguageId = table.Column<int>(type: "int", nullable: false),
                     Localization = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ExperienceLevel = table.Column<int>(type: "int", nullable: false),
                     ShortDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -130,6 +152,12 @@ namespace JustFindJob.Persistance.Migrations
                         name: "FK_JobOffers_Companies_CompanyId",
                         column: x => x.CompanyId,
                         principalTable: "Companies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_JobOffers_ProgrammingLanguages_ProgrammingLanguageId",
+                        column: x => x.ProgrammingLanguageId,
+                        principalTable: "ProgrammingLanguages",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -177,6 +205,11 @@ namespace JustFindJob.Persistance.Migrations
                 column: "CompanyId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_JobOffers_ProgrammingLanguageId",
+                table: "JobOffers",
+                column: "ProgrammingLanguageId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_TechStacks_JobOfferId",
                 table: "TechStacks",
                 column: "JobOfferId",
@@ -212,6 +245,9 @@ namespace JustFindJob.Persistance.Migrations
 
             migrationBuilder.DropTable(
                 name: "Companies");
+
+            migrationBuilder.DropTable(
+                name: "ProgrammingLanguages");
         }
     }
 }

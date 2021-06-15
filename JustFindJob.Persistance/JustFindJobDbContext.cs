@@ -26,7 +26,7 @@ namespace JustFindJob.Persistance
         public DbSet<TechStack> TechStacks { get; set; }
         public DbSet<TechnologyLevel> TechnologyLevels { get; set; }
         public DbSet<TechnologyElement> TechnologyElements { get; set; }
-
+        public DbSet<ProgrammingLanguage> ProgrammingLanguages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -62,6 +62,5 @@ namespace JustFindJob.Persistance
             return base.SaveChangesAsync(cancellationToken);
         }
 
-       
     }
 }

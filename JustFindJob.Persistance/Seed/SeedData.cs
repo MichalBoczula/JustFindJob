@@ -425,12 +425,14 @@ namespace JustFindJob.Persistance.Seed
                 new TechnologyElement()
                 {
                     Id = 1,
-                    Name = ".Net"
+                    Name = ".Net",
+                    ProgrammingLanguageId = 1
                 },
                 new TechnologyElement()
                 {
                     Id = 2,
                     Name = "Angular",
+                    ProgrammingLanguageId = 3
                 },
                 new TechnologyElement()
                 {
@@ -441,6 +443,7 @@ namespace JustFindJob.Persistance.Seed
                 {
                     Id = 4,
                     Name = "ASP.NET",
+                    ProgrammingLanguageId = 1
                 },
                 new TechnologyElement()
                 {
@@ -451,11 +454,13 @@ namespace JustFindJob.Persistance.Seed
                 {
                     Id = 6,
                     Name = "Spring",
+                    ProgrammingLanguageId = 2
                 },
                 new TechnologyElement()
                 {
                     Id = 7,
                     Name = "Hibernate",
+                    ProgrammingLanguageId = 2
                 },
                 new TechnologyElement()
                 {
@@ -466,6 +471,7 @@ namespace JustFindJob.Persistance.Seed
                 {
                     Id = 9,
                     Name = "Node",
+                    ProgrammingLanguageId = 3
                 },
                 new TechnologyElement()
                 {
@@ -476,26 +482,31 @@ namespace JustFindJob.Persistance.Seed
                 {
                     Id = 11,
                     Name = "Symfony",
+                    ProgrammingLanguageId = 4
                 },
                 new TechnologyElement()
                 {
                     Id = 12,
                     Name = "PHPUnit",
+                    ProgrammingLanguageId = 4
                 },
                 new TechnologyElement()
                 {
                     Id = 13,
                     Name = "Django",
+                    ProgrammingLanguageId = 5
                 },
                 new TechnologyElement()
                 {
                     Id = 14,
                     Name = "Flask",
+                    ProgrammingLanguageId = 5
                 },
                 new TechnologyElement()
                 {
                     Id = 15,
                     Name = "React",
+                    ProgrammingLanguageId = 3 
                 }
            );
 
@@ -551,355 +562,318 @@ namespace JustFindJob.Persistance.Seed
             );
 
             modelBuilder.Entity<TechStack>().HasData(
-                   new TechStack()
-                   {
-                       JobOfferId = 1,
-                       TechnologyElementId = 1,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 1,
-                       TechnologyElementId = 1,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 1,
-                       TechnologyElementId = 4,
-                       TechnologyLevelId = 1
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 1,
-                       TechnologyElementId = 3,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 1,
-                       TechnologyElementId = 4,
-                       TechnologyLevelId = 2
-                   },
+                new TechStack()
+                {
+                    JobOfferId = 1,
+                    TechnologyElementId = 1,
+                    TechnologyLevelId = 2
+                },
+                new TechStack()
+                {
+                    JobOfferId = 1,
+                    TechnologyElementId = 3,
+                    TechnologyLevelId = 2
+                },
+                new TechStack()
+                {
+                    JobOfferId = 1,
+                    TechnologyElementId = 4,
+                    TechnologyLevelId = 2
+                },
 
-                   new TechStack()
-                   {
-                       JobOfferId = 2,
-                       TechnologyElementId = 1,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 2,
-                       TechnologyElementId = 1,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 2,
-                       TechnologyElementId = 2,
-                       TechnologyLevelId = 1
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 2,
-                       TechnologyElementId = 3,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 2,
-                       TechnologyElementId = 4,
-                       TechnologyLevelId = 3
-                   },
+                new TechStack()
+                {
+                    JobOfferId = 2,
+                    TechnologyElementId = 1,
+                    TechnologyLevelId = 3
+                },
+                new TechStack()
+                {
+                    JobOfferId = 2,
+                    TechnologyElementId = 2,
+                    TechnologyLevelId = 1
+                },
+                new TechStack()
+                {
+                    JobOfferId = 2,
+                    TechnologyElementId = 3,
+                    TechnologyLevelId = 3
+                },
+                new TechStack()
+                {
+                    JobOfferId = 2,
+                    TechnologyElementId = 4,
+                    TechnologyLevelId = 3
+                },
 
-                   new TechStack()
-                   {
-                       JobOfferId = 3,
-                       TechnologyElementId = 1,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 3,
-                       TechnologyElementId = 1,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 3,
-                       TechnologyElementId = 4,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 3,
-                       TechnologyElementId = 3,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 3,
-                       TechnologyElementId = 4,
-                       TechnologyLevelId = 3
-                   },
+                new TechStack()
+                {
+                    JobOfferId = 3,
+                    TechnologyElementId = 1,
+                    TechnologyLevelId = 3
+                },
+                new TechStack()
+                {
+                    JobOfferId = 3,
+                    TechnologyElementId = 4,
+                    TechnologyLevelId = 3
+                },
+                new TechStack()
+                {
+                    JobOfferId = 3,
+                    TechnologyElementId = 3,
+                    TechnologyLevelId = 3
+                },
 
-                   new TechStack()
-                   {
-                       JobOfferId = 4,
-                       TechnologyElementId = 3,
-                       TechnologyLevelId = 4
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 4,
-                       TechnologyElementId = 6,
-                       TechnologyLevelId = 4
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 4,
-                       TechnologyElementId = 7,
-                       TechnologyLevelId = 4
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 4,
-                       TechnologyElementId = 5,
-                       TechnologyLevelId = 4
-                   },
+                new TechStack()
+                {
+                    JobOfferId = 4,
+                    TechnologyElementId = 3,
+                    TechnologyLevelId = 4
+                },
+                new TechStack()
+                {
+                    JobOfferId = 4,
+                    TechnologyElementId = 6,
+                    TechnologyLevelId = 4
+                },
+                new TechStack()
+                {
+                    JobOfferId = 4,
+                    TechnologyElementId = 7,
+                    TechnologyLevelId = 4
+                },
+                new TechStack()
+                {
+                    JobOfferId = 4,
+                    TechnologyElementId = 5,
+                    TechnologyLevelId = 4
+                },
 
-                   new TechStack()
-                   {
-                       JobOfferId = 5,
-                       TechnologyElementId = 3,
-                       TechnologyLevelId = 4
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 5,
-                       TechnologyElementId = 6,
-                       TechnologyLevelId = 4
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 5,
-                       TechnologyElementId = 7,
-                       TechnologyLevelId = 4
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 5,
-                       TechnologyElementId = 5,
-                       TechnologyLevelId = 4
-                   },
+                new TechStack()
+                {
+                    JobOfferId = 5,
+                    TechnologyElementId = 3,
+                    TechnologyLevelId = 4
+                },
+                new TechStack()
+                {
+                    JobOfferId = 5,
+                    TechnologyElementId = 6,
+                    TechnologyLevelId = 4
+                },
+                new TechStack()
+                {
+                    JobOfferId = 5,
+                    TechnologyElementId = 7,
+                    TechnologyLevelId = 4
+                },
+                new TechStack()
+                {
+                    JobOfferId = 5,
+                    TechnologyElementId = 5,
+                    TechnologyLevelId = 4
+                },
 
-                   new TechStack()
-                   {
-                       JobOfferId = 6,
-                       TechnologyElementId = 3,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 6,
-                       TechnologyElementId = 4,
-                       TechnologyLevelId = 1
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 6,
-                       TechnologyElementId = 8,
-                       TechnologyLevelId = 1
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 6,
-                       TechnologyElementId = 6,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 6,
-                       TechnologyElementId = 7,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 6,
-                       TechnologyElementId = 5,
-                       TechnologyLevelId = 1
-                   },
+                new TechStack()
+                {
+                    JobOfferId = 6,
+                    TechnologyElementId = 3,
+                    TechnologyLevelId = 2
+                },
+                new TechStack()
+                {
+                    JobOfferId = 6,
+                    TechnologyElementId = 4,
+                    TechnologyLevelId = 1
+                },
+                new TechStack()
+                {
+                    JobOfferId = 6,
+                    TechnologyElementId = 8,
+                    TechnologyLevelId = 1
+                },
+                new TechStack()
+                {
+                    JobOfferId = 6,
+                    TechnologyElementId = 6,
+                    TechnologyLevelId = 2
+                },
+                new TechStack()
+                {
+                    JobOfferId = 6,
+                    TechnologyElementId = 7,
+                    TechnologyLevelId = 2
+                },
+                new TechStack()
+                {
+                    JobOfferId = 6,
+                    TechnologyElementId = 5,
+                    TechnologyLevelId = 1
+                },
 
-                   new TechStack()
-                   {
-                       JobOfferId = 7,
-                       TechnologyElementId = 15,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 7,
-                       TechnologyElementId = 2,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 7,
-                       TechnologyElementId = 8,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 7,
-                       TechnologyElementId = 4,
-                       TechnologyLevelId = 3
-                   },
+                new TechStack()
+                {
+                    JobOfferId = 7,
+                    TechnologyElementId = 15,
+                    TechnologyLevelId = 3
+                },
+                new TechStack()
+                {
+                    JobOfferId = 7,
+                    TechnologyElementId = 2,
+                    TechnologyLevelId = 2
+                },
+                new TechStack()
+                {
+                    JobOfferId = 7,
+                    TechnologyElementId = 8,
+                    TechnologyLevelId = 3
+                },
+                new TechStack()
+                {
+                    JobOfferId = 7,
+                    TechnologyElementId = 4,
+                    TechnologyLevelId = 3
+                },
 
-                   new TechStack()
-                   {
-                       JobOfferId = 8,
-                       TechnologyElementId = 15,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 8,
-                       TechnologyElementId = 4,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 8,
-                       TechnologyElementId = 8,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 8,
-                       TechnologyElementId = 9,
-                       TechnologyLevelId = 1
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 8,
-                       TechnologyElementId = 10,
-                       TechnologyLevelId = 1
-                   },
+                new TechStack()
+                {
+                    JobOfferId = 8,
+                    TechnologyElementId = 15,
+                    TechnologyLevelId = 2
+                },
+                new TechStack()
+                {
+                    JobOfferId = 8,
+                    TechnologyElementId = 4,
+                    TechnologyLevelId = 2
+                },
+                new TechStack()
+                {
+                    JobOfferId = 8,
+                    TechnologyElementId = 8,
+                    TechnologyLevelId = 2
+                },
+                new TechStack()
+                {
+                    JobOfferId = 8,
+                    TechnologyElementId = 9,
+                    TechnologyLevelId = 1
+                },
+                new TechStack()
+                {
+                    JobOfferId = 8,
+                    TechnologyElementId = 10,
+                    TechnologyLevelId = 1
+                },
 
-                   new TechStack()
-                   {
-                       JobOfferId = 9,
-                       TechnologyElementId = 15,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 9,
-                       TechnologyElementId = 4,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 9,
-                       TechnologyElementId = 8,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 9,
-                       TechnologyElementId = 9,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 9,
-                       TechnologyElementId = 10,
-                       TechnologyLevelId = 3
-                   },
+                new TechStack()
+                {
+                    JobOfferId = 9,
+                    TechnologyElementId = 15,
+                    TechnologyLevelId = 3
+                },
+                new TechStack()
+                {
+                    JobOfferId = 9,
+                    TechnologyElementId = 4,
+                    TechnologyLevelId = 3
+                },
+                new TechStack()
+                {
+                    JobOfferId = 9,
+                    TechnologyElementId = 8,
+                    TechnologyLevelId = 3
+                },
+                new TechStack()
+                {
+                    JobOfferId = 9,
+                    TechnologyElementId = 9,
+                    TechnologyLevelId = 3
+                },
+                new TechStack()
+                {
+                    JobOfferId = 9,
+                    TechnologyElementId = 10,
+                    TechnologyLevelId = 3
+                },
 
-                   new TechStack()
-                   {
-                       JobOfferId = 10,
-                       TechnologyElementId = 2,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 10,
-                       TechnologyElementId = 4,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 10,
-                       TechnologyElementId = 8,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 10,
-                       TechnologyElementId = 9,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 10,
-                       TechnologyElementId = 10,
-                       TechnologyLevelId = 3
-                   },
+                new TechStack()
+                {
+                    JobOfferId = 10,
+                    TechnologyElementId = 2,
+                    TechnologyLevelId = 3
+                },
+                new TechStack()
+                {
+                    JobOfferId = 10,
+                    TechnologyElementId = 4,
+                    TechnologyLevelId = 3
+                },
+                new TechStack()
+                {
+                    JobOfferId = 10,
+                    TechnologyElementId = 8,
+                    TechnologyLevelId = 3
+                },
+                new TechStack()
+                {
+                    JobOfferId = 10,
+                    TechnologyElementId = 9,
+                    TechnologyLevelId = 3
+                },
+                new TechStack()
+                {
+                    JobOfferId = 10,
+                    TechnologyElementId = 10,
+                    TechnologyLevelId = 3
+                },
 
-                   new TechStack()
-                   {
-                       JobOfferId = 11,
-                       TechnologyElementId = 13,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 11,
-                       TechnologyElementId = 14,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 11,
-                       TechnologyElementId = 5,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 11,
-                       TechnologyElementId = 5,
-                       TechnologyLevelId = 3
-                   },
+                new TechStack()
+                {
+                    JobOfferId = 11,
+                    TechnologyElementId = 13,
+                    TechnologyLevelId = 3
+                },
+                new TechStack()
+                {
+                    JobOfferId = 11,
+                    TechnologyElementId = 14,
+                    TechnologyLevelId = 3
+                },
+                new TechStack()
+                {
+                    JobOfferId = 11,
+                    TechnologyElementId = 5,
+                    TechnologyLevelId = 3
+                },
 
-                   new TechStack()
-                   {
-                       JobOfferId = 12,
-                       TechnologyElementId = 6,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 12,
-                       TechnologyElementId = 5,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 12,
-                       TechnologyElementId = 11,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 12,
-                       TechnologyElementId = 12,
-                       TechnologyLevelId = 2
-                   }
+                new TechStack()
+                {
+                    JobOfferId = 12,
+                    TechnologyElementId = 6,
+                    TechnologyLevelId = 2
+                },
+                new TechStack()
+                {
+                    JobOfferId = 12,
+                    TechnologyElementId = 5,
+                    TechnologyLevelId = 2
+                },
+                new TechStack()
+                {
+                    JobOfferId = 12,
+                    TechnologyElementId = 11,
+                    TechnologyLevelId = 2
+                },
+                new TechStack()
+                {
+                    JobOfferId = 12,
+                    TechnologyElementId = 12,
+                    TechnologyLevelId = 2
+                }
            );
-
         }
     }
 }

@@ -233,6 +233,9 @@ namespace JustFindJob.Persistance.Migrations
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ProgrammingLanguageId")
+                        .HasColumnType("int");
+
                     b.Property<string>("ShortDescription")
                         .HasColumnType("nvarchar(max)");
 
@@ -242,6 +245,8 @@ namespace JustFindJob.Persistance.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CompanyId");
+
+                    b.HasIndex("ProgrammingLanguageId");
 
                     b.ToTable("JobOffers");
 
@@ -254,6 +259,7 @@ namespace JustFindJob.Persistance.Migrations
                             ExperienceLevel = 0,
                             Localization = "Wroclaw",
                             LongDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis. Nam ultrices justo purus, blandit dignissim libero elementum at. Pellentesque sed leo ac lacus faucibus sagittis sed ut tellus. Mauris eget dapibus quam. Ut est ex, egestas sit amet fermentum sit amet, lobortis nec risus. Duis vitae sodales urna. Pellentesque blandit ex in nisl laoreet, eget rutrum leo vulputate. Fusce viverra porttitor mauris, nec viverra justo dignissim varius. Nam quis commodo enim, id imperdiet lorem. In porta, augue eget laoreet tincidunt, arcu turpis laoreet enim, dapibus consequat ante nibh at sapien. Vivamus ligula velit, tincidunt et consectetur ac, tincidunt in risus. Vestibulum mattis lacinia tellus ac feugiat. Morbi eget urna volutpat ex lacinia commodo at quis nunc. Duis sapien urna, iaculis nec hendrerit at, venenatis eu massa. Proin aliquet imperdiet magna, sed ullamcorper tellus consectetur sit amet. Integer venenatis orci ac lorem commodo semper. Sed vitae risus ligula. Phasellus pulvinar laoreet lectus, sed sodales nibh feugiat non. Nunc placerat non massa et suscipit. Duis vel augue a velit vestibulum sagittis. Sed lectus urna, volutpat id nulla vel, ultrices condimentum metus. Cras cursus, enim et aliquam fermentum, neque neque mollis ante, eu lacinia sapien turpis ac mauris. Ut malesuada enim quam, non egestas dolor auctor ut. Vestibulum iaculis nec tortor faucibus fermentum.",
+                            ProgrammingLanguageId = 1,
                             ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis.",
                             StatusId = 0
                         },
@@ -265,6 +271,7 @@ namespace JustFindJob.Persistance.Migrations
                             ExperienceLevel = 1,
                             Localization = "Wroclaw",
                             LongDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis. Nam ultrices justo purus, blandit dignissim libero elementum at. Pellentesque sed leo ac lacus faucibus sagittis sed ut tellus. Mauris eget dapibus quam. Ut est ex, egestas sit amet fermentum sit amet, lobortis nec risus. Duis vitae sodales urna. Pellentesque blandit ex in nisl laoreet, eget rutrum leo vulputate. Fusce viverra porttitor mauris, nec viverra justo dignissim varius. Nam quis commodo enim, id imperdiet lorem. In porta, augue eget laoreet tincidunt, arcu turpis laoreet enim, dapibus consequat ante nibh at sapien. Vivamus ligula velit, tincidunt et consectetur ac, tincidunt in risus. Vestibulum mattis lacinia tellus ac feugiat. Morbi eget urna volutpat ex lacinia commodo at quis nunc. Duis sapien urna, iaculis nec hendrerit at, venenatis eu massa. Proin aliquet imperdiet magna, sed ullamcorper tellus consectetur sit amet. Integer venenatis orci ac lorem commodo semper. Sed vitae risus ligula. Phasellus pulvinar laoreet lectus, sed sodales nibh feugiat non. Nunc placerat non massa et suscipit. Duis vel augue a velit vestibulum sagittis. Sed lectus urna, volutpat id nulla vel, ultrices condimentum metus. Cras cursus, enim et aliquam fermentum, neque neque mollis ante, eu lacinia sapien turpis ac mauris. Ut malesuada enim quam, non egestas dolor auctor ut. Vestibulum iaculis nec tortor faucibus fermentum.",
+                            ProgrammingLanguageId = 1,
                             ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis.",
                             StatusId = 0
                         },
@@ -276,6 +283,7 @@ namespace JustFindJob.Persistance.Migrations
                             ExperienceLevel = 1,
                             Localization = "Poznan",
                             LongDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis. Nam ultrices justo purus, blandit dignissim libero elementum at. Pellentesque sed leo ac lacus faucibus sagittis sed ut tellus. Mauris eget dapibus quam. Ut est ex, egestas sit amet fermentum sit amet, lobortis nec risus. Duis vitae sodales urna. Pellentesque blandit ex in nisl laoreet, eget rutrum leo vulputate. Fusce viverra porttitor mauris, nec viverra justo dignissim varius. Nam quis commodo enim, id imperdiet lorem. In porta, augue eget laoreet tincidunt, arcu turpis laoreet enim, dapibus consequat ante nibh at sapien. Vivamus ligula velit, tincidunt et consectetur ac, tincidunt in risus. Vestibulum mattis lacinia tellus ac feugiat. Morbi eget urna volutpat ex lacinia commodo at quis nunc. Duis sapien urna, iaculis nec hendrerit at, venenatis eu massa. Proin aliquet imperdiet magna, sed ullamcorper tellus consectetur sit amet. Integer venenatis orci ac lorem commodo semper. Sed vitae risus ligula. Phasellus pulvinar laoreet lectus, sed sodales nibh feugiat non. Nunc placerat non massa et suscipit. Duis vel augue a velit vestibulum sagittis. Sed lectus urna, volutpat id nulla vel, ultrices condimentum metus. Cras cursus, enim et aliquam fermentum, neque neque mollis ante, eu lacinia sapien turpis ac mauris. Ut malesuada enim quam, non egestas dolor auctor ut. Vestibulum iaculis nec tortor faucibus fermentum.",
+                            ProgrammingLanguageId = 1,
                             ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis.",
                             StatusId = 0
                         },
@@ -287,6 +295,7 @@ namespace JustFindJob.Persistance.Migrations
                             ExperienceLevel = 2,
                             Localization = "Crakow",
                             LongDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis. Nam ultrices justo purus, blandit dignissim libero elementum at. Pellentesque sed leo ac lacus faucibus sagittis sed ut tellus. Mauris eget dapibus quam. Ut est ex, egestas sit amet fermentum sit amet, lobortis nec risus. Duis vitae sodales urna. Pellentesque blandit ex in nisl laoreet, eget rutrum leo vulputate. Fusce viverra porttitor mauris, nec viverra justo dignissim varius. Nam quis commodo enim, id imperdiet lorem. In porta, augue eget laoreet tincidunt, arcu turpis laoreet enim, dapibus consequat ante nibh at sapien. Vivamus ligula velit, tincidunt et consectetur ac, tincidunt in risus. Vestibulum mattis lacinia tellus ac feugiat. Morbi eget urna volutpat ex lacinia commodo at quis nunc. Duis sapien urna, iaculis nec hendrerit at, venenatis eu massa. Proin aliquet imperdiet magna, sed ullamcorper tellus consectetur sit amet. Integer venenatis orci ac lorem commodo semper. Sed vitae risus ligula. Phasellus pulvinar laoreet lectus, sed sodales nibh feugiat non. Nunc placerat non massa et suscipit. Duis vel augue a velit vestibulum sagittis. Sed lectus urna, volutpat id nulla vel, ultrices condimentum metus. Cras cursus, enim et aliquam fermentum, neque neque mollis ante, eu lacinia sapien turpis ac mauris. Ut malesuada enim quam, non egestas dolor auctor ut. Vestibulum iaculis nec tortor faucibus fermentum.",
+                            ProgrammingLanguageId = 2,
                             ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis.",
                             StatusId = 0
                         },
@@ -298,6 +307,7 @@ namespace JustFindJob.Persistance.Migrations
                             ExperienceLevel = 2,
                             Localization = "Poznan",
                             LongDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis. Nam ultrices justo purus, blandit dignissim libero elementum at. Pellentesque sed leo ac lacus faucibus sagittis sed ut tellus. Mauris eget dapibus quam. Ut est ex, egestas sit amet fermentum sit amet, lobortis nec risus. Duis vitae sodales urna. Pellentesque blandit ex in nisl laoreet, eget rutrum leo vulputate. Fusce viverra porttitor mauris, nec viverra justo dignissim varius. Nam quis commodo enim, id imperdiet lorem. In porta, augue eget laoreet tincidunt, arcu turpis laoreet enim, dapibus consequat ante nibh at sapien. Vivamus ligula velit, tincidunt et consectetur ac, tincidunt in risus. Vestibulum mattis lacinia tellus ac feugiat. Morbi eget urna volutpat ex lacinia commodo at quis nunc. Duis sapien urna, iaculis nec hendrerit at, venenatis eu massa. Proin aliquet imperdiet magna, sed ullamcorper tellus consectetur sit amet. Integer venenatis orci ac lorem commodo semper. Sed vitae risus ligula. Phasellus pulvinar laoreet lectus, sed sodales nibh feugiat non. Nunc placerat non massa et suscipit. Duis vel augue a velit vestibulum sagittis. Sed lectus urna, volutpat id nulla vel, ultrices condimentum metus. Cras cursus, enim et aliquam fermentum, neque neque mollis ante, eu lacinia sapien turpis ac mauris. Ut malesuada enim quam, non egestas dolor auctor ut. Vestibulum iaculis nec tortor faucibus fermentum.",
+                            ProgrammingLanguageId = 2,
                             ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis.",
                             StatusId = 0
                         },
@@ -309,6 +319,7 @@ namespace JustFindJob.Persistance.Migrations
                             ExperienceLevel = 0,
                             Localization = "Cracow",
                             LongDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis. Nam ultrices justo purus, blandit dignissim libero elementum at. Pellentesque sed leo ac lacus faucibus sagittis sed ut tellus. Mauris eget dapibus quam. Ut est ex, egestas sit amet fermentum sit amet, lobortis nec risus. Duis vitae sodales urna. Pellentesque blandit ex in nisl laoreet, eget rutrum leo vulputate. Fusce viverra porttitor mauris, nec viverra justo dignissim varius. Nam quis commodo enim, id imperdiet lorem. In porta, augue eget laoreet tincidunt, arcu turpis laoreet enim, dapibus consequat ante nibh at sapien. Vivamus ligula velit, tincidunt et consectetur ac, tincidunt in risus. Vestibulum mattis lacinia tellus ac feugiat. Morbi eget urna volutpat ex lacinia commodo at quis nunc. Duis sapien urna, iaculis nec hendrerit at, venenatis eu massa. Proin aliquet imperdiet magna, sed ullamcorper tellus consectetur sit amet. Integer venenatis orci ac lorem commodo semper. Sed vitae risus ligula. Phasellus pulvinar laoreet lectus, sed sodales nibh feugiat non. Nunc placerat non massa et suscipit. Duis vel augue a velit vestibulum sagittis. Sed lectus urna, volutpat id nulla vel, ultrices condimentum metus. Cras cursus, enim et aliquam fermentum, neque neque mollis ante, eu lacinia sapien turpis ac mauris. Ut malesuada enim quam, non egestas dolor auctor ut. Vestibulum iaculis nec tortor faucibus fermentum.",
+                            ProgrammingLanguageId = 2,
                             ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis.",
                             StatusId = 0
                         },
@@ -320,6 +331,7 @@ namespace JustFindJob.Persistance.Migrations
                             ExperienceLevel = 1,
                             Localization = "Warsaw",
                             LongDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis. Nam ultrices justo purus, blandit dignissim libero elementum at. Pellentesque sed leo ac lacus faucibus sagittis sed ut tellus. Mauris eget dapibus quam. Ut est ex, egestas sit amet fermentum sit amet, lobortis nec risus. Duis vitae sodales urna. Pellentesque blandit ex in nisl laoreet, eget rutrum leo vulputate. Fusce viverra porttitor mauris, nec viverra justo dignissim varius. Nam quis commodo enim, id imperdiet lorem. In porta, augue eget laoreet tincidunt, arcu turpis laoreet enim, dapibus consequat ante nibh at sapien. Vivamus ligula velit, tincidunt et consectetur ac, tincidunt in risus. Vestibulum mattis lacinia tellus ac feugiat. Morbi eget urna volutpat ex lacinia commodo at quis nunc. Duis sapien urna, iaculis nec hendrerit at, venenatis eu massa. Proin aliquet imperdiet magna, sed ullamcorper tellus consectetur sit amet. Integer venenatis orci ac lorem commodo semper. Sed vitae risus ligula. Phasellus pulvinar laoreet lectus, sed sodales nibh feugiat non. Nunc placerat non massa et suscipit. Duis vel augue a velit vestibulum sagittis. Sed lectus urna, volutpat id nulla vel, ultrices condimentum metus. Cras cursus, enim et aliquam fermentum, neque neque mollis ante, eu lacinia sapien turpis ac mauris. Ut malesuada enim quam, non egestas dolor auctor ut. Vestibulum iaculis nec tortor faucibus fermentum.",
+                            ProgrammingLanguageId = 3,
                             ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis.",
                             StatusId = 0
                         },
@@ -331,6 +343,7 @@ namespace JustFindJob.Persistance.Migrations
                             ExperienceLevel = 0,
                             Localization = "Warsaw",
                             LongDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis. Nam ultrices justo purus, blandit dignissim libero elementum at. Pellentesque sed leo ac lacus faucibus sagittis sed ut tellus. Mauris eget dapibus quam. Ut est ex, egestas sit amet fermentum sit amet, lobortis nec risus. Duis vitae sodales urna. Pellentesque blandit ex in nisl laoreet, eget rutrum leo vulputate. Fusce viverra porttitor mauris, nec viverra justo dignissim varius. Nam quis commodo enim, id imperdiet lorem. In porta, augue eget laoreet tincidunt, arcu turpis laoreet enim, dapibus consequat ante nibh at sapien. Vivamus ligula velit, tincidunt et consectetur ac, tincidunt in risus. Vestibulum mattis lacinia tellus ac feugiat. Morbi eget urna volutpat ex lacinia commodo at quis nunc. Duis sapien urna, iaculis nec hendrerit at, venenatis eu massa. Proin aliquet imperdiet magna, sed ullamcorper tellus consectetur sit amet. Integer venenatis orci ac lorem commodo semper. Sed vitae risus ligula. Phasellus pulvinar laoreet lectus, sed sodales nibh feugiat non. Nunc placerat non massa et suscipit. Duis vel augue a velit vestibulum sagittis. Sed lectus urna, volutpat id nulla vel, ultrices condimentum metus. Cras cursus, enim et aliquam fermentum, neque neque mollis ante, eu lacinia sapien turpis ac mauris. Ut malesuada enim quam, non egestas dolor auctor ut. Vestibulum iaculis nec tortor faucibus fermentum.",
+                            ProgrammingLanguageId = 3,
                             ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis.",
                             StatusId = 0
                         },
@@ -342,6 +355,7 @@ namespace JustFindJob.Persistance.Migrations
                             ExperienceLevel = 1,
                             Localization = "Warsaw",
                             LongDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis. Nam ultrices justo purus, blandit dignissim libero elementum at. Pellentesque sed leo ac lacus faucibus sagittis sed ut tellus. Mauris eget dapibus quam. Ut est ex, egestas sit amet fermentum sit amet, lobortis nec risus. Duis vitae sodales urna. Pellentesque blandit ex in nisl laoreet, eget rutrum leo vulputate. Fusce viverra porttitor mauris, nec viverra justo dignissim varius. Nam quis commodo enim, id imperdiet lorem. In porta, augue eget laoreet tincidunt, arcu turpis laoreet enim, dapibus consequat ante nibh at sapien. Vivamus ligula velit, tincidunt et consectetur ac, tincidunt in risus. Vestibulum mattis lacinia tellus ac feugiat. Morbi eget urna volutpat ex lacinia commodo at quis nunc. Duis sapien urna, iaculis nec hendrerit at, venenatis eu massa. Proin aliquet imperdiet magna, sed ullamcorper tellus consectetur sit amet. Integer venenatis orci ac lorem commodo semper. Sed vitae risus ligula. Phasellus pulvinar laoreet lectus, sed sodales nibh feugiat non. Nunc placerat non massa et suscipit. Duis vel augue a velit vestibulum sagittis. Sed lectus urna, volutpat id nulla vel, ultrices condimentum metus. Cras cursus, enim et aliquam fermentum, neque neque mollis ante, eu lacinia sapien turpis ac mauris. Ut malesuada enim quam, non egestas dolor auctor ut. Vestibulum iaculis nec tortor faucibus fermentum.",
+                            ProgrammingLanguageId = 3,
                             ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis.",
                             StatusId = 0
                         },
@@ -353,6 +367,7 @@ namespace JustFindJob.Persistance.Migrations
                             ExperienceLevel = 1,
                             Localization = "Crakow",
                             LongDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis. Nam ultrices justo purus, blandit dignissim libero elementum at. Pellentesque sed leo ac lacus faucibus sagittis sed ut tellus. Mauris eget dapibus quam. Ut est ex, egestas sit amet fermentum sit amet, lobortis nec risus. Duis vitae sodales urna. Pellentesque blandit ex in nisl laoreet, eget rutrum leo vulputate. Fusce viverra porttitor mauris, nec viverra justo dignissim varius. Nam quis commodo enim, id imperdiet lorem. In porta, augue eget laoreet tincidunt, arcu turpis laoreet enim, dapibus consequat ante nibh at sapien. Vivamus ligula velit, tincidunt et consectetur ac, tincidunt in risus. Vestibulum mattis lacinia tellus ac feugiat. Morbi eget urna volutpat ex lacinia commodo at quis nunc. Duis sapien urna, iaculis nec hendrerit at, venenatis eu massa. Proin aliquet imperdiet magna, sed ullamcorper tellus consectetur sit amet. Integer venenatis orci ac lorem commodo semper. Sed vitae risus ligula. Phasellus pulvinar laoreet lectus, sed sodales nibh feugiat non. Nunc placerat non massa et suscipit. Duis vel augue a velit vestibulum sagittis. Sed lectus urna, volutpat id nulla vel, ultrices condimentum metus. Cras cursus, enim et aliquam fermentum, neque neque mollis ante, eu lacinia sapien turpis ac mauris. Ut malesuada enim quam, non egestas dolor auctor ut. Vestibulum iaculis nec tortor faucibus fermentum.",
+                            ProgrammingLanguageId = 3,
                             ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis.",
                             StatusId = 0
                         },
@@ -364,6 +379,7 @@ namespace JustFindJob.Persistance.Migrations
                             ExperienceLevel = 1,
                             Localization = "Warsaw",
                             LongDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis. Nam ultrices justo purus, blandit dignissim libero elementum at. Pellentesque sed leo ac lacus faucibus sagittis sed ut tellus. Mauris eget dapibus quam. Ut est ex, egestas sit amet fermentum sit amet, lobortis nec risus. Duis vitae sodales urna. Pellentesque blandit ex in nisl laoreet, eget rutrum leo vulputate. Fusce viverra porttitor mauris, nec viverra justo dignissim varius. Nam quis commodo enim, id imperdiet lorem. In porta, augue eget laoreet tincidunt, arcu turpis laoreet enim, dapibus consequat ante nibh at sapien. Vivamus ligula velit, tincidunt et consectetur ac, tincidunt in risus. Vestibulum mattis lacinia tellus ac feugiat. Morbi eget urna volutpat ex lacinia commodo at quis nunc. Duis sapien urna, iaculis nec hendrerit at, venenatis eu massa. Proin aliquet imperdiet magna, sed ullamcorper tellus consectetur sit amet. Integer venenatis orci ac lorem commodo semper. Sed vitae risus ligula. Phasellus pulvinar laoreet lectus, sed sodales nibh feugiat non. Nunc placerat non massa et suscipit. Duis vel augue a velit vestibulum sagittis. Sed lectus urna, volutpat id nulla vel, ultrices condimentum metus. Cras cursus, enim et aliquam fermentum, neque neque mollis ante, eu lacinia sapien turpis ac mauris. Ut malesuada enim quam, non egestas dolor auctor ut. Vestibulum iaculis nec tortor faucibus fermentum.",
+                            ProgrammingLanguageId = 5,
                             ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis.",
                             StatusId = 0
                         },
@@ -375,7 +391,84 @@ namespace JustFindJob.Persistance.Migrations
                             ExperienceLevel = 0,
                             Localization = "Warsaw",
                             LongDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis. Nam ultrices justo purus, blandit dignissim libero elementum at. Pellentesque sed leo ac lacus faucibus sagittis sed ut tellus. Mauris eget dapibus quam. Ut est ex, egestas sit amet fermentum sit amet, lobortis nec risus. Duis vitae sodales urna. Pellentesque blandit ex in nisl laoreet, eget rutrum leo vulputate. Fusce viverra porttitor mauris, nec viverra justo dignissim varius. Nam quis commodo enim, id imperdiet lorem. In porta, augue eget laoreet tincidunt, arcu turpis laoreet enim, dapibus consequat ante nibh at sapien. Vivamus ligula velit, tincidunt et consectetur ac, tincidunt in risus. Vestibulum mattis lacinia tellus ac feugiat. Morbi eget urna volutpat ex lacinia commodo at quis nunc. Duis sapien urna, iaculis nec hendrerit at, venenatis eu massa. Proin aliquet imperdiet magna, sed ullamcorper tellus consectetur sit amet. Integer venenatis orci ac lorem commodo semper. Sed vitae risus ligula. Phasellus pulvinar laoreet lectus, sed sodales nibh feugiat non. Nunc placerat non massa et suscipit. Duis vel augue a velit vestibulum sagittis. Sed lectus urna, volutpat id nulla vel, ultrices condimentum metus. Cras cursus, enim et aliquam fermentum, neque neque mollis ante, eu lacinia sapien turpis ac mauris. Ut malesuada enim quam, non egestas dolor auctor ut. Vestibulum iaculis nec tortor faucibus fermentum.",
+                            ProgrammingLanguageId = 4,
                             ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio. Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. Aliquam blandit tortor vitae eros porta venenatis.",
+                            StatusId = 0
+                        });
+                });
+
+            modelBuilder.Entity("JustFindJob.Domain.Entities.ProgrammingLanguage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Inactivated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("InactivatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Modified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProgrammingLanguages");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "C#",
+                            StatusId = 0
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Java",
+                            StatusId = 0
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "JavaScript",
+                            StatusId = 0
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PHP",
+                            StatusId = 0
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Python",
                             StatusId = 0
                         });
                 });
@@ -412,25 +505,13 @@ namespace JustFindJob.Persistance.Migrations
                         new
                         {
                             JobOfferId = 1,
-                            TechnologyElementId = 2,
+                            TechnologyElementId = 3,
                             TechnologyLevelId = 2
                         },
                         new
                         {
                             JobOfferId = 1,
                             TechnologyElementId = 4,
-                            TechnologyLevelId = 1
-                        },
-                        new
-                        {
-                            JobOfferId = 1,
-                            TechnologyElementId = 8,
-                            TechnologyLevelId = 2
-                        },
-                        new
-                        {
-                            JobOfferId = 1,
-                            TechnologyElementId = 9,
                             TechnologyLevelId = 2
                         },
                         new
@@ -443,24 +524,18 @@ namespace JustFindJob.Persistance.Migrations
                         {
                             JobOfferId = 2,
                             TechnologyElementId = 2,
-                            TechnologyLevelId = 3
-                        },
-                        new
-                        {
-                            JobOfferId = 2,
-                            TechnologyElementId = 7,
                             TechnologyLevelId = 1
                         },
                         new
                         {
                             JobOfferId = 2,
-                            TechnologyElementId = 8,
+                            TechnologyElementId = 3,
                             TechnologyLevelId = 3
                         },
                         new
                         {
                             JobOfferId = 2,
-                            TechnologyElementId = 9,
+                            TechnologyElementId = 4,
                             TechnologyLevelId = 3
                         },
                         new
@@ -472,241 +547,223 @@ namespace JustFindJob.Persistance.Migrations
                         new
                         {
                             JobOfferId = 3,
-                            TechnologyElementId = 2,
-                            TechnologyLevelId = 3
-                        },
-                        new
-                        {
-                            JobOfferId = 3,
                             TechnologyElementId = 4,
                             TechnologyLevelId = 3
                         },
                         new
                         {
                             JobOfferId = 3,
+                            TechnologyElementId = 3,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 4,
+                            TechnologyElementId = 3,
+                            TechnologyLevelId = 4
+                        },
+                        new
+                        {
+                            JobOfferId = 4,
+                            TechnologyElementId = 6,
+                            TechnologyLevelId = 4
+                        },
+                        new
+                        {
+                            JobOfferId = 4,
+                            TechnologyElementId = 7,
+                            TechnologyLevelId = 4
+                        },
+                        new
+                        {
+                            JobOfferId = 4,
+                            TechnologyElementId = 5,
+                            TechnologyLevelId = 4
+                        },
+                        new
+                        {
+                            JobOfferId = 5,
+                            TechnologyElementId = 3,
+                            TechnologyLevelId = 4
+                        },
+                        new
+                        {
+                            JobOfferId = 5,
+                            TechnologyElementId = 6,
+                            TechnologyLevelId = 4
+                        },
+                        new
+                        {
+                            JobOfferId = 5,
+                            TechnologyElementId = 7,
+                            TechnologyLevelId = 4
+                        },
+                        new
+                        {
+                            JobOfferId = 5,
+                            TechnologyElementId = 5,
+                            TechnologyLevelId = 4
+                        },
+                        new
+                        {
+                            JobOfferId = 6,
+                            TechnologyElementId = 3,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
+                            JobOfferId = 6,
+                            TechnologyElementId = 4,
+                            TechnologyLevelId = 1
+                        },
+                        new
+                        {
+                            JobOfferId = 6,
+                            TechnologyElementId = 8,
+                            TechnologyLevelId = 1
+                        },
+                        new
+                        {
+                            JobOfferId = 6,
+                            TechnologyElementId = 6,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
+                            JobOfferId = 6,
+                            TechnologyElementId = 7,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
+                            JobOfferId = 6,
+                            TechnologyElementId = 5,
+                            TechnologyLevelId = 1
+                        },
+                        new
+                        {
+                            JobOfferId = 7,
+                            TechnologyElementId = 15,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 7,
+                            TechnologyElementId = 2,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
+                            JobOfferId = 7,
                             TechnologyElementId = 8,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            JobOfferId = 3,
+                            JobOfferId = 7,
+                            TechnologyElementId = 4,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 8,
+                            TechnologyElementId = 15,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
+                            JobOfferId = 8,
+                            TechnologyElementId = 4,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
+                            JobOfferId = 8,
+                            TechnologyElementId = 8,
+                            TechnologyLevelId = 2
+                        },
+                        new
+                        {
+                            JobOfferId = 8,
+                            TechnologyElementId = 9,
+                            TechnologyLevelId = 1
+                        },
+                        new
+                        {
+                            JobOfferId = 8,
+                            TechnologyElementId = 10,
+                            TechnologyLevelId = 1
+                        },
+                        new
+                        {
+                            JobOfferId = 9,
+                            TechnologyElementId = 15,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 9,
+                            TechnologyElementId = 4,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 9,
+                            TechnologyElementId = 8,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 9,
                             TechnologyElementId = 9,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            JobOfferId = 4,
-                            TechnologyElementId = 3,
-                            TechnologyLevelId = 4
-                        },
-                        new
-                        {
-                            JobOfferId = 4,
-                            TechnologyElementId = 11,
-                            TechnologyLevelId = 4
-                        },
-                        new
-                        {
-                            JobOfferId = 4,
-                            TechnologyElementId = 12,
-                            TechnologyLevelId = 4
-                        },
-                        new
-                        {
-                            JobOfferId = 4,
+                            JobOfferId = 9,
                             TechnologyElementId = 10,
-                            TechnologyLevelId = 4
+                            TechnologyLevelId = 3
                         },
                         new
                         {
-                            JobOfferId = 5,
-                            TechnologyElementId = 3,
-                            TechnologyLevelId = 4
+                            JobOfferId = 10,
+                            TechnologyElementId = 2,
+                            TechnologyLevelId = 3
                         },
                         new
                         {
-                            JobOfferId = 5,
-                            TechnologyElementId = 11,
-                            TechnologyLevelId = 4
+                            JobOfferId = 10,
+                            TechnologyElementId = 4,
+                            TechnologyLevelId = 3
                         },
                         new
                         {
-                            JobOfferId = 5,
-                            TechnologyElementId = 12,
-                            TechnologyLevelId = 4
+                            JobOfferId = 10,
+                            TechnologyElementId = 8,
+                            TechnologyLevelId = 3
                         },
                         new
                         {
-                            JobOfferId = 5,
+                            JobOfferId = 10,
+                            TechnologyElementId = 9,
+                            TechnologyLevelId = 3
+                        },
+                        new
+                        {
+                            JobOfferId = 10,
                             TechnologyElementId = 10,
-                            TechnologyLevelId = 4
-                        },
-                        new
-                        {
-                            JobOfferId = 6,
-                            TechnologyElementId = 3,
-                            TechnologyLevelId = 2
-                        },
-                        new
-                        {
-                            JobOfferId = 6,
-                            TechnologyElementId = 4,
-                            TechnologyLevelId = 1
-                        },
-                        new
-                        {
-                            JobOfferId = 6,
-                            TechnologyElementId = 13,
-                            TechnologyLevelId = 1
-                        },
-                        new
-                        {
-                            JobOfferId = 6,
-                            TechnologyElementId = 11,
-                            TechnologyLevelId = 2
-                        },
-                        new
-                        {
-                            JobOfferId = 6,
-                            TechnologyElementId = 12,
-                            TechnologyLevelId = 2
-                        },
-                        new
-                        {
-                            JobOfferId = 6,
-                            TechnologyElementId = 10,
-                            TechnologyLevelId = 1
-                        },
-                        new
-                        {
-                            JobOfferId = 7,
-                            TechnologyElementId = 20,
-                            TechnologyLevelId = 3
-                        },
-                        new
-                        {
-                            JobOfferId = 7,
-                            TechnologyElementId = 7,
-                            TechnologyLevelId = 2
-                        },
-                        new
-                        {
-                            JobOfferId = 7,
-                            TechnologyElementId = 13,
-                            TechnologyLevelId = 3
-                        },
-                        new
-                        {
-                            JobOfferId = 7,
-                            TechnologyElementId = 4,
-                            TechnologyLevelId = 3
-                        },
-                        new
-                        {
-                            JobOfferId = 8,
-                            TechnologyElementId = 20,
-                            TechnologyLevelId = 2
-                        },
-                        new
-                        {
-                            JobOfferId = 8,
-                            TechnologyElementId = 4,
-                            TechnologyLevelId = 2
-                        },
-                        new
-                        {
-                            JobOfferId = 8,
-                            TechnologyElementId = 13,
-                            TechnologyLevelId = 2
-                        },
-                        new
-                        {
-                            JobOfferId = 8,
-                            TechnologyElementId = 14,
-                            TechnologyLevelId = 1
-                        },
-                        new
-                        {
-                            JobOfferId = 8,
-                            TechnologyElementId = 15,
-                            TechnologyLevelId = 1
-                        },
-                        new
-                        {
-                            JobOfferId = 9,
-                            TechnologyElementId = 20,
-                            TechnologyLevelId = 3
-                        },
-                        new
-                        {
-                            JobOfferId = 9,
-                            TechnologyElementId = 4,
-                            TechnologyLevelId = 3
-                        },
-                        new
-                        {
-                            JobOfferId = 9,
-                            TechnologyElementId = 13,
-                            TechnologyLevelId = 3
-                        },
-                        new
-                        {
-                            JobOfferId = 9,
-                            TechnologyElementId = 14,
-                            TechnologyLevelId = 3
-                        },
-                        new
-                        {
-                            JobOfferId = 9,
-                            TechnologyElementId = 15,
-                            TechnologyLevelId = 3
-                        },
-                        new
-                        {
-                            JobOfferId = 10,
-                            TechnologyElementId = 7,
-                            TechnologyLevelId = 3
-                        },
-                        new
-                        {
-                            JobOfferId = 10,
-                            TechnologyElementId = 4,
-                            TechnologyLevelId = 3
-                        },
-                        new
-                        {
-                            JobOfferId = 10,
-                            TechnologyElementId = 13,
-                            TechnologyLevelId = 3
-                        },
-                        new
-                        {
-                            JobOfferId = 10,
-                            TechnologyElementId = 14,
-                            TechnologyLevelId = 3
-                        },
-                        new
-                        {
-                            JobOfferId = 10,
-                            TechnologyElementId = 15,
                             TechnologyLevelId = 3
                         },
                         new
                         {
                             JobOfferId = 11,
-                            TechnologyElementId = 18,
+                            TechnologyElementId = 13,
                             TechnologyLevelId = 3
                         },
                         new
                         {
                             JobOfferId = 11,
-                            TechnologyElementId = 19,
-                            TechnologyLevelId = 3
-                        },
-                        new
-                        {
-                            JobOfferId = 11,
-                            TechnologyElementId = 10,
+                            TechnologyElementId = 14,
                             TechnologyLevelId = 3
                         },
                         new
@@ -724,19 +781,19 @@ namespace JustFindJob.Persistance.Migrations
                         new
                         {
                             JobOfferId = 12,
-                            TechnologyElementId = 10,
+                            TechnologyElementId = 5,
                             TechnologyLevelId = 2
                         },
                         new
                         {
                             JobOfferId = 12,
-                            TechnologyElementId = 16,
+                            TechnologyElementId = 11,
                             TechnologyLevelId = 2
                         },
                         new
                         {
                             JobOfferId = 12,
-                            TechnologyElementId = 17,
+                            TechnologyElementId = 12,
                             TechnologyLevelId = 2
                         });
                 });
@@ -772,10 +829,15 @@ namespace JustFindJob.Persistance.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("ProgrammingLanguageId")
+                        .HasColumnType("int");
+
                     b.Property<int>("StatusId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ProgrammingLanguageId");
 
                     b.ToTable("TechnologyElements");
 
@@ -784,140 +846,116 @@ namespace JustFindJob.Persistance.Migrations
                         {
                             Id = 1,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "C#",
+                            Name = ".Net",
+                            ProgrammingLanguageId = 1,
                             StatusId = 0
                         },
                         new
                         {
                             Id = 2,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = ".Net",
+                            Name = "Angular",
+                            ProgrammingLanguageId = 3,
                             StatusId = 0
                         },
                         new
                         {
                             Id = 3,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Java",
+                            Name = "MSSQL",
                             StatusId = 0
                         },
                         new
                         {
                             Id = 4,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "JavaScript",
+                            Name = "ASP.NET",
+                            ProgrammingLanguageId = 1,
                             StatusId = 0
                         },
                         new
                         {
                             Id = 5,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Python",
+                            Name = "MySQL",
                             StatusId = 0
                         },
                         new
                         {
                             Id = 6,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "PHP",
+                            Name = "Spring",
+                            ProgrammingLanguageId = 2,
                             StatusId = 0
                         },
                         new
                         {
                             Id = 7,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Angular",
+                            Name = "Hibernate",
+                            ProgrammingLanguageId = 2,
                             StatusId = 0
                         },
                         new
                         {
                             Id = 8,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "MSSQL",
+                            Name = "HTML & CSS",
                             StatusId = 0
                         },
                         new
                         {
                             Id = 9,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "ASP.NET",
+                            Name = "Node",
+                            ProgrammingLanguageId = 3,
                             StatusId = 0
                         },
                         new
                         {
                             Id = 10,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "MySQL",
+                            Name = "NoSQL",
                             StatusId = 0
                         },
                         new
                         {
                             Id = 11,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Spring",
+                            Name = "Symfony",
+                            ProgrammingLanguageId = 4,
                             StatusId = 0
                         },
                         new
                         {
                             Id = 12,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Hibernate",
+                            Name = "PHPUnit",
+                            ProgrammingLanguageId = 4,
                             StatusId = 0
                         },
                         new
                         {
                             Id = 13,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "HTML & CSS",
+                            Name = "Django",
+                            ProgrammingLanguageId = 5,
                             StatusId = 0
                         },
                         new
                         {
                             Id = 14,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Node",
+                            Name = "Flask",
+                            ProgrammingLanguageId = 5,
                             StatusId = 0
                         },
                         new
                         {
                             Id = 15,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "NoSQL",
-                            StatusId = 0
-                        },
-                        new
-                        {
-                            Id = 16,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Symfony",
-                            StatusId = 0
-                        },
-                        new
-                        {
-                            Id = 17,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "PHPUnit",
-                            StatusId = 0
-                        },
-                        new
-                        {
-                            Id = 18,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Django",
-                            StatusId = 0
-                        },
-                        new
-                        {
-                            Id = 19,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Flask",
-                            StatusId = 0
-                        },
-                        new
-                        {
-                            Id = 20,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "React",
+                            ProgrammingLanguageId = 3,
                             StatusId = 0
                         });
                 });
@@ -1007,7 +1045,15 @@ namespace JustFindJob.Persistance.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("JustFindJob.Domain.Entities.ProgrammingLanguage", "ProgrammingLanguage")
+                        .WithMany("JobOffers")
+                        .HasForeignKey("ProgrammingLanguageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Company");
+
+                    b.Navigation("ProgrammingLanguage");
                 });
 
             modelBuilder.Entity("JustFindJob.Domain.Entities.TechStack", b =>
@@ -1037,6 +1083,15 @@ namespace JustFindJob.Persistance.Migrations
                     b.Navigation("TechnologyLevel");
                 });
 
+            modelBuilder.Entity("JustFindJob.Domain.Entities.TechnologyElement", b =>
+                {
+                    b.HasOne("JustFindJob.Domain.Entities.ProgrammingLanguage", "ProgrammingLanguage")
+                        .WithMany("TechnologyElements")
+                        .HasForeignKey("ProgrammingLanguageId");
+
+                    b.Navigation("ProgrammingLanguage");
+                });
+
             modelBuilder.Entity("JustFindJob.Domain.Entities.Company", b =>
                 {
                     b.Navigation("CompanyDetails");
@@ -1047,6 +1102,13 @@ namespace JustFindJob.Persistance.Migrations
             modelBuilder.Entity("JustFindJob.Domain.Entities.JobOffer", b =>
                 {
                     b.Navigation("TechStack");
+                });
+
+            modelBuilder.Entity("JustFindJob.Domain.Entities.ProgrammingLanguage", b =>
+                {
+                    b.Navigation("JobOffers");
+
+                    b.Navigation("TechnologyElements");
                 });
 #pragma warning restore 612, 618
         }
