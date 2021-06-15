@@ -346,6 +346,69 @@ namespace JustFindJob.Persistance.Seed
                }
            );
 
+            modelBuilder.Entity<CompanyDetails>().HasData(
+               new CompanyDetails()
+               {
+                   Id = 1,
+                   CompanyId = 1,
+                   CompanyDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
+                   " Pellentesque malesuada risus commodo massa mollis molestie. Class aptent taciti sociosqu ad litora torquent per" +
+                   " conubia nostra, per inceptos himenaeos. Integer et finibus dolor, sed sodales ante. Praesent quis purus vitae" +
+                   " libero porta tempus at nec nulla. Pellentesque in justo eget ligula semper maximus eget nec risus. Duis tempus" +
+                   " neque sed est elementum mattis. Donec sit amet blandit risus. Phasellus sed magna ultricies, fermentum lorem sed," +
+                   " condimentum sem. Phasellus aliquam, ligula nec placerat hendrerit, urna sapien eleifend purus," +
+                   " fermentum sollicitudin nunc ex eu velit. Aenean laoreet, metus a facilisis luctus, eros ligula rhoncus odio," +
+                   " consectetur ornare nunc augue ut mi. Integer molestie pellentesque sapien at pharetra." +
+                   " Nunc suscipit lorem vitae ex pretium, at tempor augue iaculis. Praesent suscipit placerat mauris eget vehicula. " +
+                   "Duis purus enim, sodales eget euismod id, commodo et tellus. Mauris sed condimentum augue, vitae tempor ex."
+               },
+               new CompanyDetails()
+               {
+                   Id = 2,
+                   CompanyId = 2,
+                   CompanyDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
+                   " Pellentesque malesuada risus commodo massa mollis molestie. Class aptent taciti sociosqu ad litora torquent per " +
+                   "conubia nostra, per inceptos himenaeos. Integer et finibus dolor, sed sodales ante. Praesent quis purus vitae " +
+                   "libero porta tempus at nec nulla. Pellentesque in justo eget ligula semper maximus eget nec risus." +
+                   " Duis tempus neque sed est elementum mattis. Donec sit amet blandit risus. Phasellus sed magna ultricies, " +
+                   "fermentum lorem sed, condimentum sem. Phasellus aliquam, ligula nec placerat hendrerit, urna sapien eleifend purus, " +
+                   "fermentum sollicitudin nunc ex eu velit. Aenean laoreet, metus a facilisis luctus, eros ligula rhoncus odio," +
+                   " consectetur ornare nunc augue ut mi. Integer molestie pellentesque sapien at pharetra. Nunc suscipit lorem vitae" +
+                   " ex pretium, at tempor augue iaculis. Praesent suscipit placerat mauris eget vehicula. Duis purus enim, sodales " +
+                   "eget euismod id, commodo et tellus. Mauris sed condimentum augue, vitae tempor ex."
+               },
+               new CompanyDetails()
+               {
+                   Id = 3,
+                   CompanyId = 3,
+                   CompanyDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+                   "Pellentesque malesuada risus commodo massa mollis molestie. Class aptent taciti sociosqu ad litora torquent per " +
+                   "conubia nostra, per inceptos himenaeos. Integer et finibus dolor, sed sodales ante. Praesent quis purus vitae libero " +
+                   "porta tempus at nec nulla. Pellentesque in justo eget ligula semper maximus eget nec risus. Duis tempus neque sed est" +
+                   " elementum mattis. Donec sit amet blandit risus. Phasellus sed magna ultricies, fermentum lorem sed, condimentum sem. " +
+                   "Phasellus aliquam, ligula nec placerat hendrerit, urna sapien eleifend purus, fermentum sollicitudin nunc ex eu velit." +
+                   " Aenean laoreet, metus a facilisis luctus, eros ligula rhoncus odio, consectetur ornare nunc augue ut mi." +
+                   " Integer molestie pellentesque sapien at pharetra. Nunc suscipit lorem vitae ex pretium, at tempor augue iaculis." +
+                   " Praesent suscipit placerat mauris eget vehicula. Duis purus enim, sodales eget euismod id, commodo et tellus." +
+                   " Mauris sed condimentum augue, vitae tempor ex."
+               },
+               new CompanyDetails()
+               {
+                   Id = 4,
+                   CompanyId = 4,
+                   CompanyDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
+                   " Pellentesque malesuada risus commodo massa mollis molestie. Class aptent taciti sociosqu ad litora torquent per " +
+                   "conubia nostra, per inceptos himenaeos. Integer et finibus dolor, sed sodales ante. Praesent quis purus vitae libero " +
+                   "porta tempus at nec nulla. Pellentesque in justo eget ligula semper maximus eget nec risus. Duis tempus neque sed est" +
+                   " elementum mattis. Donec sit amet blandit risus. Phasellus sed magna ultricies, fermentum lorem sed, condimentum sem." +
+                   " Phasellus aliquam, ligula nec placerat hendrerit, urna sapien eleifend purus, fermentum sollicitudin nunc ex eu velit." +
+                   " Aenean laoreet, metus a facilisis luctus, eros ligula rhoncus odio, consectetur ornare nunc augue ut mi." +
+                   " Integer molestie pellentesque sapien at pharetra. Nunc suscipit lorem vitae ex pretium, at tempor augue iaculis." +
+                   " Praesent suscipit placerat mauris eget vehicula. Duis purus enim, sodales eget euismod id, commodo et tellus." +
+                   " Mauris sed condimentum augue, vitae tempor ex."
+               }
+           );
+
             modelBuilder.Entity<Technology>().HasData(
                 new Technology()
                 {

@@ -1,10 +1,12 @@
 ﻿using JustFindJob.Application.Contracts.Persistance;
 using JustFindJob.Domain.Common;
 using JustFindJob.Domain.Entities;
+using JustFindJob.Persistance.Seed;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -21,6 +23,11 @@ namespace JustFindJob.Persistance
         public DbSet<JobOffer> JobOffers { get; set; }
         public DbSet<Company> Companies { get; set; }
         public DbSet<Technology> Technologies { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
