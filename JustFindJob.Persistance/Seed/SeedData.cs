@@ -488,23 +488,191 @@ namespace JustFindJob.Persistance.Seed
                 new TechnologyElement()
                 {
                     Id = 10,
-                    TechnologyId = 3,
+                    TechnologyId = 4,
                     ElementName = "MySQL",
                     ElementLevel = "Senior"
                 },
                 new TechnologyElement()
                 {
                     Id = 11,
-                    TechnologyId = 3,
+                    TechnologyId = 4,
                     ElementName = "Spring",
                     ElementLevel = "Senior"
                 },
                 new TechnologyElement()
                 {
                     Id = 12,
-                    TechnologyId = 3,
+                    TechnologyId = 4,
                     ElementName = "Hibernate",
                     ElementLevel = "Senior"
+                },
+                new TechnologyElement()
+                {
+                    Id = 13,
+                    TechnologyId = 5,
+                    ElementName = "MySQL",
+                    ElementLevel = "Senior"
+                },
+                new TechnologyElement()
+                {
+                    Id = 14,
+                    TechnologyId = 5,
+                    ElementName = "Spring",
+                    ElementLevel = "Senior"
+                },
+                new TechnologyElement()
+                {
+                    Id = 15,
+                    TechnologyId = 5,
+                    ElementName = "Hibernate",
+                    ElementLevel = "Senior"
+                },
+                new TechnologyElement()
+                 {
+                     Id = 16,
+                     TechnologyId = 6,
+                     ElementName = "MySQL",
+                     ElementLevel = "Junior"
+                 },
+                new TechnologyElement()
+                {
+                    Id = 17,
+                    TechnologyId = 6,
+                    ElementName = "Spring",
+                    ElementLevel = "Junior"
+                },
+                new TechnologyElement()
+                {
+                    Id = 18,
+                    TechnologyId = 6,
+                    ElementName = "Hibernate",
+                    ElementLevel = "Junior"
+                },
+                new TechnologyElement()
+                 {
+                     Id = 19,
+                     TechnologyId = 7,
+                     ElementName = "MySQL",
+                     ElementLevel = "Mid"
+                 },
+                new TechnologyElement()
+                {
+                    Id = 20,
+                    TechnologyId = 7,
+                    ElementName = "Spring",
+                    ElementLevel = "Mid"
+                },
+                new TechnologyElement()
+                {
+                    Id = 21,
+                    TechnologyId = 7,
+                    ElementName = "Hibernate",
+                    ElementLevel = "Mid"
+                },
+                new TechnologyElement()
+                {
+                    Id = 22,
+                    TechnologyId = 8,
+                    ElementName = "NoSQL",
+                    ElementLevel = "Junior"
+                },
+                new TechnologyElement()
+                {
+                    Id = 23,
+                    TechnologyId = 8,
+                    ElementName = "Node",
+                    ElementLevel = "Junior"
+                },
+                new TechnologyElement()
+                {
+                    Id = 24,
+                    TechnologyId = 8,
+                    ElementName = "HTML & CSS",
+                    ElementLevel = "Junior"
+                },
+                new TechnologyElement()
+                {
+                    Id = 25,
+                    TechnologyId = 9,
+                    ElementName = "NoSQL",
+                    ElementLevel = "Mid"
+                },
+                new TechnologyElement()
+                {
+                    Id = 26,
+                    TechnologyId = 9,
+                    ElementName = "Node",
+                    ElementLevel = "Mid"
+                },
+                new TechnologyElement()
+                {
+                    Id = 27,
+                    TechnologyId = 9,
+                    ElementName = "HTML & CSS",
+                    ElementLevel = "Mid"
+                },
+                new TechnologyElement()
+                {
+                    Id = 28,
+                    TechnologyId = 10,
+                    ElementName = "NoSQL",
+                    ElementLevel = "Mid"
+                },
+                new TechnologyElement()
+                {
+                    Id = 29,
+                    TechnologyId = 10,
+                    ElementName = "Node",
+                    ElementLevel = "Mid"
+                },
+                new TechnologyElement()
+                {
+                    Id = 30,
+                    TechnologyId = 10,
+                    ElementName = "HTML & CSS",
+                    ElementLevel = "Mid"
+                },
+                new TechnologyElement()
+                {
+                    Id = 31,
+                    TechnologyId = 11,
+                    ElementName = "MySQL",
+                    ElementLevel = "Mid"
+                },
+                new TechnologyElement()
+                {
+                    Id = 32,
+                    TechnologyId = 11,
+                    ElementName = "Symfony",
+                    ElementLevel = "Mid"
+                },
+                new TechnologyElement()
+                {
+                    Id = 33,
+                    TechnologyId = 11,
+                    ElementName = "PHPUnit",
+                    ElementLevel = "Mid"
+                },
+                new TechnologyElement()
+                {
+                    Id = 34,
+                    TechnologyId = 12,
+                    ElementName = "SQL",
+                    ElementLevel = "Junior"
+                },
+                new TechnologyElement()
+                {
+                    Id = 35,
+                    TechnologyId = 12,
+                    ElementName = "Django",
+                    ElementLevel = "Junior"
+                },
+                new TechnologyElement()
+                {
+                    Id = 36,
+                    TechnologyId = 12,
+                    ElementName = "Flask",
+                    ElementLevel = "Junior"
                 }
            );
         }
