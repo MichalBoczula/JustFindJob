@@ -19,6 +19,7 @@ namespace JustFindJob.Persistance.Seed
                     CompanyId = 1,
                     Localization = "Wroclaw",
                     ExperienceLevel = ExperienceLevels.Junior,
+                    ProgrammingLanguageId = 1,
                     ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio." +
                     " Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. " +
                     "Aliquam blandit tortor vitae eros porta venenatis.",
@@ -44,6 +45,7 @@ namespace JustFindJob.Persistance.Seed
                     CompanyId = 1,
                     Localization = "Wroclaw",
                     ExperienceLevel = ExperienceLevels.Mid,
+                    ProgrammingLanguageId = 1,
                     ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio." +
                     " Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. " +
                     "Aliquam blandit tortor vitae eros porta venenatis.",
@@ -69,6 +71,7 @@ namespace JustFindJob.Persistance.Seed
                     CompanyId = 1,
                     Localization = "Poznan",
                     ExperienceLevel = ExperienceLevels.Mid,
+                    ProgrammingLanguageId = 1,
                     ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio." +
                     " Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. " +
                     "Aliquam blandit tortor vitae eros porta venenatis.",
@@ -94,6 +97,7 @@ namespace JustFindJob.Persistance.Seed
                     CompanyId = 2,
                     Localization = "Crakow",
                     ExperienceLevel = ExperienceLevels.Senior,
+                    ProgrammingLanguageId = 2,
                     ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio." +
                     " Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. " +
                     "Aliquam blandit tortor vitae eros porta venenatis.",
@@ -119,6 +123,7 @@ namespace JustFindJob.Persistance.Seed
                     CompanyId = 2,
                     Localization = "Poznan",
                     ExperienceLevel = ExperienceLevels.Senior,
+                    ProgrammingLanguageId = 2,
                     ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio." +
                     " Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. " +
                     "Aliquam blandit tortor vitae eros porta venenatis.",
@@ -144,6 +149,7 @@ namespace JustFindJob.Persistance.Seed
                     CompanyId = 2,
                     Localization = "Cracow",
                     ExperienceLevel = ExperienceLevels.Junior,
+                    ProgrammingLanguageId = 2,
                     ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio." +
                     " Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. " +
                     "Aliquam blandit tortor vitae eros porta venenatis.",
@@ -169,6 +175,7 @@ namespace JustFindJob.Persistance.Seed
                     CompanyId = 2,
                     Localization = "Warsaw",
                     ExperienceLevel = ExperienceLevels.Mid,
+                    ProgrammingLanguageId = 3,
                     ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio." +
                     " Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. " +
                     "Aliquam blandit tortor vitae eros porta venenatis.",
@@ -194,6 +201,7 @@ namespace JustFindJob.Persistance.Seed
                     CompanyId = 1,
                     Localization = "Warsaw",
                     ExperienceLevel = ExperienceLevels.Junior,
+                    ProgrammingLanguageId = 3,
                     ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio." +
                     " Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. " +
                     "Aliquam blandit tortor vitae eros porta venenatis.",
@@ -219,6 +227,7 @@ namespace JustFindJob.Persistance.Seed
                     CompanyId = 4,
                     Localization = "Warsaw",
                     ExperienceLevel = ExperienceLevels.Mid,
+                    ProgrammingLanguageId = 3,
                     ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio." +
                     " Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. " +
                     "Aliquam blandit tortor vitae eros porta venenatis.",
@@ -244,6 +253,7 @@ namespace JustFindJob.Persistance.Seed
                     CompanyId = 4,
                     Localization = "Crakow",
                     ExperienceLevel = ExperienceLevels.Mid,
+                    ProgrammingLanguageId = 3,
                     ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio." +
                     " Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. " +
                     "Aliquam blandit tortor vitae eros porta venenatis.",
@@ -269,6 +279,7 @@ namespace JustFindJob.Persistance.Seed
                     CompanyId = 3,
                     Localization = "Warsaw",
                     ExperienceLevel = ExperienceLevels.Mid,
+                    ProgrammingLanguageId = 5,
                     ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio." +
                     " Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. " +
                     "Aliquam blandit tortor vitae eros porta venenatis.",
@@ -294,6 +305,7 @@ namespace JustFindJob.Persistance.Seed
                     CompanyId = 3,
                     Localization = "Warsaw",
                     ExperienceLevel = ExperienceLevels.Junior,
+                    ProgrammingLanguageId = 4,
                     ShortDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget rhoncus odio." +
                     " Donec blandit at felis eu finibus. Aenean rhoncus est massa, ut dapibus dolor viverra ut. " +
                     "Aliquam blandit tortor vitae eros porta venenatis.",
@@ -413,101 +425,76 @@ namespace JustFindJob.Persistance.Seed
                 new TechnologyElement()
                 {
                     Id = 1,
-                    Name = "C#"
-                },
-                new TechnologyElement()
-                {
-                    Id = 2,
                     Name = ".Net"
                 },
                 new TechnologyElement()
                 {
-                    Id = 3,
-                    Name = "Java"
-                },
-                new TechnologyElement()
-                {
-                    Id = 4,
-                    Name = "JavaScript"
-                },
-                new TechnologyElement()
-                {
-                    Id = 5,
-                    Name = "Python"
-                },
-                new TechnologyElement()
-                {
-                    Id = 6,
-                    Name = "PHP"
-                },
-                new TechnologyElement()
-                {
-                    Id = 7,
+                    Id = 2,
                     Name = "Angular",
                 },
                 new TechnologyElement()
                 {
-                    Id = 8,
+                    Id = 3,
                     Name = "MSSQL",
                 },
                 new TechnologyElement()
                 {
-                    Id = 9,
+                    Id = 4,
                     Name = "ASP.NET",
                 },
                 new TechnologyElement()
                 {
-                    Id = 10,
+                    Id = 5,
                     Name = "MySQL",
                 },
                 new TechnologyElement()
                 {
-                    Id = 11,
+                    Id = 6,
                     Name = "Spring",
                 },
                 new TechnologyElement()
                 {
-                    Id = 12,
+                    Id = 7,
                     Name = "Hibernate",
                 },
                 new TechnologyElement()
                 {
-                    Id = 13,
+                    Id = 8,
                     Name = "HTML & CSS",
                 },
                 new TechnologyElement()
                 {
-                    Id = 14,
+                    Id = 9,
                     Name = "Node",
                 },
                 new TechnologyElement()
                 {
-                    Id = 15,
+                    Id = 10,
                     Name = "NoSQL",
                 },
                 new TechnologyElement()
                 {
-                    Id = 16,
+                    Id = 11,
                     Name = "Symfony",
                 },
                 new TechnologyElement()
                 {
-                    Id = 17,
+                    Id = 12,
                     Name = "PHPUnit",
                 },
                 new TechnologyElement()
                 {
-                    Id = 18,
+                    Id = 13,
                     Name = "Django",
                 },
                 new TechnologyElement()
                 {
-                    Id = 19,
+                    Id = 14,
                     Name = "Flask",
                 },
                 new TechnologyElement()
                 {
-                    Id = 20,
+                    Id = 15,
                     Name = "React",
                 }
            );
@@ -535,6 +522,34 @@ namespace JustFindJob.Persistance.Seed
                 }
             );
 
+            modelBuilder.Entity<ProgrammingLanguage>().HasData(
+                new ProgrammingLanguage()
+                {
+                    Id = 1,
+                    Name = "C#"
+                },
+                new ProgrammingLanguage()
+                {
+                    Id = 2,
+                    Name = "Java"
+                },
+                new ProgrammingLanguage()
+                {
+                    Id = 3,
+                    Name = "JavaScript"
+                },
+                new ProgrammingLanguage()
+                {
+                    Id = 4,
+                    Name = "PHP"
+                },
+                new ProgrammingLanguage()
+                {
+                    Id = 5,
+                    Name = "Python"
+                }
+            );
+
             modelBuilder.Entity<TechStack>().HasData(
                    new TechStack()
                    {
@@ -545,7 +560,7 @@ namespace JustFindJob.Persistance.Seed
                    new TechStack()
                    {
                        JobOfferId = 1,
-                       TechnologyElementId = 2,
+                       TechnologyElementId = 1,
                        TechnologyLevelId = 2
                    },
                    new TechStack()
@@ -557,13 +572,13 @@ namespace JustFindJob.Persistance.Seed
                    new TechStack()
                    {
                        JobOfferId = 1,
-                       TechnologyElementId = 8,
+                       TechnologyElementId = 3,
                        TechnologyLevelId = 2
                    },
                    new TechStack()
                    {
                        JobOfferId = 1,
-                       TechnologyElementId = 9,
+                       TechnologyElementId = 4,
                        TechnologyLevelId = 2
                    },
 
@@ -576,25 +591,25 @@ namespace JustFindJob.Persistance.Seed
                    new TechStack()
                    {
                        JobOfferId = 2,
-                       TechnologyElementId = 2,
+                       TechnologyElementId = 1,
                        TechnologyLevelId = 3
                    },
                    new TechStack()
                    {
                        JobOfferId = 2,
-                       TechnologyElementId = 7,
+                       TechnologyElementId = 2,
                        TechnologyLevelId = 1
                    },
                    new TechStack()
                    {
                        JobOfferId = 2,
-                       TechnologyElementId = 8,
+                       TechnologyElementId = 3,
                        TechnologyLevelId = 3
                    },
                    new TechStack()
                    {
                        JobOfferId = 2,
-                       TechnologyElementId = 9,
+                       TechnologyElementId = 4,
                        TechnologyLevelId = 3
                    },
 
@@ -607,7 +622,7 @@ namespace JustFindJob.Persistance.Seed
                    new TechStack()
                    {
                        JobOfferId = 3,
-                       TechnologyElementId = 2,
+                       TechnologyElementId = 1,
                        TechnologyLevelId = 3
                    },
                    new TechStack()
@@ -619,237 +634,237 @@ namespace JustFindJob.Persistance.Seed
                    new TechStack()
                    {
                        JobOfferId = 3,
+                       TechnologyElementId = 3,
+                       TechnologyLevelId = 3
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 3,
+                       TechnologyElementId = 4,
+                       TechnologyLevelId = 3
+                   },
+
+                   new TechStack()
+                   {
+                       JobOfferId = 4,
+                       TechnologyElementId = 3,
+                       TechnologyLevelId = 4
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 4,
+                       TechnologyElementId = 6,
+                       TechnologyLevelId = 4
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 4,
+                       TechnologyElementId = 7,
+                       TechnologyLevelId = 4
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 4,
+                       TechnologyElementId = 5,
+                       TechnologyLevelId = 4
+                   },
+
+                   new TechStack()
+                   {
+                       JobOfferId = 5,
+                       TechnologyElementId = 3,
+                       TechnologyLevelId = 4
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 5,
+                       TechnologyElementId = 6,
+                       TechnologyLevelId = 4
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 5,
+                       TechnologyElementId = 7,
+                       TechnologyLevelId = 4
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 5,
+                       TechnologyElementId = 5,
+                       TechnologyLevelId = 4
+                   },
+
+                   new TechStack()
+                   {
+                       JobOfferId = 6,
+                       TechnologyElementId = 3,
+                       TechnologyLevelId = 2
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 6,
+                       TechnologyElementId = 4,
+                       TechnologyLevelId = 1
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 6,
+                       TechnologyElementId = 8,
+                       TechnologyLevelId = 1
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 6,
+                       TechnologyElementId = 6,
+                       TechnologyLevelId = 2
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 6,
+                       TechnologyElementId = 7,
+                       TechnologyLevelId = 2
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 6,
+                       TechnologyElementId = 5,
+                       TechnologyLevelId = 1
+                   },
+
+                   new TechStack()
+                   {
+                       JobOfferId = 7,
+                       TechnologyElementId = 15,
+                       TechnologyLevelId = 3
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 7,
+                       TechnologyElementId = 2,
+                       TechnologyLevelId = 2
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 7,
                        TechnologyElementId = 8,
                        TechnologyLevelId = 3
                    },
                    new TechStack()
                    {
-                       JobOfferId = 3,
+                       JobOfferId = 7,
+                       TechnologyElementId = 4,
+                       TechnologyLevelId = 3
+                   },
+
+                   new TechStack()
+                   {
+                       JobOfferId = 8,
+                       TechnologyElementId = 15,
+                       TechnologyLevelId = 2
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 8,
+                       TechnologyElementId = 4,
+                       TechnologyLevelId = 2
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 8,
+                       TechnologyElementId = 8,
+                       TechnologyLevelId = 2
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 8,
+                       TechnologyElementId = 9,
+                       TechnologyLevelId = 1
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 8,
+                       TechnologyElementId = 10,
+                       TechnologyLevelId = 1
+                   },
+
+                   new TechStack()
+                   {
+                       JobOfferId = 9,
+                       TechnologyElementId = 15,
+                       TechnologyLevelId = 3
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 9,
+                       TechnologyElementId = 4,
+                       TechnologyLevelId = 3
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 9,
+                       TechnologyElementId = 8,
+                       TechnologyLevelId = 3
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 9,
                        TechnologyElementId = 9,
                        TechnologyLevelId = 3
                    },
-
                    new TechStack()
                    {
-                       JobOfferId = 4,
-                       TechnologyElementId = 3,
-                       TechnologyLevelId = 4
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 4,
-                       TechnologyElementId = 11,
-                       TechnologyLevelId = 4
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 4,
-                       TechnologyElementId = 12,
-                       TechnologyLevelId = 4
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 4,
+                       JobOfferId = 9,
                        TechnologyElementId = 10,
-                       TechnologyLevelId = 4
+                       TechnologyLevelId = 3
                    },
 
                    new TechStack()
                    {
-                       JobOfferId = 5,
-                       TechnologyElementId = 3,
-                       TechnologyLevelId = 4
+                       JobOfferId = 10,
+                       TechnologyElementId = 2,
+                       TechnologyLevelId = 3
                    },
                    new TechStack()
                    {
-                       JobOfferId = 5,
-                       TechnologyElementId = 11,
-                       TechnologyLevelId = 4
+                       JobOfferId = 10,
+                       TechnologyElementId = 4,
+                       TechnologyLevelId = 3
                    },
                    new TechStack()
                    {
-                       JobOfferId = 5,
-                       TechnologyElementId = 12,
-                       TechnologyLevelId = 4
+                       JobOfferId = 10,
+                       TechnologyElementId = 8,
+                       TechnologyLevelId = 3
                    },
                    new TechStack()
                    {
-                       JobOfferId = 5,
+                       JobOfferId = 10,
+                       TechnologyElementId = 9,
+                       TechnologyLevelId = 3
+                   },
+                   new TechStack()
+                   {
+                       JobOfferId = 10,
                        TechnologyElementId = 10,
-                       TechnologyLevelId = 4
-                   },
-
-                   new TechStack()
-                   {
-                       JobOfferId = 6,
-                       TechnologyElementId = 3,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 6,
-                       TechnologyElementId = 4,
-                       TechnologyLevelId = 1
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 6,
-                       TechnologyElementId = 13,
-                       TechnologyLevelId = 1
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 6,
-                       TechnologyElementId = 11,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 6,
-                       TechnologyElementId = 12,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 6,
-                       TechnologyElementId = 10,
-                       TechnologyLevelId = 1
-                   },
-
-                   new TechStack()
-                   {
-                       JobOfferId = 7,
-                       TechnologyElementId = 20,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 7,
-                       TechnologyElementId = 7,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 7,
-                       TechnologyElementId = 13,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 7,
-                       TechnologyElementId = 4,
-                       TechnologyLevelId = 3
-                   },
-
-                   new TechStack()
-                   {
-                       JobOfferId = 8,
-                       TechnologyElementId = 20,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 8,
-                       TechnologyElementId = 4,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 8,
-                       TechnologyElementId = 13,
-                       TechnologyLevelId = 2
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 8,
-                       TechnologyElementId = 14,
-                       TechnologyLevelId = 1
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 8,
-                       TechnologyElementId = 15,
-                       TechnologyLevelId = 1
-                   },
-
-                   new TechStack()
-                   {
-                       JobOfferId = 9,
-                       TechnologyElementId = 20,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 9,
-                       TechnologyElementId = 4,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 9,
-                       TechnologyElementId = 13,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 9,
-                       TechnologyElementId = 14,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 9,
-                       TechnologyElementId = 15,
-                       TechnologyLevelId = 3
-                   },
-
-                   new TechStack()
-                   {
-                       JobOfferId = 10,
-                       TechnologyElementId = 7,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 10,
-                       TechnologyElementId = 4,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 10,
-                       TechnologyElementId = 13,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 10,
-                       TechnologyElementId = 14,
-                       TechnologyLevelId = 3
-                   },
-                   new TechStack()
-                   {
-                       JobOfferId = 10,
-                       TechnologyElementId = 15,
                        TechnologyLevelId = 3
                    },
 
                    new TechStack()
                    {
                        JobOfferId = 11,
-                       TechnologyElementId = 18,
+                       TechnologyElementId = 13,
                        TechnologyLevelId = 3
                    },
                    new TechStack()
                    {
                        JobOfferId = 11,
-                       TechnologyElementId = 19,
+                       TechnologyElementId = 14,
                        TechnologyLevelId = 3
                    },
                    new TechStack()
                    {
                        JobOfferId = 11,
-                       TechnologyElementId = 10,
+                       TechnologyElementId = 5,
                        TechnologyLevelId = 3
                    },
                    new TechStack()
@@ -868,19 +883,19 @@ namespace JustFindJob.Persistance.Seed
                    new TechStack()
                    {
                        JobOfferId = 12,
-                       TechnologyElementId = 10,
+                       TechnologyElementId = 5,
                        TechnologyLevelId = 2
                    },
                    new TechStack()
                    {
                        JobOfferId = 12,
-                       TechnologyElementId = 16,
+                       TechnologyElementId = 11,
                        TechnologyLevelId = 2
                    },
                    new TechStack()
                    {
                        JobOfferId = 12,
-                       TechnologyElementId = 17,
+                       TechnologyElementId = 12,
                        TechnologyLevelId = 2
                    }
            );
