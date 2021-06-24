@@ -36,7 +36,9 @@ namespace JustFindJob.Application.Profiles
         private void CreateJobOfferDetailsMapping()
         {
             CreateMap<Company, CompanyForJobOfferDetailsDto>().ReverseMap();
-            CreateMap<JobOffer, JobOfferForJobOfferDetailsDto>().ReverseMap();
+            CreateMap<JobOffer, JobOfferForJobOfferDetailsDto>()
+                .ForMember(j => j.ExperienceLevel, opt => opt.MapFrom(x => x.ExperienceLevel.ToString()))
+                .ReverseMap();
             CreateMap<ProgrammingLanguage, ProgrammingLanguageForJobOfferDetailsDto>().ReverseMap();
             CreateMap<TechnologyElement, TechnologyElementForJobOfferDetailsDto>().ReverseMap();
             CreateMap<TechnologyLevel, TechnologyLevelForJobOfferDetailsDto>().ReverseMap();

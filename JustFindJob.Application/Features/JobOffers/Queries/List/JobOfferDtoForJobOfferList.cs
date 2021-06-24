@@ -11,7 +11,7 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.List
     {
         public int Id { get; set; }
         public string Localization { get; set; }
-        public ExperienceLevels ExperienceLevel { get; set; }
+        public string ExperienceLevel { get; set; }
         public string ShortDescription { get; set; }
     }
 }

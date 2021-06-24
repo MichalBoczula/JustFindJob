@@ -41,7 +41,7 @@ namespace JustFindJob.Application.Test.JobOffers.Queries.List
                 ele.ProgrammingLanguageDto.Name.ShouldNotBeNullOrEmpty();
                 ele.CompanyDto.Name.ShouldNotBeNullOrEmpty();
                 ele.JobOfferDto.Localization.ShouldNotBeNullOrEmpty();
-                ele.JobOfferDto.ExperienceLevel.ShouldBeOfType<ExperienceLevels>();
+                ele.JobOfferDto.ExperienceLevel.ShouldBeOfType<string>();
                 ele.JobOfferDto.ShortDescription.ShouldNotBeNullOrEmpty();
             }
         }
