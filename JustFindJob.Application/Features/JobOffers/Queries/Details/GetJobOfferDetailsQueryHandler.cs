@@ -24,17 +24,59 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.Details
 
         public async Task<JobOfferDetailsVm> Handle(GetJobOfferDetailsQuery request, CancellationToken cancellationToken)
         {
-            var query = await (
+
+            var techStacks = await (from tech in _context.TechStacks
+                             where tech.JobOfferId == request.JobOfferId
+                             join techEle in _context.TechnologyElements
+                                on tech.TechnologyElementId equals techEle.Id
+                             join techLevel in _context.TechnologyLevels
+                                on tech.TechnologyLevelId equals techLevel.Id
+                             select new { 
+                                 techEle, 
+                                 techLevel })
+                            .ToListAsync(cancellationToken);
+
+            var result = await (
                          from job in _context.JobOffers
                          where job.Id == request.JobOfferId
-                         join tech in _context.TechStacks
-                            on job.Id equals tech.JobOfferId into jobAndCom
-                         join company in _context.Companies
-                            on job.CompanyId equals company.Id into jobAndComAndTech
-                         select jobAndComAndTech)
+                         join comp in _context.Companies
+                            on job.CompanyId equals comp.Id
+                         join progLan in _context.ProgrammingLanguages
+                             on job.ProgrammingLanguageId equals progLan.Id
+                         select new
+                         {
+                             job,
+                             comp,
+                             progLan,
+                         })
                          .FirstOrDefaultAsync(cancellationToken);
-            var result = _mapper.Map<JobOfferDetailsVm>(query);
-            return result;
+
+            var jobOffer = _mapper.Map<JobOfferForJobOfferDetailsDto>(result.job);
+            var company = _mapper.Map<CompanyForJobOfferDetailsDto>(result.comp);
+            var language = _mapper.Map<ProgrammingLanguageForJobOfferDetailsDto>(result.progLan);
+            var techStackList = new List<TechStackForJobOfferDetailsDto>();
+
+            foreach(var ele in techStacks)
+            {
+                var techLevel = _mapper.Map<TechnologyLevelForJobOfferDetailsDto>(ele.techLevel);
+                var techElement = _mapper.Map<TechnologyElementForJobOfferDetailsDto>(ele.techEle);
+
+                var techStack = new TechStackForJobOfferDetailsDto()
+                {
+                    TechnologyElementDto = techElement,
+                    TechnologyLevelDto = techLevel
+                };
+
+                techStackList.Add(techStack);
+            }
+
+            return new JobOfferDetailsVm()
+            {
+                JobOfferDto = jobOffer,
+                CompanyDto = company,
+                ProgrammingLanguageDto = language,
+                TechStackDtos = techStackList
+            };
         }
     }
 }

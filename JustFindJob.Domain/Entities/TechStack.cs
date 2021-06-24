@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace JustFindJob.Domain.Entities
 {
-    public class TechStack
+    public class TechStack : AuditableEntity
     {
         public int JobOfferId { get; set; }
         public JobOffer JobOffer { get; set; }

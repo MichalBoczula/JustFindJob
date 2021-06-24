@@ -13,7 +13,7 @@ namespace JustFindJob.Persistance.Configuration
     {
         public void Configure(EntityTypeBuilder<TechStack> builder)
         {
-            builder.HasKey(ts => new { ts.JobOfferId, ts.TechnologyElementId});
+            builder.HasKey(ts => ts.Id);
         }
     }
 }

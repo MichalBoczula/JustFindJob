@@ -34,6 +34,18 @@ namespace JustFindJob.Application.Test.JobOffers.Queries.Details
             var result = await handler.Handle(new GetJobOfferDetailsQuery() { JobOfferId = 1}, CancellationToken.None);
 
             result.ShouldBeOfType<JobOfferDetailsVm>();
+            result.JobOfferDto.Localization.ShouldBe("Wroclaw");
+            result.JobOfferDto.ExperienceLevel.ShouldBe(Domain.Entities.ExperienceLevels.Junior);
+            result.JobOfferDto.ShortDescription.ShouldNotBeNullOrEmpty();
+            result.JobOfferDto.LongDescription.ShouldNotBeNullOrEmpty();
+            result.CompanyDto.Name.ShouldBe("The Best IT");
+            result.CompanyDto.Size.ShouldBe("50 - 100 employees");
+            result.CompanyDto.Type.ShouldBe("Software House");
+            result.CompanyDto.Id.ShouldBe(1);
+            result.ProgrammingLanguageDto.Name.ShouldBe("C#");
+            result.TechStackDtos.Count.ShouldBe(3);
+            result.TechStackDtos.ToList()[0].TechnologyLevelDto.Level.ShouldBe("Begginer");
+            result.TechStackDtos.ToList()[0].TechnologyElementDto.Name.ShouldBe(".Net");
         }
     }
 }

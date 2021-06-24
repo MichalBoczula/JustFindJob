@@ -8,7 +8,7 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.Details
 {
     public class TechStackForJobOfferDetailsDto
     {
-        public TechnologyElementForJobOfferDetailsDto TechnologyElementForJobOfferDetailsDto { get; set; }
-        public TechnologyLevelForJobOfferDetailsDto TechnologyLevelForJobOfferDetailsDto { get; set; }
+        public TechnologyElementForJobOfferDetailsDto TechnologyElementDto { get; set; }
+        public TechnologyLevelForJobOfferDetailsDto TechnologyLevelDto { get; set; }
     }
 }

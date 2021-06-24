@@ -4,14 +4,16 @@ using JustFindJob.Persistance;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JustFindJob.Persistance.Migrations
 {
     [DbContext(typeof(JustFindJobDbContext))]
-    partial class JustFindJobDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210624213952_ModifiedRelationBetweenJobOfferAndTechStack")]
+    partial class ModifiedRelationBetweenJobOfferAndTechStack
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -475,33 +477,7 @@ namespace JustFindJob.Persistance.Migrations
 
             modelBuilder.Entity("JustFindJob.Domain.Entities.TechStack", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("Inactivated")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("InactivatedBy")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("JobOfferId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("Modified")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ModifiedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("StatusId")
                         .HasColumnType("int");
 
                     b.Property<int>("TechnologyElementId")
@@ -510,9 +486,7 @@ namespace JustFindJob.Persistance.Migrations
                     b.Property<int>("TechnologyLevelId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
-
-                    b.HasIndex("JobOfferId");
+                    b.HasKey("JobOfferId", "TechnologyElementId");
 
                     b.HasIndex("TechnologyElementId");
 
@@ -523,451 +497,301 @@ namespace JustFindJob.Persistance.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 1,
-                            StatusId = 0,
                             TechnologyElementId = 1,
                             TechnologyLevelId = 2
                         },
                         new
                         {
-                            Id = 2,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 1,
-                            StatusId = 0,
                             TechnologyElementId = 3,
                             TechnologyLevelId = 2
                         },
                         new
                         {
-                            Id = 3,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 1,
-                            StatusId = 0,
                             TechnologyElementId = 4,
                             TechnologyLevelId = 2
                         },
                         new
                         {
-                            Id = 4,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 2,
-                            StatusId = 0,
                             TechnologyElementId = 1,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 5,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 2,
-                            StatusId = 0,
                             TechnologyElementId = 2,
                             TechnologyLevelId = 1
                         },
                         new
                         {
-                            Id = 6,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 2,
-                            StatusId = 0,
                             TechnologyElementId = 3,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 7,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 2,
-                            StatusId = 0,
                             TechnologyElementId = 4,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 8,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 3,
-                            StatusId = 0,
                             TechnologyElementId = 1,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 9,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 3,
-                            StatusId = 0,
                             TechnologyElementId = 4,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 10,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 3,
-                            StatusId = 0,
                             TechnologyElementId = 3,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 11,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 4,
-                            StatusId = 0,
                             TechnologyElementId = 3,
                             TechnologyLevelId = 4
                         },
                         new
                         {
-                            Id = 12,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 4,
-                            StatusId = 0,
                             TechnologyElementId = 6,
                             TechnologyLevelId = 4
                         },
                         new
                         {
-                            Id = 13,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 4,
-                            StatusId = 0,
                             TechnologyElementId = 7,
                             TechnologyLevelId = 4
                         },
                         new
                         {
-                            Id = 14,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 4,
-                            StatusId = 0,
                             TechnologyElementId = 5,
                             TechnologyLevelId = 4
                         },
                         new
                         {
-                            Id = 15,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 5,
-                            StatusId = 0,
                             TechnologyElementId = 3,
                             TechnologyLevelId = 4
                         },
                         new
                         {
-                            Id = 16,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 5,
-                            StatusId = 0,
                             TechnologyElementId = 6,
                             TechnologyLevelId = 4
                         },
                         new
                         {
-                            Id = 17,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 5,
-                            StatusId = 0,
                             TechnologyElementId = 7,
                             TechnologyLevelId = 4
                         },
                         new
                         {
-                            Id = 18,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 5,
-                            StatusId = 0,
                             TechnologyElementId = 5,
                             TechnologyLevelId = 4
                         },
                         new
                         {
-                            Id = 19,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 6,
-                            StatusId = 0,
                             TechnologyElementId = 3,
                             TechnologyLevelId = 2
                         },
                         new
                         {
-                            Id = 20,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 6,
-                            StatusId = 0,
                             TechnologyElementId = 4,
                             TechnologyLevelId = 1
                         },
                         new
                         {
-                            Id = 21,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 6,
-                            StatusId = 0,
                             TechnologyElementId = 8,
                             TechnologyLevelId = 1
                         },
                         new
                         {
-                            Id = 22,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 6,
-                            StatusId = 0,
                             TechnologyElementId = 6,
                             TechnologyLevelId = 2
                         },
                         new
                         {
-                            Id = 23,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 6,
-                            StatusId = 0,
                             TechnologyElementId = 7,
                             TechnologyLevelId = 2
                         },
                         new
                         {
-                            Id = 24,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 6,
-                            StatusId = 0,
                             TechnologyElementId = 5,
                             TechnologyLevelId = 1
                         },
                         new
                         {
-                            Id = 25,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 7,
-                            StatusId = 0,
                             TechnologyElementId = 15,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 26,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 7,
-                            StatusId = 0,
                             TechnologyElementId = 2,
                             TechnologyLevelId = 2
                         },
                         new
                         {
-                            Id = 27,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 7,
-                            StatusId = 0,
                             TechnologyElementId = 8,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 28,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 7,
-                            StatusId = 0,
                             TechnologyElementId = 4,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 29,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 8,
-                            StatusId = 0,
                             TechnologyElementId = 15,
                             TechnologyLevelId = 2
                         },
                         new
                         {
-                            Id = 30,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 8,
-                            StatusId = 0,
                             TechnologyElementId = 4,
                             TechnologyLevelId = 2
                         },
                         new
                         {
-                            Id = 31,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 8,
-                            StatusId = 0,
                             TechnologyElementId = 8,
                             TechnologyLevelId = 2
                         },
                         new
                         {
-                            Id = 32,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 8,
-                            StatusId = 0,
                             TechnologyElementId = 9,
                             TechnologyLevelId = 1
                         },
                         new
                         {
-                            Id = 33,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 8,
-                            StatusId = 0,
                             TechnologyElementId = 10,
                             TechnologyLevelId = 1
                         },
                         new
                         {
-                            Id = 34,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 9,
-                            StatusId = 0,
                             TechnologyElementId = 15,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 35,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 9,
-                            StatusId = 0,
                             TechnologyElementId = 4,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 36,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 9,
-                            StatusId = 0,
                             TechnologyElementId = 8,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 37,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 9,
-                            StatusId = 0,
                             TechnologyElementId = 9,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 38,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 9,
-                            StatusId = 0,
                             TechnologyElementId = 10,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 39,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 10,
-                            StatusId = 0,
                             TechnologyElementId = 2,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 40,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 10,
-                            StatusId = 0,
                             TechnologyElementId = 4,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 41,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 10,
-                            StatusId = 0,
                             TechnologyElementId = 8,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 42,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 10,
-                            StatusId = 0,
                             TechnologyElementId = 9,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 43,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 10,
-                            StatusId = 0,
                             TechnologyElementId = 10,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 44,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 11,
-                            StatusId = 0,
                             TechnologyElementId = 13,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 45,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 11,
-                            StatusId = 0,
                             TechnologyElementId = 14,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 46,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 11,
-                            StatusId = 0,
                             TechnologyElementId = 5,
                             TechnologyLevelId = 3
                         },
                         new
                         {
-                            Id = 47,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 12,
-                            StatusId = 0,
                             TechnologyElementId = 6,
                             TechnologyLevelId = 2
                         },
                         new
                         {
-                            Id = 48,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 12,
-                            StatusId = 0,
                             TechnologyElementId = 5,
                             TechnologyLevelId = 2
                         },
                         new
                         {
-                            Id = 49,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 12,
-                            StatusId = 0,
                             TechnologyElementId = 11,
                             TechnologyLevelId = 2
                         },
                         new
                         {
-                            Id = 50,
-                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JobOfferId = 12,
-                            StatusId = 0,
                             TechnologyElementId = 12,
                             TechnologyLevelId = 2
                         });

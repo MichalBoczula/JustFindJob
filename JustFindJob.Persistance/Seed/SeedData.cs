@@ -564,18 +564,21 @@ namespace JustFindJob.Persistance.Seed
             modelBuilder.Entity<TechStack>().HasData(
                 new TechStack()
                 {
+                    Id = 1,
                     JobOfferId = 1,
                     TechnologyElementId = 1,
                     TechnologyLevelId = 2
                 },
                 new TechStack()
                 {
+                    Id = 2,
                     JobOfferId = 1,
                     TechnologyElementId = 3,
                     TechnologyLevelId = 2
                 },
                 new TechStack()
                 {
+                    Id = 3,
                     JobOfferId = 1,
                     TechnologyElementId = 4,
                     TechnologyLevelId = 2
@@ -583,24 +586,28 @@ namespace JustFindJob.Persistance.Seed
 
                 new TechStack()
                 {
+                    Id = 4,
                     JobOfferId = 2,
                     TechnologyElementId = 1,
                     TechnologyLevelId = 3
                 },
                 new TechStack()
                 {
+                    Id = 5,
                     JobOfferId = 2,
                     TechnologyElementId = 2,
                     TechnologyLevelId = 1
                 },
                 new TechStack()
                 {
+                    Id = 6,
                     JobOfferId = 2,
                     TechnologyElementId = 3,
                     TechnologyLevelId = 3
                 },
                 new TechStack()
                 {
+                    Id = 7,
                     JobOfferId = 2,
                     TechnologyElementId = 4,
                     TechnologyLevelId = 3
@@ -608,18 +615,21 @@ namespace JustFindJob.Persistance.Seed
 
                 new TechStack()
                 {
+                    Id = 8,
                     JobOfferId = 3,
                     TechnologyElementId = 1,
                     TechnologyLevelId = 3
                 },
                 new TechStack()
                 {
+                    Id = 9,
                     JobOfferId = 3,
                     TechnologyElementId = 4,
                     TechnologyLevelId = 3
                 },
                 new TechStack()
                 {
+                    Id = 10,
                     JobOfferId = 3,
                     TechnologyElementId = 3,
                     TechnologyLevelId = 3
@@ -627,24 +637,28 @@ namespace JustFindJob.Persistance.Seed
 
                 new TechStack()
                 {
+                    Id = 11,
                     JobOfferId = 4,
                     TechnologyElementId = 3,
                     TechnologyLevelId = 4
                 },
                 new TechStack()
                 {
+                    Id = 12,
                     JobOfferId = 4,
                     TechnologyElementId = 6,
                     TechnologyLevelId = 4
                 },
                 new TechStack()
                 {
+                    Id = 13,
                     JobOfferId = 4,
                     TechnologyElementId = 7,
                     TechnologyLevelId = 4
                 },
                 new TechStack()
                 {
+                    Id = 14,
                     JobOfferId = 4,
                     TechnologyElementId = 5,
                     TechnologyLevelId = 4
@@ -652,24 +666,28 @@ namespace JustFindJob.Persistance.Seed
 
                 new TechStack()
                 {
+                    Id = 15,
                     JobOfferId = 5,
                     TechnologyElementId = 3,
                     TechnologyLevelId = 4
                 },
                 new TechStack()
                 {
+                    Id = 16,
                     JobOfferId = 5,
                     TechnologyElementId = 6,
                     TechnologyLevelId = 4
                 },
                 new TechStack()
                 {
+                    Id = 17,
                     JobOfferId = 5,
                     TechnologyElementId = 7,
                     TechnologyLevelId = 4
                 },
                 new TechStack()
                 {
+                    Id = 18,
                     JobOfferId = 5,
                     TechnologyElementId = 5,
                     TechnologyLevelId = 4
@@ -677,36 +695,42 @@ namespace JustFindJob.Persistance.Seed
 
                 new TechStack()
                 {
+                    Id = 19,
                     JobOfferId = 6,
                     TechnologyElementId = 3,
                     TechnologyLevelId = 2
                 },
                 new TechStack()
                 {
+                    Id = 20,
                     JobOfferId = 6,
                     TechnologyElementId = 4,
                     TechnologyLevelId = 1
                 },
                 new TechStack()
                 {
+                    Id = 21,
                     JobOfferId = 6,
                     TechnologyElementId = 8,
                     TechnologyLevelId = 1
                 },
                 new TechStack()
                 {
+                    Id = 22,
                     JobOfferId = 6,
                     TechnologyElementId = 6,
                     TechnologyLevelId = 2
                 },
                 new TechStack()
                 {
+                    Id = 23,
                     JobOfferId = 6,
                     TechnologyElementId = 7,
                     TechnologyLevelId = 2
                 },
                 new TechStack()
                 {
+                    Id = 24,
                     JobOfferId = 6,
                     TechnologyElementId = 5,
                     TechnologyLevelId = 1
@@ -714,24 +738,28 @@ namespace JustFindJob.Persistance.Seed
 
                 new TechStack()
                 {
+                    Id = 25,
                     JobOfferId = 7,
                     TechnologyElementId = 15,
                     TechnologyLevelId = 3
                 },
                 new TechStack()
                 {
+                    Id = 26,
                     JobOfferId = 7,
                     TechnologyElementId = 2,
                     TechnologyLevelId = 2
                 },
                 new TechStack()
                 {
+                    Id = 27,
                     JobOfferId = 7,
                     TechnologyElementId = 8,
                     TechnologyLevelId = 3
                 },
                 new TechStack()
                 {
+                    Id = 28,
                     JobOfferId = 7,
                     TechnologyElementId = 4,
                     TechnologyLevelId = 3
@@ -739,30 +767,35 @@ namespace JustFindJob.Persistance.Seed
 
                 new TechStack()
                 {
+                    Id = 29,
                     JobOfferId = 8,
                     TechnologyElementId = 15,
                     TechnologyLevelId = 2
                 },
                 new TechStack()
                 {
+                    Id = 30,
                     JobOfferId = 8,
                     TechnologyElementId = 4,
                     TechnologyLevelId = 2
                 },
                 new TechStack()
                 {
+                    Id = 31,
                     JobOfferId = 8,
                     TechnologyElementId = 8,
                     TechnologyLevelId = 2
                 },
                 new TechStack()
                 {
+                    Id = 32,
                     JobOfferId = 8,
                     TechnologyElementId = 9,
                     TechnologyLevelId = 1
                 },
                 new TechStack()
                 {
+                    Id = 33,
                     JobOfferId = 8,
                     TechnologyElementId = 10,
                     TechnologyLevelId = 1
@@ -770,30 +803,35 @@ namespace JustFindJob.Persistance.Seed
 
                 new TechStack()
                 {
+                    Id = 34,
                     JobOfferId = 9,
                     TechnologyElementId = 15,
                     TechnologyLevelId = 3
                 },
                 new TechStack()
                 {
+                    Id = 35,
                     JobOfferId = 9,
                     TechnologyElementId = 4,
                     TechnologyLevelId = 3
                 },
                 new TechStack()
                 {
+                    Id = 36,
                     JobOfferId = 9,
                     TechnologyElementId = 8,
                     TechnologyLevelId = 3
                 },
                 new TechStack()
                 {
+                    Id = 37,
                     JobOfferId = 9,
                     TechnologyElementId = 9,
                     TechnologyLevelId = 3
                 },
                 new TechStack()
                 {
+                    Id = 38,
                     JobOfferId = 9,
                     TechnologyElementId = 10,
                     TechnologyLevelId = 3
@@ -801,30 +839,35 @@ namespace JustFindJob.Persistance.Seed
 
                 new TechStack()
                 {
+                    Id = 39,
                     JobOfferId = 10,
                     TechnologyElementId = 2,
                     TechnologyLevelId = 3
                 },
                 new TechStack()
                 {
+                    Id = 40,
                     JobOfferId = 10,
                     TechnologyElementId = 4,
                     TechnologyLevelId = 3
                 },
                 new TechStack()
                 {
+                    Id = 41,
                     JobOfferId = 10,
                     TechnologyElementId = 8,
                     TechnologyLevelId = 3
                 },
                 new TechStack()
                 {
+                    Id = 42,
                     JobOfferId = 10,
                     TechnologyElementId = 9,
                     TechnologyLevelId = 3
                 },
                 new TechStack()
                 {
+                    Id = 43,
                     JobOfferId = 10,
                     TechnologyElementId = 10,
                     TechnologyLevelId = 3
@@ -832,18 +875,21 @@ namespace JustFindJob.Persistance.Seed
 
                 new TechStack()
                 {
+                    Id = 44,
                     JobOfferId = 11,
                     TechnologyElementId = 13,
                     TechnologyLevelId = 3
                 },
                 new TechStack()
                 {
+                    Id = 45,
                     JobOfferId = 11,
                     TechnologyElementId = 14,
                     TechnologyLevelId = 3
                 },
                 new TechStack()
                 {
+                    Id = 46,
                     JobOfferId = 11,
                     TechnologyElementId = 5,
                     TechnologyLevelId = 3
@@ -851,24 +897,28 @@ namespace JustFindJob.Persistance.Seed
 
                 new TechStack()
                 {
+                    Id = 47,
                     JobOfferId = 12,
                     TechnologyElementId = 6,
                     TechnologyLevelId = 2
                 },
                 new TechStack()
                 {
+                    Id = 48,
                     JobOfferId = 12,
                     TechnologyElementId = 5,
                     TechnologyLevelId = 2
                 },
                 new TechStack()
                 {
+                    Id = 49,
                     JobOfferId = 12,
                     TechnologyElementId = 11,
                     TechnologyLevelId = 2
                 },
                 new TechStack()
                 {
+                    Id = 50,
                     JobOfferId = 12,
                     TechnologyElementId = 12,
                     TechnologyLevelId = 2
