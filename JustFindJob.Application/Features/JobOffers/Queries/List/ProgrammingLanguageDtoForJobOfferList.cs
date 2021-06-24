@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace JustFindJob.Application.Features.JobOffers.Queries.List
 {
-    public class TechnologyDtoForJobOfferList
+    public class ProgrammingLanguageDtoForJobOfferList
     {
-        public string MainTechnologyName { get; set; }
-        public string MainTechnologyImage { get; set; }
+        public string Name { get; set; }
+        public string Image { get; set; }
     }
 }

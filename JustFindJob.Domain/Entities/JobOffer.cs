@@ -11,7 +11,7 @@ namespace JustFindJob.Domain.Entities
     {
         public int CompanyId { get; set; }
         public Company Company { get; set; }
-        public TechStack TechStack { get; set; }
+        public ICollection<TechStack> TechStacks { get; set; }
         public int ProgrammingLanguageId { get; set; }
         public ProgrammingLanguage ProgrammingLanguage { get; set; }
         public string Localization { get; set; }

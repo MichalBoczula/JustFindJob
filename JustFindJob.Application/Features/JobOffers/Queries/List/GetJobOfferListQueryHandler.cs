@@ -24,31 +24,31 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.List
 
         public async Task<List<JobOfferListVm>> Handle(GetJobOfferListQuery request, CancellationToken cancellationToken)
         {
-            var elements = await (from job in _context.JobOffers
-                                  join com in _context.Companies
-                                    on job.CompanyId equals com.Id
-                                  join tech in _context.TechStacks
-                                    on job.Id equals tech.JobOfferId
-                                  select new
-                                  {
-                                      job,
-                                      com,
-                                      tech
-                                  }).ToListAsync(cancellationToken);
+            var elements = from job in _context.JobOffers
+                           join com in _context.Companies
+                             on job.CompanyId equals com.Id
+                           join prog in _context.ProgrammingLanguages
+                             on job.ProgrammingLanguageId equals prog.Id
+                           select new
+                           {
+                               job,
+                               com,
+                               prog
+                           };
 
             List<JobOfferListVm> result = new List<JobOfferListVm>();
 
-            foreach (var ele in elements)
+            foreach (var ele in await elements.ToListAsync(cancellationToken))
             {
                 var companyDto = _mapper.Map<CompanyDtoForJobOfferList>(ele.com);
                 var jobOfferDto = _mapper.Map<JobOfferDtoForJobOfferList>(ele.job);
-                var technologyDto = _mapper.Map<TechnologyDtoForJobOfferList>(ele.tech);
+                var languageDto = _mapper.Map<ProgrammingLanguageDtoForJobOfferList>(ele.prog);
 
                 var jobOfferVm = new JobOfferListVm()
                 {
                     JobOfferDto = jobOfferDto,
                     CompanyDto = companyDto,
-                    TechnologyDto = technologyDto
+                    ProgrammingLanguageDto = languageDto
                 };
                 result.Add(jobOfferVm);
             }

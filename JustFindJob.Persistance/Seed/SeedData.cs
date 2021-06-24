@@ -437,7 +437,7 @@ namespace JustFindJob.Persistance.Seed
                 new TechnologyElement()
                 {
                     Id = 3,
-                    Name = "MSSQL",
+                    Name = "MSSQL"
                 },
                 new TechnologyElement()
                 {
@@ -448,7 +448,7 @@ namespace JustFindJob.Persistance.Seed
                 new TechnologyElement()
                 {
                     Id = 5,
-                    Name = "MySQL",
+                    Name = "MySQL"
                 },
                 new TechnologyElement()
                 {
@@ -465,7 +465,7 @@ namespace JustFindJob.Persistance.Seed
                 new TechnologyElement()
                 {
                     Id = 8,
-                    Name = "HTML & CSS",
+                    Name = "HTML & CSS"
                 },
                 new TechnologyElement()
                 {

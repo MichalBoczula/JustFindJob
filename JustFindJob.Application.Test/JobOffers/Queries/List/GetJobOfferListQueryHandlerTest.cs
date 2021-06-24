@@ -10,6 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 using Shouldly;
+using JustFindJob.Domain.Entities;
 
 namespace JustFindJob.Application.Test.JobOffers.Queries.List
 {
@@ -37,10 +38,10 @@ namespace JustFindJob.Application.Test.JobOffers.Queries.List
             result.Count.ShouldBe(12);
             foreach (var ele in result)
             {
-                ele.TechnologyDto.MainTechnologyName.ShouldNotBeNullOrEmpty();
+                ele.ProgrammingLanguageDto.Name.ShouldNotBeNullOrEmpty();
                 ele.CompanyDto.Name.ShouldNotBeNullOrEmpty();
                 ele.JobOfferDto.Localization.ShouldNotBeNullOrEmpty();
-                ele.JobOfferDto.ExperienceLevel.ShouldNotBeNullOrEmpty();
+                ele.JobOfferDto.ExperienceLevel.ShouldBeOfType<ExperienceLevels>();
                 ele.JobOfferDto.ShortDescription.ShouldNotBeNullOrEmpty();
             }
         }

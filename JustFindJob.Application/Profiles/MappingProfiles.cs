@@ -14,15 +14,30 @@ namespace JustFindJob.Application.Profiles
     {
         public MappingProfiles()
         {
-#region JobOffer Queries 
-            CreateMap<TechStack, TechnologyDtoForJobOfferList>().ReverseMap();
+            #region JobOffer Queries;
+
+            CreateJobOfferListMapping();
+            CreateJobOfferDetailsMapping();
+            #endregion
+
+        }
+
+
+        private void CreateJobOfferListMapping()
+        {
+            CreateMap<ProgrammingLanguage, ProgrammingLanguageDtoForJobOfferList>().ReverseMap();
             CreateMap<Company, CompanyDtoForJobOfferList>().ReverseMap();
             CreateMap<JobOffer, JobOfferDtoForJobOfferList>().ReverseMap();
-#endregion
-            CreateMap<JobOffer, JobOfferListVm>().ReverseMap();
-            CreateMap<JobOffer, JobOfferDetailsVm>().ReverseMap();
-            CreateMap<TechStack, TechnologyForJobOfferDto>().ReverseMap();
+        }
+
+        private void CreateJobOfferDetailsMapping()
+        {
             CreateMap<Company, CompanyForJobOfferDetailsDto>().ReverseMap();
+            CreateMap<JobOffer, JobOfferForJobOfferDetailsDto>().ReverseMap();
+            CreateMap<ProgrammingLanguage, ProgrammingLanguageForJobOfferDetailsDto>().ReverseMap();
+            CreateMap<TechnologyElement, TechnologyElementForJobOfferDetailsDto>().ReverseMap();
+            CreateMap<TechnologyLevel, TechnologyLevelForJobOfferDetailsDto>().ReverseMap();
+            CreateMap<TechStack, TechStackForJobOfferDetailsDto>().ReverseMap();
         }
     }
 }
