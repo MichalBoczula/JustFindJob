@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using JustFindJob.Application.Features.JobOffers.Queries.Details;
+using JustFindJob.Application.Features.JobOffers.Queries.FilteredList;
 using JustFindJob.Application.Features.JobOffers.Queries.List;
 using JustFindJob.Domain.Entities;
 using System;
@@ -18,19 +19,18 @@ namespace JustFindJob.Application.Profiles
 
             CreateJobOfferListMapping();
             CreateJobOfferDetailsMapping();
+            CreateJobOfferFilteredListMapping();
             #endregion
 
         }
 
-
         private void CreateJobOfferListMapping()
         {
-            CreateMap<ProgrammingLanguage, ProgrammingLanguageDtoForJobOfferList>().ReverseMap();
-            CreateMap<Company, CompanyDtoForJobOfferList>().ReverseMap();
-            CreateMap<JobOffer, JobOfferDtoForJobOfferList>()
+            CreateMap<ProgrammingLanguage, ProgrammingLanguageForJobOfferListDto>().ReverseMap();
+            CreateMap<Company, CompanyForJobOfferListDto>().ReverseMap();
+            CreateMap<JobOffer, JobOfferForJobOfferListDto>()
                 .ForMember(j => j.ExperienceLevel, opt => opt.MapFrom(x => x.ExperienceLevel.ToString()))
                 .ReverseMap();
-
         }
 
         private void CreateJobOfferDetailsMapping()
@@ -43,6 +43,15 @@ namespace JustFindJob.Application.Profiles
             CreateMap<TechnologyElement, TechnologyElementForJobOfferDetailsDto>().ReverseMap();
             CreateMap<TechnologyLevel, TechnologyLevelForJobOfferDetailsDto>().ReverseMap();
             CreateMap<TechStack, TechStackForJobOfferDetailsDto>().ReverseMap();
+        }
+
+        private void CreateJobOfferFilteredListMapping()
+        {
+            CreateMap<ProgrammingLanguage, ProgrammingLanguageForFilteredListDto>().ReverseMap();
+            CreateMap<Company, CompanyForFilteredJobOfferDto>().ReverseMap();
+            CreateMap<JobOffer, JobOfferForFilteredListDto>()
+                .ForMember(j => j.ExperienceLevel, opt => opt.MapFrom(x => x.ExperienceLevel.ToString()))
+                .ReverseMap();
         }
     }
 }

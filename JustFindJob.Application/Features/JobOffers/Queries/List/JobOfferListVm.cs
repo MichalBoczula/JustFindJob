@@ -9,9 +9,9 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.List
 {
     public class JobOfferListVm
     {
-        public JobOfferDtoForJobOfferList JobOfferDto { get; set; }
-        public CompanyDtoForJobOfferList CompanyDto { get; set; }
-        public ProgrammingLanguageDtoForJobOfferList ProgrammingLanguageDto { get; set; }
+        public JobOfferForJobOfferListDto JobOfferDto { get; set; }
+        public CompanyForJobOfferListDto CompanyDto { get; set; }
+        public ProgrammingLanguageForJobOfferListDto ProgrammingLanguageDto { get; set; }
 
     }
 }

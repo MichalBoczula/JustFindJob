@@ -29,10 +29,11 @@ namespace JustFindJob.Application.Test.JobOffers.Queries.Details
         [Fact]
         public async Task ShouldReturnDetails()
         {
+            //arrange
             var handler = new GetJobOfferDetailsQueryHandler(_context, _mapper);
-
+            //act
             var result = await handler.Handle(new GetJobOfferDetailsQuery() { JobOfferId = 1}, CancellationToken.None);
-
+            //assert
             result.ShouldBeOfType<JobOfferDetailsVm>();
             result.JobOfferDto.Localization.ShouldBe("Wroclaw");
             result.JobOfferDto.ExperienceLevel.ShouldBe("Junior");

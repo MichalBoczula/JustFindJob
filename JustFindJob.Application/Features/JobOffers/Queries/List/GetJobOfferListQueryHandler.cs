@@ -40,9 +40,9 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.List
 
             foreach (var ele in await elements.ToListAsync(cancellationToken))
             {
-                var companyDto = _mapper.Map<CompanyDtoForJobOfferList>(ele.com);
-                var jobOfferDto = _mapper.Map<JobOfferDtoForJobOfferList>(ele.job);
-                var languageDto = _mapper.Map<ProgrammingLanguageDtoForJobOfferList>(ele.prog);
+                var companyDto = _mapper.Map<CompanyForJobOfferListDto>(ele.com);
+                var jobOfferDto = _mapper.Map<JobOfferForJobOfferListDto>(ele.job);
+                var languageDto = _mapper.Map<ProgrammingLanguageForJobOfferListDto>(ele.prog);
 
                 var jobOfferVm = new JobOfferListVm()
                 {
