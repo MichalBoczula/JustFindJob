@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustFindJob.Persistance", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustFindJob.API", "JustFindJob.API\JustFindJob.API.csproj", "{B6DD3F91-0E63-43C5-B2DB-54FF16BC1EFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustFindJob.Application.Test", "JustFindJob.Application.Test\JustFindJob.Application.Test.csproj", "{3DAB5CB9-79AC-4C37-BAF3-A9D0ADFBEBD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustFindJob.Application.Test", "JustFindJob.Application.Test\JustFindJob.Application.Test.csproj", "{3DAB5CB9-79AC-4C37-BAF3-A9D0ADFBEBD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

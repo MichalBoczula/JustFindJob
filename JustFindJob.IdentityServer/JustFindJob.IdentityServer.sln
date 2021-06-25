@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustFindJob.IdentityServer", "JustFindJob.IdentityServer.csproj", "{34BBF7D1-3AD7-44C4-AB55-46166BDB93BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34BBF7D1-3AD7-44C4-AB55-46166BDB93BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34BBF7D1-3AD7-44C4-AB55-46166BDB93BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34BBF7D1-3AD7-44C4-AB55-46166BDB93BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34BBF7D1-3AD7-44C4-AB55-46166BDB93BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F7E2BBB-2DE4-4187-AC2C-779034BCBEF9}
+	EndGlobalSection
+EndGlobal
