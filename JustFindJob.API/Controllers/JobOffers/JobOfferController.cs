@@ -1,6 +1,7 @@
 ﻿using JustFindJob.API.Controllers.Common;
 using JustFindJob.Application.Features.JobOffers.Queries.Details;
 using JustFindJob.Application.Features.JobOffers.Queries.List;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 namespace JustFindJob.API.Controllers.JobOffers
 {
     [Route("api/jobs")]
+    [Authorize]
     public class JobOfferController : BaseController
     {
         [HttpGet("{id}")]

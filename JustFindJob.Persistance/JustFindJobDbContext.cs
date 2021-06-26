@@ -1,4 +1,5 @@
-﻿using JustFindJob.Application.Contracts.Persistance;
+﻿using JustFindJob.Application.Contracts.Identity;
+using JustFindJob.Application.Contracts.Persistance;
 using JustFindJob.Domain.Common;
 using JustFindJob.Domain.Entities;
 using JustFindJob.Persistance.Seed;
@@ -15,9 +16,11 @@ namespace JustFindJob.Persistance
 {
     public class JustFindJobDbContext : DbContext , IJustFindJobDbContext
     {
-        public JustFindJobDbContext(DbContextOptions<JustFindJobDbContext> options) : base(options)
-        {
+        private readonly ICurrentUserService _currentUserService;
 
+        public JustFindJobDbContext(DbContextOptions<JustFindJobDbContext> options, ICurrentUserService currentUserService) : base(options)
+        {
+            _currentUserService = currentUserService;
         }
 
         public DbSet<JobOffer> JobOffers { get; set; }
@@ -41,19 +44,19 @@ namespace JustFindJob.Persistance
                 switch (entry.State)
                 {
                     case EntityState.Added:
-                        entry.Entity.CreatedBy = string.Empty;
+                        entry.Entity.CreatedBy = _currentUserService.Email;
                         entry.Entity.Created = DateTime.Now;
                         entry.Entity.StatusId = 1;
                         break;
                     case EntityState.Modified:
-                        entry.Entity.ModifiedBy = string.Empty;
+                        entry.Entity.ModifiedBy = _currentUserService.Email;
                         entry.Entity.Modified = DateTime.Now;
                         break;
                     case EntityState.Deleted:
-                        entry.Entity.ModifiedBy = string.Empty;
+                        entry.Entity.ModifiedBy = _currentUserService.Email;
                         entry.Entity.Modified = DateTime.Now;
                         entry.Entity.Inactivated = DateTime.Now;
-                        entry.Entity.InactivatedBy = string.Empty;
+                        entry.Entity.InactivatedBy = _currentUserService.Email;
                         entry.Entity.StatusId = 0;
                         entry.State = EntityState.Modified;
                         break;
