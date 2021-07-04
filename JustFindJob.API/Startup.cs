@@ -1,4 +1,6 @@
+using IdentityServer4.AccessTokenValidation;
 using IdentityServer4.Services;
+using JustFindJob.API.HttpHandlers;
 using JustFindJob.API.Service;
 using JustFindJob.Application;
 using JustFindJob.Application.Contracts.Identity;
@@ -34,7 +36,8 @@ namespace JustFindJob.API
 
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddHttpContextAccessor();
+            services.AddTransient<BearerTokenHandler>();
             services.AddApplication();
             services.AddPersistance(Configuration);
             services.AddControllers();
@@ -42,23 +45,24 @@ namespace JustFindJob.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "JustFindJob.API", Version = "v1" });
             });
-            services.AddAuthentication(opt =>
-            {
-                opt.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                opt.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
-            })
-            .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme)
-            .AddOpenIdConnect(OpenIdConnectDefaults.AuthenticationScheme, opt =>
-            {
-                opt.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                opt.Authority = "https://localhost:5000/";
-                opt.ClientId = "justfindjob";
-                opt.ResponseType = "code";
-                opt.Scope.Add("openid");
-                opt.Scope.Add("profile");
-                opt.SaveTokens = true;
-                opt.ClientSecret = "this is my secret";
-            });
+            services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+                .AddIdentityServerAuthentication(opt =>
+                {
+                    opt.Authority = "https://localhost:5000/";
+                    opt.ApiName = "justfindjobapi";
+                })
+                .AddOpenIdConnect(OpenIdConnectDefaults.AuthenticationScheme, opt =>
+                {
+                    opt.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                    opt.Authority = "https://localhost:5000/";
+                    opt.ClientId = "justfindjob";
+                    opt.ResponseType = "code";
+                    opt.Scope.Add("openid");
+                    opt.Scope.Add("profile");
+                    opt.Scope.Add("justfindjobapi");
+                    opt.SaveTokens = true;
+                    opt.ClientSecret = "this is my secret";
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

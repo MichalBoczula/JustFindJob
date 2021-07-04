@@ -19,7 +19,9 @@ namespace JustFindJob.IdentityProvider
 
         public static IEnumerable<ApiScope> ApiScopes =>
             new ApiScope[]
-            { };
+            {
+                new ApiScope("justfindjobapi", "Just Find Job API")
+            };
 
         public static IEnumerable<Client> Clients =>
             new Client[]
@@ -34,10 +36,14 @@ namespace JustFindJob.IdentityProvider
                     {
                         "https://localhost:44341/signin-oidc"
                     },
+                    PostLogoutRedirectUris = new List<string>{
+                        "https://localhost:44341/loggedout/signout-callback-oidc"
+                    },
                     AllowedScopes =
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.Profile
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "justfindjobapi"
                     },
                     ClientSecrets =
                     {

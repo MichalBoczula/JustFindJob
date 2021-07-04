@@ -1,6 +1,9 @@
 ﻿using JustFindJob.API.Controllers.Common;
 using JustFindJob.Application.Features.JobOffers.Queries.Details;
 using JustFindJob.Application.Features.JobOffers.Queries.List;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -27,5 +30,6 @@ namespace JustFindJob.API.Controllers.JobOffers
             var vm = await Mediator.Send(new GetJobOfferListQuery());
             return Ok(vm);
         }
+       
     }
 }
