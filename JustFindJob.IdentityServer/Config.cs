@@ -2,7 +2,6 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
-
 using IdentityModel;
 using IdentityServer4.Models;
 using System.Collections.Generic;
@@ -16,7 +15,7 @@ namespace JustFindJob.IdentityServer
                    {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
-                new IdentityResource(name: "user", userClaims: new[] {JwtClaimTypes.Email})
+                new IdentityResource(name: "user", userClaims: new [] { JwtClaimTypes.Email})
                    };
 
         public static IEnumerable<ApiScope> ApiScopes =>
@@ -24,7 +23,7 @@ namespace JustFindJob.IdentityServer
             {
                 new ApiScope("scope1"),
                 new ApiScope("scope2"),
-                new ApiScope("JustFindJob"),
+                new ApiScope("api")
             };
 
         public static IEnumerable<Client> Clients =>
@@ -33,17 +32,16 @@ namespace JustFindJob.IdentityServer
                 new Client
                 {
                     ClientId = "swagger",
-                    ClientName = "Client for Swagger user",
+                    ClientName = "ClientForSwagger",
+                    ClientSecrets = { new Secret("SwaggerSecret".Sha256()) },
                     AllowedGrantTypes = GrantTypes.CodeAndClientCredentials,
-                    ClientSecrets = {new Secret("secret".Sha256())},
-                    AllowedScopes = { "JustFindJob", "user"},
+                    AllowedScopes = { "openid", "api", "user" },
                     AlwaysSendClientClaims = true,
                     AlwaysIncludeUserClaimsInIdToken = true,
-                    AllowAccessTokensViaBrowser=true,
-                    RedirectUris = { "http://localhost:59735/swagger/oauth2-redirect.html" },
-                    AllowedCorsOrigins = { "http://localhost:59735" }
-
-                }
+                    AllowAccessTokensViaBrowser = true,
+                    RedirectUris = { "https://localhost:44341/signin-oidc" },
+                    AllowedCorsOrigins = { "https://localhost:44341/" }
+                },
             };
     }
 }

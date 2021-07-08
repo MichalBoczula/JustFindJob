@@ -26,7 +26,7 @@ namespace JustFindJob.IdentityServer.Services
             {
                 new Claim("Email", user.Email)
             };
-            context.IssuedClaims.AddRange(claims);
+            context.IssuedClaims.AddRange(claims); 
         }
 
         public async Task IsActiveAsync(IsActiveContext context)

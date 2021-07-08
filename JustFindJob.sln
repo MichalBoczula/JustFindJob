@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustFindJob.IdentityProvide
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{9888B533-E56A-4C59-9963-D509AEB937F2}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustFindJob.IdentityServer", "JustFindJob.IdentityServer\JustFindJob.IdentityServer.csproj", "{2CC2911F-0524-47DF-A4A5-0D4A147ABE41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{483C639C-0D5B-49D7-81C9-C7189FA5A1DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{483C639C-0D5B-49D7-81C9-C7189FA5A1DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{483C639C-0D5B-49D7-81C9-C7189FA5A1DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CC2911F-0524-47DF-A4A5-0D4A147ABE41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CC2911F-0524-47DF-A4A5-0D4A147ABE41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CC2911F-0524-47DF-A4A5-0D4A147ABE41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CC2911F-0524-47DF-A4A5-0D4A147ABE41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +77,7 @@ Global
 		{B6DD3F91-0E63-43C5-B2DB-54FF16BC1EFE} = {CE7B1C84-9901-4A6C-B5AC-744406584F96}
 		{3DAB5CB9-79AC-4C37-BAF3-A9D0ADFBEBD0} = {B61C0325-7281-4D12-B00F-DDDE7BCDED6D}
 		{483C639C-0D5B-49D7-81C9-C7189FA5A1DE} = {9888B533-E56A-4C59-9963-D509AEB937F2}
+		{2CC2911F-0524-47DF-A4A5-0D4A147ABE41} = {9888B533-E56A-4C59-9963-D509AEB937F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {65571B86-A7FD-47DB-9AC0-022DDCBC505D}
