@@ -41,20 +41,5 @@ namespace JustFindJob.API.Controllers
             });
             return Ok(result.ToList());
         }
-
-        [Route("/logout")]
-        [AllowAnonymous]
-        public async Task Logout()
-        {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            await HttpContext.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme);
-        }
-
-        [Route("/loggedout")]
-        [HttpGet]
-        public ActionResult<string> LoggedOut()
-        {
-            return "You Are logged out";
-        }
     }
 }
