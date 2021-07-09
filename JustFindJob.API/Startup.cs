@@ -20,6 +20,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -77,6 +78,8 @@ namespace JustFindJob.API
                 });
                 c.OperationFilter<AuthorizeCheckOperationFilter>();
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "JustFindJob.API", Version = "v1" });
+                var filePath = Path.Combine(AppContext.BaseDirectory, "JustFindJob.API.xml");
+                c.IncludeXmlComments(filePath);
             });
             services.AddAuthorization(opt =>
             {
@@ -86,6 +89,7 @@ namespace JustFindJob.API
                     policy.RequireClaim("scope", "api1");
                 });
             });
+            services.AddHealthChecks();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -103,6 +107,7 @@ namespace JustFindJob.API
                     c.OAuthUsePkce();
                 });
             }
+            app.UseHealthChecks("/hc");
             app.UseHttpsRedirection();
             app.UseAuthentication();
             

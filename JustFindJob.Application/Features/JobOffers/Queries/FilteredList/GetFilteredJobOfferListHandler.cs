@@ -29,11 +29,14 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.FilteredList
                             on job.CompanyId equals comp.Id
                         join lang in _context.ProgrammingLanguages
                             on job.ProgrammingLanguageId equals lang.Id
-                        where (request.Filters.ProggramingLanguages.Count != 0?
+                        where (request.Filters.ProggramingLanguages.Count != 0 ?
                             request.Filters.ProggramingLanguages.Contains(lang.Name) :
                             true) &&
-                            (request.Filters.ExperienceLevels.Count != 0 ?
-                            request.Filters.ExperienceLevels.Contains(job.ExperienceLevel.ToString()) :
+                            (request.Filters.ExpLevels.Count != 0 ?
+                            request.Filters.ExpLevels.Contains(job.ExperienceLevel) :
+                            true) &&
+                            (request.Filters.Localizations.Count != 0 ?
+                            request.Filters.Localizations.Contains(job.Localization) :
                             true)
                         select new
                         {

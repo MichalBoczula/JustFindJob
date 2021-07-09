@@ -1,5 +1,6 @@
 ﻿using JustFindJob.API.Controllers.Common;
 using JustFindJob.Application.Features.JobOffers.Queries.Details;
+using JustFindJob.Application.Features.JobOffers.Queries.FilteredList;
 using JustFindJob.Application.Features.JobOffers.Queries.List;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -14,13 +15,34 @@ using System.Threading.Tasks;
 namespace JustFindJob.API.Controllers.JobOffers
 {
     [Route("api/jobs")]
-    [Authorize]
+    [AllowAnonymous]
     public class JobOfferController : BaseController
     {
         [HttpGet("{id}")]
         public async Task<ActionResult<JobOfferDetailsVm>> GetDetails(int id)
         {
             var vm = await Mediator.Send(new GetJobOfferDetailsQuery() { JobOfferId = id });
+            return Ok(vm);
+        }
+
+        /// <summary>
+        /// To tests input values separated by ',' (coma) like:
+        /// languages = C#,Java;
+        /// localizations = Warsaw,Wroclaw,Crakow;
+        /// expLevels = Junior,Mid;
+        /// </summary>
+        /// <param name="languages"></param>
+        /// <param name="localizations"></param>
+        /// <param name="expLevels"></param>
+        /// <returns></returns>
+        [HttpGet("api/jobs/search")]
+        public async Task<ActionResult<FilteredJobOfferListVm>> GetFilteredJobs(string languages, string localizations, string expLevels)
+        {
+            var filters = new ListFilters();
+            filters.AddProggramingLanguages(languages);
+            filters.AddLocalizations(localizations);
+            filters.AddExperienceLevels(expLevels);
+            var vm = await Mediator.Send(new GetFilteredJobOfferListQuery() { Filters = filters });
             return Ok(vm);
         }
 

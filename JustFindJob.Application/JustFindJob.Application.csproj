@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\JobOffers\Commands\" />
+    <Compile Remove="Features\JobOffers\Commands\**" />
+    <EmbeddedResource Remove="Features\JobOffers\Commands\**" />
+    <None Remove="Features\JobOffers\Commands\**" />
   </ItemGroup>
 
   <ItemGroup>

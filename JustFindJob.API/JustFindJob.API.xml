@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JustFindJob.API</name>
+    </assembly>
+    <members>
+        <member name="M:JustFindJob.API.Controllers.JobOffers.JobOfferController.GetFilteredJobs(System.String,System.String,System.String)">
+            <summary>
+            To tests input values separated by ',' (coma) like:
+            languages = C#,Java;
+            localizations = Warsaw,Wroclaw,Crakow;
+            expLevels = Junior,Mid;
+            </summary>
+            <param name="languages"></param>
+            <param name="localizations"></param>
+            <param name="expLevels"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
