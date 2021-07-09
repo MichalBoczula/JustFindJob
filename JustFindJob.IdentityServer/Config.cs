@@ -21,9 +21,7 @@ namespace JustFindJob.IdentityServer
         public static IEnumerable<ApiScope> ApiScopes =>
             new ApiScope[]
             {
-                new ApiScope("scope1"),
-                new ApiScope("scope2"),
-                new ApiScope("api")
+                new ApiScope("api1", "My API")
             };
 
         public static IEnumerable<Client> Clients =>
@@ -33,14 +31,14 @@ namespace JustFindJob.IdentityServer
                 {
                     ClientId = "swagger",
                     ClientName = "ClientForSwagger",
-                    ClientSecrets = { new Secret("SwaggerSecret".Sha256()) },
+                    ClientSecrets = { new Secret("secret".Sha256())},
                     AllowedGrantTypes = GrantTypes.CodeAndClientCredentials,
-                    AllowedScopes = { "openid", "api", "user" },
+                    AllowedScopes = { "api1" },
                     AlwaysSendClientClaims = true,
                     AlwaysIncludeUserClaimsInIdToken = true,
                     AllowAccessTokensViaBrowser = true,
-                    RedirectUris = { "https://localhost:44341/signin-oidc" },
-                    AllowedCorsOrigins = { "https://localhost:44341/" }
+                    RedirectUris = { "https://localhost:44341/swagger/oauth2-redirect.html" },
+                    AllowedCorsOrigins = { "https://localhost:44341" }
                 },
             };
     }

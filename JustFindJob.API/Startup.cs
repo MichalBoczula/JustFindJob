@@ -16,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
@@ -47,14 +48,14 @@ namespace JustFindJob.API
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<ICurrentUserService, CurrentUserService>();
             services.AddAuthentication("Bearer")
-                .AddJwtBearer("Bearer", opt =>
+            .AddJwtBearer("Bearer", options =>
+            {
+                options.Authority = "https://localhost:5001";
+                options.TokenValidationParameters = new TokenValidationParameters
                 {
-                    opt.Authority = "https://localhost:5001";
-                    opt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
-                    {
-                        ValidateAudience = false
-                    };
-                });
+                    ValidateAudience = false
+                };
+            });
             services.AddSwaggerGen(c =>
             {
                 c.AddSecurityDefinition("bearer", new OpenApiSecurityScheme
@@ -68,7 +69,7 @@ namespace JustFindJob.API
                             TokenUrl = new Uri("https://localhost:5001/connect/token"),
                             Scopes = new Dictionary<string, string>
                             {
-                                {"api", "Full Access"},
+                                {"api1", "Full Access"},
                                 {"user", "User Info"},
                             }
                         }
@@ -82,7 +83,7 @@ namespace JustFindJob.API
                 opt.AddPolicy("ApiScope", policy =>
                 {
                     policy.RequireAuthenticatedUser();
-                    policy.RequireClaim("scope", "api");
+                    policy.RequireClaim("scope", "api1");
                 });
             });
         }
@@ -93,22 +94,25 @@ namespace JustFindJob.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "JustFindJob.API v1");
+                    c.OAuthClientId("swagger");
+                    c.OAuth2RedirectUrl("https://localhost:44341/swagger/oauth2-redirect.html");
+                    c.OAuthUsePkce();
+                });
             }
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "JustFindJob.API v1");
-                c.OAuthClientId("swagger");
-                c.OAuth2RedirectUrl("https://localhost:44341/swagger/oauth2-redirect.html");
-                c.OAuthUsePkce();
-            });
+            app.UseHttpsRedirection();
+            app.UseAuthentication();
+            
             app.UseRouting();
 
-            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers().RequireAuthorization("ApiScope");
+                endpoints.MapControllers().RequireAuthorization("ApiScope"); ;
             });
         }
     }
