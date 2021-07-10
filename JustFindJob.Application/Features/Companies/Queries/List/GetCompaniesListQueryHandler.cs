@@ -27,7 +27,7 @@ namespace JustFindJob.Application.Features.Companies.Queries.List
             var query = from c in _context.Companies
                         select c;
             List<CompanyVm> result = new List<CompanyVm>();
-            foreach (var ele in await query.ToListAsync())
+            foreach (var ele in await query.ToListAsync(cancellationToken))
             {
                 result.Add(
                     _mapper.Map<CompanyVm>(ele));

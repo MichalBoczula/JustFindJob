@@ -1,4 +1,5 @@
 ﻿using JustFindJob.API.Controllers.Common;
+using JustFindJob.Application.Features.Companies.Queries.Details;
 using JustFindJob.Application.Features.Companies.Queries.List;
 using JustFindJob.Application.Features.JobOffers.Queries.List;
 using MediatR;
@@ -22,6 +23,13 @@ namespace JustFindJob.API.Controllers.Company
         {
             var vm = await Mediator.Send(new GetCompaniesListQuery());
             return Ok(vm);
+        }
+
+        [HttpGet("{Id}")]
+        public async Task<ActionResult<CompanyDetailsVm>> GetCompanyDetails(int Id)
+        {
+            var vm = await Mediator.Send(new GetCompanyDetailsQuery() { CompanyId = Id });
+            return vm;
         }
     }
 }

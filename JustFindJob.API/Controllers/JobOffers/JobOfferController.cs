@@ -18,10 +18,10 @@ namespace JustFindJob.API.Controllers.JobOffers
     [AllowAnonymous]
     public class JobOfferController : BaseController
     {
-        [HttpGet("{id}")]
-        public async Task<ActionResult<JobOfferDetailsVm>> GetDetails(int id)
+        [HttpGet("{Id}")]
+        public async Task<ActionResult<JobOfferDetailsVm>> GetDetails(int Id)
         {
-            var vm = await Mediator.Send(new GetJobOfferDetailsQuery() { JobOfferId = id });
+            var vm = await Mediator.Send(new GetJobOfferDetailsQuery() { JobOfferId = Id });
             return Ok(vm);
         }
 
