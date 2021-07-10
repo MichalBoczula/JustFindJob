@@ -26,7 +26,7 @@ namespace JustFindJob.API.Controllers.JobOffers
         }
 
         /// <summary>
-        /// To tests input values separated by ',' (coma) like:
+        /// To tests input values should be separate by ',' (coma) like:
         /// languages = C#,Java;
         /// localizations = Warsaw,Wroclaw,Crakow;
         /// expLevels = Junior,Mid;
@@ -52,6 +52,5 @@ namespace JustFindJob.API.Controllers.JobOffers
             var vm = await Mediator.Send(new GetJobOfferListQuery());
             return Ok(vm);
         }
-       
     }
 }

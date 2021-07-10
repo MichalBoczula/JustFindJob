@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using JustFindJob.Application.Features.Companies.Queries.CompanyJobs;
 using JustFindJob.Application.Features.Companies.Queries.Details;
 using JustFindJob.Application.Features.Companies.Queries.List;
 using JustFindJob.Application.Features.JobOffers.Queries.Details;
@@ -25,6 +26,7 @@ namespace JustFindJob.Application.Profiles
             #region Company Queries;
             CreateCompanyListMapping();
             CreateCompanyDetailsMapping();
+            CreateCompanyJobOfferMapping();
             #endregion
         }
 
@@ -67,6 +69,15 @@ namespace JustFindJob.Application.Profiles
         {
             CreateMap<Company, CompanyBasicInformationDto>().ReverseMap();
             CreateMap<CompanyDetails, CompanyExtendedInformationDto>().ReverseMap();
+        }
+
+        private void CreateCompanyJobOfferMapping()
+        {
+            CreateMap<Company, CompanyForCompanyJobOfferListDto>().ReverseMap();
+            CreateMap<ProgrammingLanguage, ProgrammingLanguageForCompanyJobOfferListDto>().ReverseMap();
+            CreateMap<JobOffer, JobOfferForCompanyJobOfferDto>()
+                .ForMember(j => j.ExperienceLevel, opt => opt.MapFrom(x => x.ExperienceLevel.ToString()))
+                .ReverseMap();
         }
     }
 }
