@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using JustFindJob.Application.Features.Companies.Queries.List;
 using JustFindJob.Application.Features.JobOffers.Queries.Details;
 using JustFindJob.Application.Features.JobOffers.Queries.FilteredList;
 using JustFindJob.Application.Features.JobOffers.Queries.List;
@@ -16,12 +17,18 @@ namespace JustFindJob.Application.Profiles
         public MappingProfiles()
         {
             #region JobOffer Queries;
-
             CreateJobOfferListMapping();
             CreateJobOfferDetailsMapping();
             CreateJobOfferFilteredListMapping();
             #endregion
+            #region Company Queries;
+            CreateCompanyListMapping();
+            #endregion
+        }
 
+        private void CreateCompanyListMapping()
+        {
+            CreateMap<Company, CompanyVm>().ReverseMap();
         }
 
         private void CreateJobOfferListMapping()
