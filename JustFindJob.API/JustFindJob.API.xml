@@ -7,13 +7,29 @@
         <member name="M:JustFindJob.API.Controllers.JobOffers.JobOffersController.GetFilteredJobs(System.String,System.String,System.String)">
             <summary>
             To tests input values should be separate by ',' (coma) like:
-            languages = C#,Java;
-            localizations = Warsaw,Wroclaw,Crakow;
+            languages = C#,Java
+            localizations = Warsaw,Wroclaw,Crakow
             expLevels = Junior,Mid;
             </summary>
             <param name="languages"></param>
             <param name="localizations"></param>
             <param name="expLevels"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JustFindJob.API.Controllers.TechnologyElements.TechnologyElementsController.GetFilteredListByProggramingLanguage(System.String)">
+            <summary>
+             To tests input values should be separate by ',' (coma) like:
+            programmingLanguages = C#,Java
+            </summary>
+            <param name="programmingLanguages"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JustFindJob.API.Controllers.TechnologyElements.TechnologyElementsController.GetFilteredListByTechnologyName(System.String)">
+            <summary>
+             To tests input values should be separate by ',' (coma) like:
+            technologyNames = Angular,MSSQL
+            </summary>
+            <param name="technologyNames"></param>
             <returns></returns>
         </member>
     </members>

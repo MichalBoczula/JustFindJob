@@ -7,6 +7,7 @@ using JustFindJob.Application.Features.JobOffers.Queries.FilteredList;
 using JustFindJob.Application.Features.JobOffers.Queries.List;
 using JustFindJob.Application.Features.TechnologyElements.Queries;
 using JustFindJob.Application.Features.TechnologyElements.Queries.FilteredList;
+using JustFindJob.Application.Features.TechnologyElements.Queries.FilteredList.FindByProgrammingLanguage;
 using JustFindJob.Application.Features.TechnologyElements.Queries.List;
 using JustFindJob.Domain.Entities;
 using System;

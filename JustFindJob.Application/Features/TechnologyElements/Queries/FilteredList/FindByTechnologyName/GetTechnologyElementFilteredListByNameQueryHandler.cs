@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using JustFindJob.Application.Contracts.Persistance;
+using JustFindJob.Application.Features.TechnologyElements.Queries.FilteredList.FindByProgrammingLanguage;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,48 +10,27 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace JustFindJob.Application.Features.TechnologyElements.Queries.FilteredList
+namespace JustFindJob.Application.Features.TechnologyElements.Queries.FilteredList.FindByTechnologyName
 {
-    public class GetTechnologyElementFilteredListQueryHandler : IRequestHandler<GetTechnologyElementFilteredListQuery, List<FilteredTechnologyElementVm>>
+    public class GetTechnologyElementFilteredListByNameQueryHandler : IRequestHandler<GetTechnologyElementFilteredListByNameQuery, List<FilteredTechnologyElementVm>>
     {
         private readonly IJustFindJobDbContext _context;
         private readonly IMapper _mapper;
 
-        public GetTechnologyElementFilteredListQueryHandler(IJustFindJobDbContext context, IMapper mapper)
+        public GetTechnologyElementFilteredListByNameQueryHandler(IJustFindJobDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
         }
 
-        public async Task<List<FilteredTechnologyElementVm>> Handle(GetTechnologyElementFilteredListQuery request, CancellationToken cancellationToken)
+        public async Task<List<FilteredTechnologyElementVm>> Handle(GetTechnologyElementFilteredListByNameQuery request, CancellationToken cancellationToken)
         {
-            //var query = from te in _context.TechnologyElements
-            //            join pl in _context.ProgrammingLanguages
-            //                on te.ProgrammingLanguageId equals pl.Id
-            //                    into ele
-            //            from pl in ele.DefaultIfEmpty()
-            //            where (request.Filters.TechnologyNames.Count > 0 ?
-            //                request.Filters.TechnologyNames.Contains(te.Name) : 
-            //                true) 
-            //                && 
-            //                (request.Filters.ProgrammingLanguages.Count > 0 ?
-            //                request.Filters.TechnologyNames.Contains(pl.Name) : 
-            //                true)
-            //            select new
-            //            {
-            //                TechnologyElement = te,
-            //                ProgrammingLanguage = pl
-            //            };
-
             var query = from te in _context.TechnologyElements
                         join pl in _context.ProgrammingLanguages
                             on te.ProgrammingLanguageId equals pl.Id
                                 into ele
                         from pl in ele.DefaultIfEmpty()
                         where
-                           (request.Filters.ProgrammingLanguages.Count != 0 ?
-                           request.Filters.ProgrammingLanguages.Contains(pl.Name) :
-                           true) &&
                            (request.Filters.TechnologyNames.Count != 0 ?
                            request.Filters.TechnologyNames.Contains(te.Name) :
                            true)

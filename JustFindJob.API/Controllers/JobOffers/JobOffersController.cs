@@ -27,15 +27,15 @@ namespace JustFindJob.API.Controllers.JobOffers
 
         /// <summary>
         /// To tests input values should be separate by ',' (coma) like:
-        /// languages = C#,Java;
-        /// localizations = Warsaw,Wroclaw,Crakow;
+        /// languages = C#,Java
+        /// localizations = Warsaw,Wroclaw,Crakow
         /// expLevels = Junior,Mid;
         /// </summary>
         /// <param name="languages"></param>
         /// <param name="localizations"></param>
         /// <param name="expLevels"></param>
         /// <returns></returns>
-        [HttpGet("api/jobs/search")]
+        [HttpGet("/api/jobs/search")]
         public async Task<ActionResult<FilteredJobOfferListVm>> GetFilteredJobs(string languages, string localizations, string expLevels)
         {
             var filters = new ListFiltersJobOffer();

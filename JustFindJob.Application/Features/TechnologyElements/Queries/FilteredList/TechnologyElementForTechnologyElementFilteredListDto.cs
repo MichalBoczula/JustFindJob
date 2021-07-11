@@ -1,4 +1,4 @@
-﻿namespace JustFindJob.Application.Features.TechnologyElements.Queries.FilteredList
+﻿namespace JustFindJob.Application.Features.TechnologyElements.Queries.FilteredList.FindByProgrammingLanguage
 {
     public class TechnologyElementForTechnologyElementFilteredListDto
     {
