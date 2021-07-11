@@ -2,7 +2,7 @@
 
 namespace JustFindJob.Application.Features.TechnologyElements.Queries.List
 {
-    public class TechStackVm
+    public class TechnologyElementVm
     {
         public TechnologyElementForTechnologyElementListDto TechnologyElementDto { get; set; }
         public ProgrammingLanguageForTechnologyElementListDto ProgrammingLanguageDto { get; set; }

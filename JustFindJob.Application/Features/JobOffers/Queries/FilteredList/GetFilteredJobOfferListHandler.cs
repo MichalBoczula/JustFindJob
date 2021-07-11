@@ -29,8 +29,8 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.FilteredList
                             on job.CompanyId equals comp.Id
                         join lang in _context.ProgrammingLanguages
                             on job.ProgrammingLanguageId equals lang.Id
-                        where (request.Filters.ProggramingLanguages.Count != 0 ?
-                            request.Filters.ProggramingLanguages.Contains(lang.Name) :
+                        where (request.Filters.ProgrammingLanguages.Count != 0 ?
+                            request.Filters.ProgrammingLanguages.Contains(lang.Name) :
                             true) &&
                             (request.Filters.ExpLevels.Count != 0 ?
                             request.Filters.ExpLevels.Contains(job.ExperienceLevel) :

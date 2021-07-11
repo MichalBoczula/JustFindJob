@@ -16,7 +16,7 @@ namespace JustFindJob.API.Controllers.JobOffers
 {
     [Route("api/jobs")]
     [AllowAnonymous]
-    public class JobOfferController : BaseController
+    public class JobOffersController : BaseController
     {
         [HttpGet("{Id}")]
         public async Task<ActionResult<JobOfferDetailsVm>> GetDetails(int Id)
@@ -38,7 +38,7 @@ namespace JustFindJob.API.Controllers.JobOffers
         [HttpGet("api/jobs/search")]
         public async Task<ActionResult<FilteredJobOfferListVm>> GetFilteredJobs(string languages, string localizations, string expLevels)
         {
-            var filters = new ListFilters();
+            var filters = new ListFiltersJobOffer();
             filters.AddProggramingLanguages(languages);
             filters.AddLocalizations(localizations);
             filters.AddExperienceLevels(expLevels);

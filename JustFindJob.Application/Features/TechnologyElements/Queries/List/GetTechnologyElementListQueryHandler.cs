@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace JustFindJob.Application.Features.TechnologyElements.Queries.List
 {
-    public class GetTechnologyElementListQueryHandler : IRequestHandler<GetTechnologyElementListQuery, List<TechStackVm>>
+    public class GetTechnologyElementListQueryHandler : IRequestHandler<GetTechnologyElementListQuery, List<TechnologyElementVm>>
     {
         private readonly IJustFindJobDbContext _context;
         private readonly IMapper _mapper;
@@ -22,7 +22,7 @@ namespace JustFindJob.Application.Features.TechnologyElements.Queries.List
             _mapper = mapper;
         }
 
-        public async Task<List<TechStackVm>> Handle(GetTechnologyElementListQuery request, CancellationToken cancellationToken)
+        public async Task<List<TechnologyElementVm>> Handle(GetTechnologyElementListQuery request, CancellationToken cancellationToken)
         {
             var query = await (from te in _context.TechnologyElements
                                join pl in _context.ProgrammingLanguages
@@ -34,11 +34,11 @@ namespace JustFindJob.Application.Features.TechnologyElements.Queries.List
                                    TechnologyElement = te,
                                    ProgrammingLanguage = pl
                                }).ToListAsync(cancellationToken);
-            List<TechStackVm> result = new List<TechStackVm>();
+            List<TechnologyElementVm> result = new List<TechnologyElementVm>();
             foreach (var ele in query)
             {
                 result.Add(
-                    new TechStackVm
+                    new TechnologyElementVm
                     {
                         TechnologyElementDto = _mapper.Map<TechnologyElementForTechnologyElementListDto>(ele.TechnologyElement),
                         ProgrammingLanguageDto = _mapper.Map<ProgrammingLanguageForTechnologyElementListDto>(ele.ProgrammingLanguage)

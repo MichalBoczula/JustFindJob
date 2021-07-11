@@ -34,7 +34,7 @@ namespace JustFindJob.Application.Test.JobOffers.Queries.FilteredList
             //act
             var query = new GetFilteredJobOfferListQuery()
             {
-                Filters = new ListFilters()
+                Filters = new ListFiltersJobOffer()
             };
             var result = await handler.Handle(query, CancellationToken.None);
             //assert
@@ -49,9 +49,9 @@ namespace JustFindJob.Application.Test.JobOffers.Queries.FilteredList
             //act
             var query = new GetFilteredJobOfferListQuery()
             {
-                Filters = new ListFilters()
+                Filters = new ListFiltersJobOffer()
                 {
-                    ProggramingLanguages = new List<string>()
+                    ProgrammingLanguages = new List<string>()
                     {
                         "C#"
                     }
@@ -70,9 +70,9 @@ namespace JustFindJob.Application.Test.JobOffers.Queries.FilteredList
             //act
             var query = new GetFilteredJobOfferListQuery()
             {
-                Filters = new ListFilters()
+                Filters = new ListFiltersJobOffer()
                 {
-                    ProggramingLanguages = new List<string>()
+                    ProgrammingLanguages = new List<string>()
                     {
                         "C#"
                     },
@@ -95,7 +95,7 @@ namespace JustFindJob.Application.Test.JobOffers.Queries.FilteredList
             //act
             var query = new GetFilteredJobOfferListQuery()
             {
-                Filters = new ListFilters()
+                Filters = new ListFiltersJobOffer()
                 {
                     ExpLevels = new List<ExperienceLevels>()
                     {
@@ -116,13 +116,13 @@ namespace JustFindJob.Application.Test.JobOffers.Queries.FilteredList
             //act
             var query = new GetFilteredJobOfferListQuery()
             {
-                Filters = new ListFilters()
+                Filters = new ListFiltersJobOffer()
                 {
                     ExpLevels = new List<ExperienceLevels>()
                     {
                         ExperienceLevels.Junior
                     },
-                    ProggramingLanguages = new List<string>()
+                    ProgrammingLanguages = new List<string>()
                     {
                         "C#",
                         "Java"
@@ -142,14 +142,14 @@ namespace JustFindJob.Application.Test.JobOffers.Queries.FilteredList
             //act
             var query = new GetFilteredJobOfferListQuery()
             {
-                Filters = new ListFilters()
+                Filters = new ListFiltersJobOffer()
                 {
                     ExpLevels = new List<ExperienceLevels>()
                     {
                         ExperienceLevels.Junior,
                         ExperienceLevels.Mid
                     },
-                    ProggramingLanguages = new List<string>()
+                    ProgrammingLanguages = new List<string>()
                     {
                         "C#",
                         "Java"
@@ -169,7 +169,7 @@ namespace JustFindJob.Application.Test.JobOffers.Queries.FilteredList
             //act
             var query = new GetFilteredJobOfferListQuery()
             {
-                Filters = new ListFilters()
+                Filters = new ListFiltersJobOffer()
                 {
                     Localizations = new List<string>()
                     {
@@ -190,13 +190,13 @@ namespace JustFindJob.Application.Test.JobOffers.Queries.FilteredList
             //act
             var query = new GetFilteredJobOfferListQuery()
             {
-                Filters = new ListFilters()
+                Filters = new ListFiltersJobOffer()
                 {
                     ExpLevels = new List<ExperienceLevels>()
                     {
                         ExperienceLevels.Junior
                     },
-                    ProggramingLanguages = new List<string>()
+                    ProgrammingLanguages = new List<string>()
                     {
                         "C#"
                     },

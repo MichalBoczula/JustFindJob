@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace JustFindJob.Application.Features.TechnologyElements.Queries.List
 {
-    public class GetTechnologyElementListQuery : IRequest<List<TechStackVm>>
+    public class GetTechnologyElementListQuery : IRequest<List<TechnologyElementVm>>
     {
     }
 }

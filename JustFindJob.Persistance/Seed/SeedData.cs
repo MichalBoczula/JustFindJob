@@ -437,7 +437,8 @@ namespace JustFindJob.Persistance.Seed
                 new TechnologyElement()
                 {
                     Id = 3,
-                    Name = "MSSQL"
+                    Name = "MSSQL",
+                    ProgrammingLanguageId = 6
                 },
                 new TechnologyElement()
                 {
@@ -448,7 +449,8 @@ namespace JustFindJob.Persistance.Seed
                 new TechnologyElement()
                 {
                     Id = 5,
-                    Name = "MySQL"
+                    Name = "MySQL",
+                    ProgrammingLanguageId = 6
                 },
                 new TechnologyElement()
                 {
@@ -476,7 +478,7 @@ namespace JustFindJob.Persistance.Seed
                 new TechnologyElement()
                 {
                     Id = 10,
-                    Name = "NoSQL",
+                    Name = "NoSQL"
                 },
                 new TechnologyElement()
                 {
@@ -558,6 +560,11 @@ namespace JustFindJob.Persistance.Seed
                 {
                     Id = 5,
                     Name = "Python"
+                },
+                new ProgrammingLanguage()
+                {
+                    Id = 6,
+                    Name = "SQL"
                 }
             );
 

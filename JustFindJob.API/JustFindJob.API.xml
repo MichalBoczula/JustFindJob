@@ -4,7 +4,7 @@
         <name>JustFindJob.API</name>
     </assembly>
     <members>
-        <member name="M:JustFindJob.API.Controllers.JobOffers.JobOfferController.GetFilteredJobs(System.String,System.String,System.String)">
+        <member name="M:JustFindJob.API.Controllers.JobOffers.JobOffersController.GetFilteredJobs(System.String,System.String,System.String)">
             <summary>
             To tests input values should be separate by ',' (coma) like:
             languages = C#,Java;

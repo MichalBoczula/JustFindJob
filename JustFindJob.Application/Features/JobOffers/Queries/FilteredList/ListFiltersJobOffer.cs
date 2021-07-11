@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace JustFindJob.Application.Features.JobOffers.Queries.FilteredList
 {
-    public class ListFilters
+    public class ListFiltersJobOffer
     {
-        public List<string> ProggramingLanguages { get; set; }
+        public List<string> ProgrammingLanguages { get; set; }
         public List<ExperienceLevels> ExpLevels { get; set; }
         public List<string> Localizations { get; set; }
 
-        public ListFilters()
+        public ListFiltersJobOffer()
         {
-            ProggramingLanguages = new List<string>();
+            ProgrammingLanguages = new List<string>();
             ExpLevels = new List<ExperienceLevels>();
             Localizations = new List<string>();
         }
@@ -21,7 +21,7 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.FilteredList
             if (!string.IsNullOrWhiteSpace(languages))
             {
                 var elements = languages.Split(",");
-                ProggramingLanguages.AddRange(elements);
+                ProgrammingLanguages.AddRange(elements);
             }
         }
 

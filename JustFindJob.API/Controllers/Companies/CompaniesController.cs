@@ -12,12 +12,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace JustFindJob.API.Controllers.Company
+namespace JustFindJob.API.Controllers.Companies
 {
     [Route("api/companies")]
     [ApiController]
     [AllowAnonymous]
-    public class CompanyController : BaseController
+    public class CompaniesController : BaseController
     {
         [HttpGet]
         public async Task<ActionResult<CompanyVm>> GetList()

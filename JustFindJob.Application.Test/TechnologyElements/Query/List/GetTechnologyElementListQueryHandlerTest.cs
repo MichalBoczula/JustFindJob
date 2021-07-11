@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using JustFindJob.Application.Features.TechnologyElements.Queries;
+using JustFindJob.Application.Features.TechnologyElements.Queries.List;
 using JustFindJob.Application.Test.Common;
 using JustFindJob.Persistance;
 using Shouldly;
@@ -11,15 +12,15 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace JustFindJob.Application.Test.TechnologyElements.Query
+namespace JustFindJob.Application.Test.TechnologyElements.Query.List
 {
     [Collection("QueryCollection")]
-    public class GetTechStackListQueryHandlerTest
+    public class GetTechnologyElementListQueryHandlerTest
     {
         private readonly JustFindJobDbContext _context;
         private readonly IMapper _mapper;
 
-        public GetTechStackListQueryHandlerTest(QueryTestBase testBase)
+        public GetTechnologyElementListQueryHandlerTest(QueryTestBase testBase)
         {
             _context = testBase.Context;
             _mapper = testBase.Mapper;
@@ -33,7 +34,7 @@ namespace JustFindJob.Application.Test.TechnologyElements.Query
             //act
             var result = await handler.Handle(new GetTechnologyElementListQuery(), CancellationToken.None);
             //assert
-            result.ShouldBeOfType<List<TechStackVm>>();
+            result.ShouldBeOfType<List<TechnologyElementVm>>();
             result.Count.ShouldBe(15);
         }
     }

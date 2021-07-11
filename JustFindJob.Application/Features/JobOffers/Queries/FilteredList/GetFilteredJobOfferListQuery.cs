@@ -9,6 +9,6 @@ namespace JustFindJob.Application.Features.JobOffers.Queries.FilteredList
 {
     public class GetFilteredJobOfferListQuery : IRequest<List<FilteredJobOfferListVm>>
     {
-        public ListFilters Filters{ get; set; }
+        public ListFiltersJobOffer Filters{ get; set; }
     }
 }
