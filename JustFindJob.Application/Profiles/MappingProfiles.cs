@@ -5,6 +5,7 @@ using JustFindJob.Application.Features.Companies.Queries.List;
 using JustFindJob.Application.Features.JobOffers.Queries.Details;
 using JustFindJob.Application.Features.JobOffers.Queries.FilteredList;
 using JustFindJob.Application.Features.JobOffers.Queries.List;
+using JustFindJob.Application.Features.ProgrammingLanguages.Queries;
 using JustFindJob.Application.Features.TechnologyElements.Queries;
 using JustFindJob.Application.Features.TechnologyElements.Queries.FilteredList;
 using JustFindJob.Application.Features.TechnologyElements.Queries.FilteredList.FindByProgrammingLanguage;
@@ -35,6 +36,9 @@ namespace JustFindJob.Application.Profiles
             #region TechnologyElement Queries;
             CreateTechnologyElementListMapping();
             CreateTechnologyElementFilteredListMapping();
+            #endregion
+            #region ProgrammingLanguage Queries;
+            CreateProgrammingLanguageListAndSingleMapping();
             #endregion
         }
 
@@ -99,5 +103,12 @@ namespace JustFindJob.Application.Profiles
             CreateMap<TechnologyElement, TechnologyElementForTechnologyElementFilteredListDto>().ReverseMap();
             CreateMap<ProgrammingLanguage, ProgrammingLanguageForTechnologyElementFilteredListDto>().ReverseMap();
         }
+
+        private void CreateProgrammingLanguageListAndSingleMapping()
+        {
+            CreateMap<ProgrammingLanguage, ProgrammingLanguagesVm>().ReverseMap();
+        }
+
+        
     }
 }
