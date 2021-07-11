@@ -6,7 +6,7 @@
     <members>
         <member name="M:JustFindJob.API.Controllers.JobOffers.JobOfferController.GetFilteredJobs(System.String,System.String,System.String)">
             <summary>
-            To tests input values separated by ',' (coma) like:
+            To tests input values should be separate by ',' (coma) like:
             languages = C#,Java;
             localizations = Warsaw,Wroclaw,Crakow;
             expLevels = Junior,Mid;

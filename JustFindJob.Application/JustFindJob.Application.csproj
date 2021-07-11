@@ -5,12 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Features\JobOffers\Commands\**" />
-    <EmbeddedResource Remove="Features\JobOffers\Commands\**" />
-    <None Remove="Features\JobOffers\Commands\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="MediatR" Version="9.0.0" />
@@ -20,6 +14,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\JustFindJob.Domain\JustFindJob.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\JobOffers\Commands\DeleteJobOffer\" />
+    <Folder Include="Features\JobOffers\Commands\UpdateJobOffer\" />
   </ItemGroup>
 
 </Project>

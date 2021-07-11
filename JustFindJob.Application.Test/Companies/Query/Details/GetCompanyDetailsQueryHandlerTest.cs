@@ -11,7 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace JustFindJob.Application.Test.Company.Query.Details
+namespace JustFindJob.Application.Test.Companies.Query.Details
 {
     [Collection("QueryCollection")]
     public class GetCompanyDetailsQueryHandlerTest

@@ -5,6 +5,7 @@ using JustFindJob.Application.Features.Companies.Queries.List;
 using JustFindJob.Application.Features.JobOffers.Queries.Details;
 using JustFindJob.Application.Features.JobOffers.Queries.FilteredList;
 using JustFindJob.Application.Features.JobOffers.Queries.List;
+using JustFindJob.Application.Features.TechnologyElements.Queries;
 using JustFindJob.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,9 @@ namespace JustFindJob.Application.Profiles
             CreateCompanyListMapping();
             CreateCompanyDetailsMapping();
             CreateCompanyJobOfferMapping();
+            #endregion
+            #region TechnologyElement Queries;
+            CreateTechnologyElementListMapping();
             #endregion
         }
 
@@ -78,6 +82,12 @@ namespace JustFindJob.Application.Profiles
             CreateMap<JobOffer, JobOfferForCompanyJobOfferDto>()
                 .ForMember(j => j.ExperienceLevel, opt => opt.MapFrom(x => x.ExperienceLevel.ToString()))
                 .ReverseMap();
+        }
+
+        private void CreateTechnologyElementListMapping()
+        {
+            CreateMap<TechnologyElement, TechnologyElementForTechnologyElementListDto>().ReverseMap();
+            CreateMap<ProgrammingLanguage, ProgrammingLanguageForTechnologyElementListDto>().ReverseMap();
         }
     }
 }
